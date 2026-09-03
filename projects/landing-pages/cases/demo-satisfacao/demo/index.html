@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pesquisa de satisfação do evento | Locatelli Group</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="LP demonstrativa de pesquisa de satisfação pós-evento da Locatelli Group.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Khand:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0C1F33;
+  --deep:#081420;
+  --orange:#ff5900;
+  --white:#fff;
+  --muted:#9FA9B6;
+  --line:rgba(255,255,255,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--deep);
+  color:#fff;
+  font-family:Inter,Arial,sans-serif;
+  overflow-x:hidden
+}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+.wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(8,20,32,.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.07)
+}
+.nav{
+  min-height:78px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px
+}
+.brand img{display:block;width:170px;height:auto}
+.header-note{
+  color:rgba(255,255,255,.56);
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase
+}
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 79% 18%,rgba(255,89,0,.15),transparent 28rem),
+    linear-gradient(145deg,var(--navy),var(--deep))
+}
+.hero:before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:58px 58px;
+  mask-image:linear-gradient(#000,transparent 90%)
+}
+.hero-grid{
+  position:relative;z-index:1;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:72px;
+  align-items:center;
+  padding:92px 0 90px
+}
+.eyebrow{
+  display:flex;align-items:center;gap:10px;
+  color:var(--orange);
+  font-size:11px;font-weight:800;
+  letter-spacing:.16em;text-transform:uppercase
+}
+.eyebrow:before{content:"";width:22px;height:2px;background:currentColor}
+h1,h2,h3{font-family:Khand,"Arial Narrow",sans-serif}
+h1{
+  margin:16px 0 18px;
+  font-size:clamp(3.35rem,7.2vw,6.2rem);
+  line-height:.93;font-weight:600;letter-spacing:-.025em
+}
+h2{
+  margin:0;
+  font-size:clamp(2.5rem,4.7vw,4rem);
+  line-height:.98;font-weight:600
+}
+h3{margin:0;font-size:27px;line-height:1.05}
+.hero-copy{
+  max-width:680px;margin:0;
+  color:rgba(255,255,255,.70);
+  font-size:18px;line-height:1.72
+}
+.event-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:24px;padding:9px 12px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:999px;
+  background:rgba(255,255,255,.04);
+  color:rgba(255,255,255,.70);
+  font-size:12px;font-weight:700
+}
+.event-tag span{width:7px;height:7px;border-radius:50%;background:var(--orange);box-shadow:0 0 14px rgba(255,89,0,.75)}
+.score-visual{
+  position:relative;
+  min-height:430px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:
+    radial-gradient(circle at 70% 22%,rgba(255,89,0,.16),transparent 28%),
+    linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.018));
+  box-shadow:0 30px 90px rgba(0,0,0,.32)
+}
+.score-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:44px 44px
+}
+.score-ring{
+  position:absolute;left:50%;top:48%;
+  width:220px;height:220px;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 0 0 36px rgba(255,255,255,.018),0 0 0 72px rgba(255,255,255,.012)
+}
+.score-ring:after{
+  content:"";
+  position:absolute;inset:27px;border-radius:50%;
+  border:1px dashed rgba(255,89,0,.58);
+  animation:spin 14s linear infinite
+}
+.score-value{
+  position:absolute;left:50%;top:48%;
+  transform:translate(-50%,-50%);
+  text-align:center
+}
+.score-value strong{
+  display:block;
+  font:600 78px/.85 Khand;
+  color:#fff
+}
+.score-value small{
+  display:block;margin-top:12px;
+  color:rgba(255,255,255,.48);
+  font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase
+}
+.score-pill{
+  position:absolute;
+  padding:10px 13px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:999px;
+  background:rgba(7,18,30,.82);
+  color:#fff;
+  font-size:11px;font-weight:700
+}
+.sp1{left:28px;top:44px}.sp2{right:26px;top:78px}.sp3{left:42px;bottom:62px}.sp4{right:34px;bottom:42px}
+.score-signal{
+  position:absolute;width:10px;height:10px;border-radius:50%;
+  background:var(--orange);box-shadow:0 0 18px rgba(255,89,0,.8)
+}
+.ss1{left:19%;top:45%;animation:pulse 2.2s infinite}.ss2{right:16%;top:40%;animation:pulse 2.5s .5s infinite}.ss3{right:28%;bottom:19%;animation:pulse 2.1s .8s infinite}
+
+.section{padding:98px 0}
+.section-head{max-width:760px;margin-bottom:42px}
+.section-head p{color:rgba(255,255,255,.64);font-size:17px;line-height:1.7}
+.survey-shell{
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+  gap:46px;
+  align-items:start
+}
+.survey-side{
+  position:sticky;top:108px;
+  padding:28px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:linear-gradient(145deg,#10283f,#0b1c2e)
+}
+.survey-side strong{
+  display:block;
+  font:600 31px/1 Khand;
+  margin-bottom:12px
+}
+.survey-side p{margin:0;color:rgba(255,255,255,.62);font-size:14px}
+.progress{
+  margin-top:22px;
+  height:5px;border-radius:999px;
+  background:rgba(255,255,255,.08);
+  overflow:hidden
+}
+.progress span{
+  display:block;width:25%;height:100%;
+  background:var(--orange);
+  transition:width .3s ease
+}
+.form{
+  display:grid;gap:18px
+}
+.question{
+  padding:26px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.02))
+}
+.question-label{
+  display:block;
+  margin-bottom:16px;
+  font-weight:700;font-size:14px;line-height:1.5
+}
+.question-help{
+  margin:-8px 0 16px;
+  color:rgba(255,255,255,.45);
+  font-size:11px
+}
+.scale-5{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px
+}
+.scale-11{
+  display:grid;
+  grid-template-columns:repeat(11,1fr);
+  gap:7px
+}
+.option{position:relative}
+.option input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none
+}
+.option label{
+  min-height:48px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  background:rgba(255,255,255,.03);
+  color:rgba(255,255,255,.68);
+  font-size:12px;font-weight:800;
+  cursor:pointer;
+  transition:.2s ease
+}
+.option input:checked + label{
+  border-color:rgba(255,89,0,.58);
+  background:rgba(255,89,0,.12);
+  color:#fff;
+  box-shadow:inset 0 0 0 1px rgba(255,89,0,.18)
+}
+.option label:hover{border-color:rgba(255,89,0,.34)}
+.scale-captions{
+  display:flex;justify-content:space-between;
+  margin-top:9px;
+  color:rgba(255,255,255,.38);
+  font-size:10px
+}
+textarea,select,input[type="text"],input[type="email"]{
+  width:100%;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  background:rgba(255,255,255,.04);
+  color:#fff;
+  padding:13px 14px;
+  outline:none
+}
+textarea{min-height:110px;resize:vertical}
+textarea::placeholder,input::placeholder{color:rgba(255,255,255,.30)}
+textarea:focus,select:focus,input:focus{
+  border-color:rgba(255,89,0,.48);
+  box-shadow:0 0 0 3px rgba(255,89,0,.08)
+}
+.inline-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.check-list{display:grid;gap:10px}
+.check-item{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:12px;border:1px solid rgba(255,255,255,.09);
+  border-radius:12px;background:rgba(255,255,255,.025)
+}
+.check-item input{accent-color:var(--orange);margin-top:2px}
+.check-item span{font-size:13px;color:rgba(255,255,255,.72)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:52px;padding:0 22px;border:0;border-radius:999px;
+  background:var(--orange);color:#fff;
+  font-size:13px;font-weight:800;
+  cursor:pointer;
+  box-shadow:0 14px 30px rgba(255,89,0,.16);
+  transition:.25s ease
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(255,89,0,.22)}
+.form-actions{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding-top:4px
+}
+.form-note{
+  max-width:560px;
+  color:rgba(255,255,255,.40);
+  font-size:11px;line-height:1.55
+}
+.success{
+  display:none;
+  padding:34px;
+  border:1px solid rgba(255,89,0,.28);
+  border-radius:22px;
+  background:linear-gradient(145deg,#10283f,#0b1c2e);
+  text-align:center
+}
+.success.show{display:block}
+.success .check{
+  width:58px;height:58px;margin:0 auto 18px;
+  display:grid;place-items:center;
+  border-radius:50%;background:var(--orange);
+  font-size:27px;font-weight:800
+}
+.success h3{font-size:34px;margin-bottom:10px}
+.success p{margin:0;color:rgba(255,255,255,.62)}
+.post{
+  background:linear-gradient(135deg,#2A2E34,var(--navy))
+}
+.post-card{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:44px;align-items:center;
+  padding:34px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:22px;
+  background:rgba(255,255,255,.035)
+}
+.post-card p{color:rgba(255,255,255,.64)}
+.post-actions{display:flex;justify-content:flex-end}
+.footer{
+  padding:30px 0 24px;
+  background:#06111b;
+  border-top:1px solid rgba(255,255,255,.06)
+}
+.footer-top{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap
+}
+.footer-brands{display:flex;align-items:center;gap:18px}
+.footer-locatelli{width:185px;height:auto}
+.footer-divider{width:1px;height:42px;background:rgba(255,255,255,.17)}
+.footer-prime{height:42px;width:auto}
+.social{display:flex;gap:10px}
+.social a{
+  display:grid;place-items:center;
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.09)
+}
+.social a:hover{background:var(--orange);transform:translateY(-2px)}
+.social svg{
+  width:18px;height:18px;fill:none;stroke:#fff;
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round
+}
+.copy{
+  margin-top:22px;padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.08);
+  color:rgba(255,255,255,.48);font-size:11px
+}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{transform:scale(.8);opacity:.5}50%{transform:scale(1.25);opacity:1}}
+@media(max-width:980px){
+  .hero-grid,.survey-shell,.post-card{grid-template-columns:1fr}
+  .survey-side{position:relative;top:auto}
+  .scale-11{grid-template-columns:repeat(6,1fr)}
+  .post-actions{justify-content:flex-start}
+}
+@media(max-width:720px){
+  .wrap{width:min(1180px,calc(100% - 32px))}
+  .nav{min-height:70px}.brand img{width:148px}
+  .header-note{display:none}
+  .hero-grid{padding:72px 0;gap:42px}
+  .score-visual{min-height:370px}
+  .score-ring{width:180px;height:180px}
+  .score-value strong{font-size:64px}
+  .score-pill{font-size:10px}
+  .sp1{left:16px}.sp2{right:16px}.sp3{left:18px}.sp4{right:16px}
+  .section{padding:74px 0}
+  .scale-5{grid-template-columns:repeat(5,1fr)}
+  .scale-11{grid-template-columns:repeat(4,1fr)}
+  .inline-fields{grid-template-columns:1fr}
+  .form-actions{align-items:stretch;flex-direction:column}
+  .btn{width:100%}
+  .footer-top{justify-content:center;text-align:center}
+  .footer-brands{justify-content:center;flex-wrap:wrap}
+  .footer-locatelli{width:160px}.footer-prime{height:38px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+<style data-portfolio-demo="true">
+.portfolio-demo-banner{position:relative;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:8px max(16px,calc((100% - 1180px)/2));background:#fff;color:#081420;font:700 12px/1.35 Arial,sans-serif;border-bottom:3px solid #ff5900}
+.portfolio-demo-banner a,.portfolio-demo-banner a:visited{display:inline-flex;align-items:center;min-height:32px;color:#081420!important;text-decoration:underline;text-underline-offset:3px}
+.portfolio-form-notice{min-height:260px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px;padding:30px;border:1px solid rgba(255,255,255,.18);background:#10283f;color:#fff;font-family:Arial,sans-serif}
+.portfolio-form-notice strong{font-size:21px}.portfolio-form-notice p{margin:0;color:rgba(255,255,255,.78);line-height:1.6}
+@media(max-width:620px){.portfolio-demo-banner{align-items:flex-start;flex-direction:column;padding:10px 16px;gap:2px}.portfolio-form-notice{min-height:220px;padding:22px}}
+</style></head>
+<body>
+<div class="portfolio-demo-banner" role="note"><span>Demo conceitual - não publicada</span><a href="../index.html">Voltar ao case</a></div><header class="header">
+  <div class="wrap nav">
+    <a class="brand" href="https://locatelligroup.com.br" aria-label="Locatelli Group">
+      <img src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1787573740/$49squ8s1wun" alt="Locatelli Group">
+    </a>
+    <div class="header-note">Pesquisa pós-evento</div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <p class="eyebrow">Pesquisa de satisfação</p>
+      <h1>Sua opinião ajuda a melhorar nossos <span style="color:#ff5900">próximos encontros.</span></h1>
+      <p class="hero-copy">
+        Obrigado por participar da palestra sobre conformidade empresarial. Queremos entender como foi sua experiência e quais temas geraram mais valor para você.
+      </p>
+      <div class="event-tag"><span></span>Palestra · Conformidade empresarial</div>
+    </div>
+
+    <div class="score-visual reveal" aria-label="Visual abstrato sobre avaliação e satisfação">
+      <div class="score-grid"></div>
+      <div class="score-ring"></div>
+      <div class="score-value"><strong>10</strong><small>experiência · conteúdo · valor</small></div>
+      <div class="score-pill sp1">Conteúdo</div>
+      <div class="score-pill sp2">Aplicabilidade</div>
+      <div class="score-pill sp3">Organização</div>
+      <div class="score-pill sp4">Recomendação</div>
+      <span class="score-signal ss1"></span>
+      <span class="score-signal ss2"></span>
+      <span class="score-signal ss3"></span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Avaliação do encontro</p>
+      <h2>Leva menos de 3 minutos.</h2>
+      <p>As respostas abaixo nos ajudam a validar a experiência, identificar oportunidades de melhoria e definir conteúdos mais relevantes para os próximos eventos.</p>
+    </div>
+
+    <div class="survey-shell">
+      <aside class="survey-side reveal">
+        <strong>Sua experiência importa.</strong>
+        <p>Não existe resposta certa. Buscamos uma leitura objetiva sobre percepção de valor, conteúdo e experiência geral.</p>
+        <div class="progress" aria-label="Progresso da pesquisa"><span id="progressBar"></span></div>
+      </aside>
+
+      <div>
+        <form class="form" id="satisfactionForm">
+          <section class="question reveal">
+            <label class="question-label">1. De forma geral, como você avalia o evento?</label>
+            <div class="scale-5">
+              <div class="option"><input id="q1-1" name="geral" type="radio" value="1" required><label for="q1-1">1</label></div>
+              <div class="option"><input id="q1-2" name="geral" type="radio" value="2"><label for="q1-2">2</label></div>
+              <div class="option"><input id="q1-3" name="geral" type="radio" value="3"><label for="q1-3">3</label></div>
+              <div class="option"><input id="q1-4" name="geral" type="radio" value="4"><label for="q1-4">4</label></div>
+              <div class="option"><input id="q1-5" name="geral" type="radio" value="5"><label for="q1-5">5</label></div>
+            </div>
+            <div class="scale-captions"><span>Muito insatisfeito</span><span>Muito satisfeito</span></div>
+          </section>
+
+          <section class="question reveal">
+            <label class="question-label">2. O conteúdo apresentado foi relevante para sua realidade profissional?</label>
+            <div class="scale-5">
+              <div class="option"><input id="q2-1" name="relevancia" type="radio" value="1" required><label for="q2-1">1</label></div>
+              <div class="option"><input id="q2-2" name="relevancia" type="radio" value="2"><label for="q2-2">2</label></div>
+              <div class="option"><input id="q2-3" name="relevancia" type="radio" value="3"><label for="q2-3">3</label></div>
+              <div class="option"><input id="q2-4" name="relevancia" type="radio" value="4"><label for="q2-4">4</label></div>
+              <div class="option"><input id="q2-5" name="relevancia" type="radio" value="5"><label for="q2-5">5</label></div>
+            </div>
+            <div class="scale-captions"><span>Pouco relevante</span><span>Muito relevante</span></div>
+          </section>
+
+          <section class="question reveal">
+            <label class="question-label">3. Como você avalia a clareza e a qualidade da apresentação?</label>
+            <div class="scale-5">
+              <div class="option"><input id="q3-1" name="apresentacao" type="radio" value="1" required><label for="q3-1">1</label></div>
+              <div class="option"><input id="q3-2" name="apresentacao" type="radio" value="2"><label for="q3-2">2</label></div>
+              <div class="option"><input id="q3-3" name="apresentacao" type="radio" value="3"><label for="q3-3">3</label></div>
+              <div class="option"><input id="q3-4" name="apresentacao" type="radio" value="4"><label for="q3-4">4</label></div>
+              <div class="option"><input id="q3-5" name="apresentacao" type="radio" value="5"><label for="q3-5">5</label></div>
+            </div>
+            <div class="scale-captions"><span>Abaixo do esperado</span><span>Excelente</span></div>
+          </section>
+
+          <section class="question reveal">
+            <label class="question-label">4. Qual a probabilidade de você recomendar um próximo evento da Locatelli Group?</label>
+            <p class="question-help">0 = não recomendaria · 10 = recomendaria com certeza</p>
+            <div class="scale-11">
+              <div class="option"><input id="nps0" name="nps" type="radio" value="0" required><label for="nps0">0</label></div>
+              <div class="option"><input id="nps1" name="nps" type="radio" value="1"><label for="nps1">1</label></div>
+              <div class="option"><input id="nps2" name="nps" type="radio" value="2"><label for="nps2">2</label></div>
+              <div class="option"><input id="nps3" name="nps" type="radio" value="3"><label for="nps3">3</label></div>
+              <div class="option"><input id="nps4" name="nps" type="radio" value="4"><label for="nps4">4</label></div>
+              <div class="option"><input id="nps5" name="nps" type="radio" value="5"><label for="nps5">5</label></div>
+              <div class="option"><input id="nps6" name="nps" type="radio" value="6"><label for="nps6">6</label></div>
+              <div class="option"><input id="nps7" name="nps" type="radio" value="7"><label for="nps7">7</label></div>
+              <div class="option"><input id="nps8" name="nps" type="radio" value="8"><label for="nps8">8</label></div>
+              <div class="option"><input id="nps9" name="nps" type="radio" value="9"><label for="nps9">9</label></div>
+              <div class="option"><input id="nps10" name="nps" type="radio" value="10"><label for="nps10">10</label></div>
+            </div>
+          </section>
+
+          <section class="question reveal">
+            <label class="question-label" for="valor">5. Qual foi o ponto mais valioso do encontro para você?</label>
+            <textarea id="valor" name="ponto_valioso" placeholder="Conte o que mais chamou sua atenção ou gerou valor."></textarea>
+          </section>
+
+          <section class="question reveal">
+            <label class="question-label" for="melhoria">6. O que poderíamos melhorar nos próximos eventos?</label>
+            <textarea id="melhoria" name="melhoria" placeholder="Sua sugestão nos ajuda a melhorar a experiência."></textarea>
+          </section>
+
+          <section class="question reveal">
+            <label class="question-label">7. Quais temas você gostaria de acompanhar em próximos encontros?</label>
+            <div class="check-list">
+              <label class="check-item"><input type="checkbox" name="temas" value="controles"><span>Controles internos e governança</span></label>
+              <label class="check-item"><input type="checkbox" name="temas" value="compliance"><span>Compliance e conformidade empresarial</span></label>
+              <label class="check-item"><input type="checkbox" name="temas" value="tributario"><span>Temas fiscais e tributários</span></label>
+              <label class="check-item"><input type="checkbox" name="temas" value="auditoria"><span>Auditoria e gestão de riscos</span></label>
+              <label class="check-item"><input type="checkbox" name="temas" value="gestao"><span>Gestão financeira e contábil</span></label>
+            </div>
+          </section>
+
+          <section class="question reveal">
+            <label class="question-label">8. Você gostaria de conversar com um especialista sobre algum ponto relacionado à realidade da sua empresa?</label>
+            <div class="scale-5" style="grid-template-columns:1fr 1fr">
+              <div class="option"><input id="contato-sim" name="contato" type="radio" value="sim"><label for="contato-sim">Sim, tenho interesse</label></div>
+              <div class="option"><input id="contato-nao" name="contato" type="radio" value="nao"><label for="contato-nao">Não neste momento</label></div>
+            </div>
+          </section>
+
+          <section class="question reveal">
+            <label class="question-label">Identificação opcional</label>
+            <p class="question-help">Na versão final, esses campos podem ser preenchidos automaticamente ou integrados ao RD Station.</p>
+            <div class="inline-fields">
+              <input type="text" name="nome" placeholder="Nome" aria-label="Nome">
+              <input type="text" name="empresa" placeholder="Empresa" aria-label="Empresa">
+              <input type="email" name="email" placeholder="E-mail corporativo" aria-label="E-mail corporativo">
+              <input type="text" name="cargo" placeholder="Cargo" aria-label="Cargo">
+            </div>
+          </section>
+
+          <div class="form-actions reveal">
+            <p class="form-note">LP demonstrativa. O formulário ainda não envia dados ao RD Station.</p>
+            <button class="btn" type="submit">Enviar avaliação →</button>
+          </div>
+        </form>
+
+        <div class="success" id="successBox" aria-live="polite">
+          <div class="check">✓</div>
+          <h3>Obrigado pela sua avaliação.</h3>
+          <p>Seu feedback ajuda a Locatelli Group a construir encontros cada vez mais relevantes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section post">
+  <div class="wrap post-card reveal">
+    <div>
+      <p class="eyebrow">Quer aprofundar algum tema?</p>
+      <h2>Converse com a Locatelli Group.</h2>
+      <p>Se algum ponto da palestra se conecta a uma necessidade atual da sua empresa, nossos especialistas podem entender o cenário e orientar os próximos passos.</p>
+    </div>
+    <div class="post-actions">
+      <a class="btn" href="https://locatelligroup.com.br">Falar com um especialista →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brands">
+        <img class="footer-locatelli" src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1787573740/$49squ8s1wun" alt="Locatelli Group">
+        <span class="footer-divider"></span>
+        <a href="https://www.primeglobal.net/" target="_blank" rel="noopener noreferrer">
+          <img class="footer-prime" src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1786467915/$satd5jeaibd" alt="PrimeGlobal">
+        </a>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/company/locatelli-group/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewbox="0 0 24 24"><path d="M4 9v11M4 5v.01M9 20v-7a4 4 0 0 1 8 0v7M9 9v11"></path></svg></a>
+        <a href="https://www.instagram.com/locatelli_group/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewbox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg></a>
+        <a href="https://www.facebook.com/people/Locatelli-Group/61581305894236/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewbox="0 0 24 24"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.6.4-1 1-1Z"></path></svg></a>
+        <a href="https://locatelligroup.com.br" target="_blank" rel="noopener noreferrer" aria-label="Site"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.4 2.5 3.6 5.5 3.6 9S14.4 18.5 12 21M12 3C9.6 5.5 8.4 8.5 8.4 12s1.2 6.5 3.6 9"></path></svg></a>
+      </div>
+    </div>
+    <div class="copy">© Locatelli Brasil 2026. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<script>
+const form=document.getElementById('satisfactionForm');
+const success=document.getElementById('successBox');
+const progress=document.getElementById('progressBar');
+
+function updateProgress(){
+  const requiredGroups=['geral','relevancia','apresentacao','nps'];
+  let done=0;
+  requiredGroups.forEach(name=>{
+    if(form.querySelector('input[name="'+name+'"]:checked')) done++;
+  });
+  if(document.getElementById('valor').value.trim()) done++;
+  if(document.getElementById('melhoria').value.trim()) done++;
+  const pct=Math.max(25,Math.min(100,Math.round((done/6)*100)));
+  progress.style.width=pct+'%';
+}
+form.addEventListener('change',updateProgress);
+form.addEventListener('input',updateProgress);
+
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!form.checkValidity()){
+    form.reportValidity();
+    return;
+  }
+  form.style.display='none';
+  success.classList.add('show');
+  success.scrollIntoView({behavior:'smooth',block:'center'});
+});
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  el.style.transitionDelay=((i%5)*50)+'ms';
+  io.observe(el);
+});
+</script>
+</body>
+</html>

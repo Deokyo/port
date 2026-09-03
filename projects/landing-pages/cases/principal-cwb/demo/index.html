@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<title>Soluções Empresariais | Locatelli Group</title>
+<meta content="Soluções empresariais da Locatelli Group para BPO, Auditoria, Staff Loan, Administração e Representação Legal, Serviços Paralegais, Tecnologia, TI e projetos especializados." name="description">
+<meta content="noindex,nofollow" name="robots">
+<meta content="website" property="og:type">
+<meta content="Soluções Empresariais | Locatelli Group" property="og:title">
+<meta content="Conhecimento técnico, tecnologia e profissionais experientes para apoiar diferentes desafios da sua operação." property="og:description">
+<meta content="summary_large_image" name="twitter:card">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Khand:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+    :root{
+      --navy:#0C1F33;
+      --navy-deep:#081420;
+      --navy-soft:#10283f;
+      --navy-panel:#122b43;
+      --orange:#ff5900;
+      --white:#fff;
+      --gray:#E7E7E7;
+      --graphite:#2A2E34;
+      --mid:#9fa9b6;
+      --ink:#edf2f6;
+      --line:rgba(255,255,255,.11);
+      --shadow:0 28px 80px rgba(0,0,0,.26);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    html,body{
+      width:100%!important;
+      max-width:none!important;
+      margin:0!important;
+      padding:0!important;
+      overflow-x:hidden!important;
+      background:var(--navy-deep)!important;
+    }
+    body{
+      font-family:Inter,Arial,sans-serif;
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    #rd-layout-body,
+    #rd-layout-body>.rd-section,
+    #rd-layout-body>.rd-section>.rd-row,
+    #rd-layout-body>.rd-section>.rd-row>.rd-column,
+    .bricks--section,.bricks--row,.bricks--column,.bricks--component{
+      margin-left:0!important;
+      margin-right:0!important;
+      padding-left:0!important;
+      padding-right:0!important;
+      max-width:none!important;
+    }
+
+    #locatelli-generalista{
+      position:relative!important;
+      left:50%!important;
+      width:100vw!important;
+      max-width:100vw!important;
+      margin-left:-50vw!important;
+      margin-right:-50vw!important;
+      overflow:hidden;
+      background:var(--navy-deep);
+    }
+
+    #locatelli-generalista *{box-sizing:border-box}
+    a{color:inherit}
+    .wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+    .display{font-family:Khand,Arial,sans-serif;letter-spacing:.005em}
+    .eyebrow{
+      display:flex;align-items:center;gap:10px;margin:0 0 14px;
+      color:var(--orange);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase
+    }
+    .eyebrow:before{content:"";width:24px;height:2px;background:var(--orange)}
+    .section-head{max-width:760px;margin-bottom:44px}
+    .section-head h2{margin:0;font:600 clamp(34px,4vw,52px)/1 Khand,Arial,sans-serif;color:#fff}
+    .section-head p{margin:16px 0 0;color:rgba(255,255,255,.62);font-size:16px;line-height:1.7}
+
+    .header{
+      position:sticky;top:0;z-index:90;background:rgba(8,20,32,.92);
+      backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)
+    }
+    .nav{
+      min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px
+    }
+    .brand{display:inline-flex;align-items:center;text-decoration:none}
+    .brand img{display:block;width:170px;height:auto}
+    .nav-cta{
+      display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;color:#fff;text-decoration:none;font-size:13px;font-weight:700;transition:.3s ease
+    }
+    .nav-cta span{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--orange)}
+    .nav-cta:hover{border-color:var(--orange);transform:translateY(-1px);box-shadow:0 10px 30px rgba(255,89,0,.18)}
+
+    .hero{
+      position:relative;min-height:720px;display:flex;align-items:center;overflow:hidden;
+      background:
+        radial-gradient(900px 520px at 82% 22%,rgba(255,89,0,.18),transparent 60%),
+        linear-gradient(180deg,var(--navy) 0%,var(--navy-deep) 100%);
+      color:#fff
+    }
+    .hero:before{
+      content:"";position:absolute;inset:0;pointer-events:none;opacity:.38;
+      background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+                       linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+      background-size:56px 56px;
+      mask-image:linear-gradient(to bottom,#000,transparent 88%)
+    }
+    .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;padding:96px 0}
+    .hero h1{margin:0;font:600 clamp(44px,5.8vw,76px)/.98 Khand,Arial,sans-serif;max-width:850px}
+    .hero h1 .accent{color:var(--orange)}
+    .hero-copy{margin:24px 0 0;max-width:650px;color:rgba(255,255,255,.76);font-size:18px;line-height:1.72}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:32px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:13px 22px;
+      border-radius:12px;text-decoration:none;font-weight:700;font-size:14px;transition:.3s ease
+    }
+    .btn-primary{background:var(--orange);color:#fff;box-shadow:0 16px 34px rgba(255,89,0,.24)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 40px rgba(255,89,0,.33)}
+    .btn-secondary{border:1px solid rgba(255,255,255,.15);color:#fff;background:rgba(255,255,255,.04)}
+    .btn-secondary:hover{border-color:rgba(255,255,255,.34);transform:translateY(-2px)}
+
+    .hub{
+      position:relative;width:min(520px,100%);aspect-ratio:1/1;margin:auto;isolation:isolate
+    }
+    .hub-glow{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle,rgba(255,89,0,.18),transparent 68%);filter:blur(12px);animation:pulseGlow 3s ease-in-out infinite}
+    .hub-ring{position:absolute;inset:11%;border:1px solid rgba(255,255,255,.16);border-radius:50%;animation:spin 24s linear infinite}
+    .hub-ring.r2{inset:24%;animation-direction:reverse;animation-duration:18s;border-style:dashed}
+
+    .orbit-dot{
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      animation:orbitSpin 10s linear infinite;
+    }
+    .orbit-dot.reverse{
+      animation-direction:reverse;
+      animation-duration:7.5s;
+    }
+    .orbit-dot::before{
+      content:"";
+      position:absolute;
+      left:50%;
+      top:11%;
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:var(--orange);
+      box-shadow:0 0 22px rgba(255,89,0,.85);
+      transform:translate(-50%,-50%);
+    }
+    .orbit-dot.inner::before{
+      top:24%;
+    }
+    @keyframes orbitSpin{
+      to{transform:rotate(360deg)}
+    }
+
+    
+    .hub-core{
+      position:absolute;inset:34%;display:grid;place-items:center;text-align:center;border-radius:24px;
+      background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 70px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);transform:rotate(45deg)
+    }
+    .hub-core-inner{transform:rotate(-45deg)}
+    .hub-core strong{display:block;font:600 30px/1 Khand;color:#fff}
+    .hub-core span{display:block;margin-top:6px;color:rgba(255,255,255,.55);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    .node{
+      position:absolute;display:flex;align-items:center;gap:9px;padding:10px 13px;border:1px solid rgba(255,255,255,.14);
+      border-radius:12px;background:rgba(8,20,32,.76);backdrop-filter:blur(8px);color:#fff;font-size:12px;font-weight:700;
+      box-shadow:0 12px 34px rgba(0,0,0,.22);animation:float 4s ease-in-out infinite
+    }
+    .node:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px rgba(255,89,0,.75)}
+    .n1{left:2%;top:18%}.n2{right:0;top:16%;animation-delay:.5s}.n3{right:1%;bottom:20%;animation-delay:1s}
+    .n4{left:4%;bottom:17%;animation-delay:1.5s}.n5{left:38%;top:1%;animation-delay:.8s}.n6{left:36%;bottom:0;animation-delay:1.3s}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes pulseGlow{50%{transform:scale(1.08);opacity:.72}}
+    @keyframes float{50%{transform:translateY(-8px)}}
+
+    .context{padding:96px 0;background:linear-gradient(180deg,#0c1f33 0%, #0f243a 100%)}
+    .context-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+    .context-copy{font-size:18px;line-height:1.8;color:rgba(255,255,255,.74)}
+    .context-copy p{margin:0 0 20px}
+    .context-stat{
+      position:relative;padding:30px;border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.03));border:1px solid var(--line);box-shadow:var(--shadow)
+    }
+    .context-stat:before{content:"";position:absolute;left:0;top:24px;bottom:24px;width:4px;background:var(--orange);border-radius:0 4px 4px 0}
+    .context-stat strong{font:600 36px/1.05 Khand;color:#fff}
+    .context-stat span{display:block;margin-top:10px;color:rgba(255,255,255,.62);line-height:1.6}
+
+    .solutions{padding:104px 0;background:linear-gradient(180deg,#0f243a 0%, #081420 100%)}
+    .solutions-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .solution-card{
+      position:relative;min-height:300px;padding:30px;border-radius:18px;overflow:hidden;
+      background:linear-gradient(145deg,#10283f,#081420);color:#fff;border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 24px 64px rgba(8,20,32,.22);transition:.4s cubic-bezier(.2,.8,.2,1)
+    }
+    .solution-card:before{
+      content:"";position:absolute;inset:auto -20% -55% 35%;height:80%;transform:rotate(-12deg);
+      background:radial-gradient(circle,rgba(255,89,0,.22),transparent 64%);transition:.5s ease
+    }
+    .solution-card:hover{transform:translateY(-7px);border-color:rgba(255,89,0,.42);box-shadow:0 32px 70px rgba(8,20,32,.3)}
+    .solution-card:hover:before{transform:rotate(-3deg) scale(1.12)}
+    .solution-k{position:relative;z-index:2;color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    .solution-card h3{position:relative;z-index:2;margin:14px 0 12px;font:600 32px/1 Khand;color:#fff}
+    .solution-card p{position:relative;z-index:2;margin:0;color:rgba(255,255,255,.72);font-size:14.5px;line-height:1.65;max-width:54ch}
+    .solution-footer{position:absolute;z-index:2;left:30px;right:30px;bottom:26px;display:flex;align-items:flex-end;justify-content:space-between;gap:18px}
+    .solution-link{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:700;font-size:13px}
+    .solution-link .arr{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--orange)}
+    .sub-links{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}
+    .sub-links a{font-size:11px;text-decoration:none;color:rgba(255,255,255,.68);padding:6px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.1)}
+    .sub-links a:hover{color:#fff;border-color:rgba(255,255,255,.25)}
+    .solution-card.light{
+      background:linear-gradient(145deg,#17344f,#10283f);color:#fff;border-color:rgba(255,255,255,.08)
+    }
+    .solution-card.light h3{color:#fff}
+    .solution-card.light p{color:rgba(255,255,255,.72)}
+    .solution-card.light .solution-link{color:#fff}
+    .solution-card.light .sub-links a{color:rgba(255,255,255,.68);border-color:rgba(255,255,255,.1)}
+    .solution-card.light:before{background:radial-gradient(circle,rgba(255,89,0,.15),transparent 64%)}
+
+    .orientation{padding:78px 0;background:var(--orange);color:#fff}
+    .orientation-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:42px;align-items:center}
+    .orientation h2{margin:0;font:600 clamp(34px,4vw,50px)/1 Khand}
+    .orientation p{margin:14px 0 0;max-width:700px;line-height:1.7;color:rgba(255,255,255,.9)}
+    .orientation .btn{justify-self:end;background:#fff;color:var(--navy)}
+
+    .why{padding:104px 0;background:var(--navy-deep);color:#fff}
+    .why-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .why-card{
+      position:relative;padding:26px 22px 24px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.04);
+      min-height:210px;overflow:hidden;transition:.35s ease
+    }
+    .why-card:after{content:"";position:absolute;left:0;right:100%;bottom:0;height:3px;background:var(--orange);transition:.35s ease}
+    .why-card:hover{transform:translateY(-5px);background:rgba(255,255,255,.06);border-color:rgba(255,89,0,.32)}
+    .why-card:hover:after{right:0}
+    .why-num{color:var(--orange);font:600 18px/1 Khand}
+    .why-card h3{margin:24px 0 10px;font:600 24px/1.08 Khand}
+    .why-card p{margin:0;color:rgba(255,255,255,.62);font-size:14px;line-height:1.6}
+
+    .form-section{padding:104px 0;background:linear-gradient(180deg,#081420 0%,#0f243a 100%)}
+    .form-shell{display:grid;grid-template-columns:.88fr 1.12fr;gap:52px;padding:48px;border-radius:22px;background:linear-gradient(145deg,#10283f,#0c1f33);border:1px solid var(--line);box-shadow:var(--shadow)}
+    .form-copy h2{margin:0;font:600 clamp(34px,4vw,50px)/1 Khand;color:#fff}
+    .form-copy>p{color:rgba(255,255,255,.68);line-height:1.7}
+    .form-list{margin:28px 0 0;padding:0;list-style:none}
+    .form-list li{padding:11px 0;border-top:1px solid rgba(255,255,255,.09);font-size:13px;color:rgba(255,255,255,.6)}
+    .form-list li:last-child{border-bottom:1px solid rgba(255,255,255,.09)}
+    .form-mount{min-height:420px;border-radius:16px;background:rgba(255,255,255,.03);border:1px dashed rgba(255,255,255,.16)}
+    .form-mount>div{width:100%;max-width:100%}
+
+    .faq{padding:104px 0;background:linear-gradient(180deg,#10283f 0%,#081420 100%)}
+    .faq-list{display:grid;gap:12px;max-width:920px}
+    details{border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.04);overflow:hidden;transition:.25s ease}
+    details[open]{box-shadow:0 18px 46px rgba(0,0,0,.14);border-color:rgba(255,89,0,.25)}
+    summary{cursor:pointer;list-style:none;padding:20px 22px;font-weight:700;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font:600 24px/1 Khand;color:var(--orange)}
+    details[open] summary:after{content:"–"}
+    details p{margin:0;padding:0 22px 22px;color:rgba(255,255,255,.66);line-height:1.7;font-size:14.5px}
+
+    .final{padding:84px 0;background:linear-gradient(135deg,var(--graphite),var(--navy));color:#fff}
+    .final-inner{display:flex;align-items:center;justify-content:space-between;gap:36px}
+    .final h2{margin:0;font:600 clamp(34px,4vw,52px)/1 Khand;max-width:720px}
+    .final p{margin:12px 0 0;color:rgba(255,255,255,.65)}
+    .final .btn{background:#fff;color:var(--navy);white-space:nowrap}
+
+    footer{padding:30px 0 24px;background:#06111b;color:#fff}
+    .footer-top{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .footer-brands{display:flex;align-items:center;gap:18px;min-width:0}
+    .footer-locatelli img{width:185px;height:auto;display:block}
+    .footer-divider{width:1px;height:42px;background:rgba(255,255,255,.17)}
+    .footer-prime img{display:block;height:42px;width:auto;max-width:220px}
+    .social{display:flex;gap:10px}
+    .social a{
+      display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.08);transition:.25s ease
+    }
+    .social a:hover{background:var(--orange);transform:translateY(-2px)}
+    .social svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .copyright{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.48);font-size:12px}
+
+    [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    [data-reveal].show{opacity:1;transform:none}
+    .stagger>*{transition-delay:calc(var(--i,0)*90ms)}
+
+    @media(max-width:980px){
+      .hero-grid,.context-grid,.orientation-grid,.form-shell{grid-template-columns:1fr}
+      .orientation .btn{justify-self:start}
+      .why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .hero{min-height:auto}
+    }
+    @media(max-width:720px){
+      .wrap{width:min(100% - 32px,1180px)}
+      .brand img{width:148px}
+      .nav-cta{padding:10px 13px;font-size:12px}
+      .hero-grid{padding:70px 0 76px;gap:48px}
+      .hero h1{font-size:clamp(40px,13vw,58px)}
+      .hub{max-width:430px}
+      .node{font-size:10px;padding:8px 10px}
+      .solutions-grid,.why-grid{grid-template-columns:1fr}
+      .solution-card{min-height:340px}
+      .solution-footer{align-items:flex-start;flex-direction:column}
+      .sub-links{justify-content:flex-start}
+      .form-shell{padding:28px 20px}
+      .final-inner{align-items:flex-start;flex-direction:column}
+      .footer-top{align-items:flex-start;flex-direction:column}
+      .footer-locatelli img{width:160px}
+      .footer-prime img{height:38px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*:before,*:after{animation:none!important;transition:none!important}
+      [data-reveal]{opacity:1!important;transform:none!important}
+    }
+  </style>
+<style>
+/* === FORMULÁRIO RD STATION — LP PRINCIPAL GERAL === */
+.rd-generalista-form-mount{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+}
+.rd-generalista-form-mount > div{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+}
+.rd-generalista-form-mount form,
+.rd-generalista-form-mount input,
+.rd-generalista-form-mount select,
+.rd-generalista-form-mount textarea,
+.rd-generalista-form-mount button{
+  max-width:100%;
+}
+</style><link href="https://contato.locatelligroup.com.br/principal-cwb" rel="canonical"><meta content="https://contato.locatelligroup.com.br/principal-cwb" property="og:url"><style data-portfolio-demo="true">
+.portfolio-demo-banner{position:relative;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:8px max(16px,calc((100% - 1180px)/2));background:#fff;color:#081420;font:700 12px/1.35 Arial,sans-serif;border-bottom:3px solid #ff5900}
+.portfolio-demo-banner a,.portfolio-demo-banner a:visited{display:inline-flex;align-items:center;min-height:32px;color:#081420!important;text-decoration:underline;text-underline-offset:3px}
+.portfolio-form-notice{min-height:260px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px;padding:30px;border:1px solid rgba(255,255,255,.18);background:#10283f;color:#fff;font-family:Arial,sans-serif}
+.portfolio-form-notice strong{font-size:21px}.portfolio-form-notice p{margin:0;color:rgba(255,255,255,.78);line-height:1.6}
+@media(max-width:620px){.portfolio-demo-banner{align-items:flex-start;flex-direction:column;padding:10px 16px;gap:2px}.portfolio-form-notice{min-height:220px;padding:22px}}
+</style></head>
+<body>
+<div class="portfolio-demo-banner" role="note"><span>Cópia sanitizada de página de produção</span><a href="../index.html">Voltar ao case</a></div><div id="locatelli-generalista">
+<header class="header">
+<div class="wrap nav">
+<a aria-label="Locatelli Group" class="brand" href="#inicio">
+<img alt="Locatelli Group" src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1777903914/$no173dxvm6">
+</a>
+<a class="nav-cta" href="#form">
+        Falar com um especialista <span>→</span>
+</a>
+</div>
+</header>
+<main id="inicio">
+<section aria-labelledby="hero-title" class="hero">
+<div class="wrap hero-grid">
+<div>
+<p class="eyebrow" data-reveal="">Locatelli Group · Soluções Empresariais</p>
+<h1 data-reveal="" id="hero-title">Soluções especializadas para tornar sua operação mais <span class="accent">eficiente, estruturada e preparada para crescer</span></h1>
+<p class="hero-copy" data-reveal="">Da terceirização de processos empresariais a projetos especializados, a Locatelli Group reúne conhecimento técnico, tecnologia e profissionais experientes para apoiar diferentes desafios da sua operação.</p>
+<div class="hero-actions" data-reveal="">
+<a class="btn btn-primary" href="#solucoes">Encontre a solução ideal →</a>
+<a class="btn btn-secondary" href="#form">Falar com um especialista</a>
+</div>
+</div>
+<div aria-label="Ecossistema de soluções Locatelli Group" class="hub" data-reveal="">
+<div class="hub-glow"></div>
+<div class="hub-ring"></div>
+<div class="hub-ring r2"></div>
+<div class="orbit-dot"></div>
+<div class="orbit-dot reverse inner"></div>
+<div class="hub-core"><div class="hub-core-inner"><strong>Locatelli</strong><span>soluções integradas</span></div></div>
+<div class="node n1">BPO</div>
+<div class="node n2">Auditoria</div>
+<div class="node n3">Tecnologia &amp; TI</div>
+<div class="node n4">Paralegal</div>
+<div class="node n5">Staff Loan</div>
+<div class="node n6">Consultoria</div>
+</div>
+</div>
+</section>
+<section class="context">
+<div class="wrap context-grid">
+<div class="section-head" data-reveal="">
+<p class="eyebrow">Contexto</p>
+<h2>Diferentes desafios exigem diferentes formas de apoio</h2>
+</div>
+<div>
+<div class="context-copy" data-reveal="">
+<p>Crescimento, aumento da complexidade operacional, novas exigências, necessidade de especialistas ou projetos pontuais podem pressionar a estrutura interna de uma empresa.</p>
+<p>A Locatelli atua em diferentes frentes para que cada organização possa encontrar o modelo de apoio mais adequado ao seu momento e à sua necessidade.</p>
+</div>
+<div class="context-stat" data-reveal="">
+<strong>especialização · eficiência · confiança</strong>
+<span>Um ecossistema de soluções para apoiar operações recorrentes, demandas específicas e projetos especializados.</span>
+</div>
+</div>
+</div>
+</section>
+<section class="solutions" id="solucoes">
+<div class="wrap">
+<div class="section-head" data-reveal="">
+<p class="eyebrow">Soluções</p>
+<h2>Soluções para diferentes necessidades da sua empresa</h2>
+</div>
+<div class="solutions-grid stagger">
+<article class="solution-card" data-reveal="" style="--i:0">
+<span class="solution-k">Estrutura recorrente</span>
+<h3>BPO</h3>
+<p>Terceirização de processos contábeis, fiscais, financeiros e de folha, além de Staff Loan para reforçar a estrutura com profissionais especializados.</p>
+<div class="solution-footer">
+<a class="solution-link" href="https://contato.locatelligroup.com.br/bpo"><span class="arr">→</span>Conhecer soluções de BPO</a>
+<div class="sub-links">
+<a href="https://contato.locatelligroup.com.br/locatelli-lp-principal-gestao-contabil">Gestão Contábil</a>
+<a href="https://contato.locatelligroup.com.br/locatelli-lp-principal-contas-a-receber">Contas a Receber</a>
+<a href="https://contato.locatelligroup.com.br/bpo-folha-de-pagamento">Folha</a>
+</div>
+</div>
+</article>
+<article class="solution-card light" data-reveal="" style="--i:1">
+<span class="solution-k">Governança &amp; confiança</span>
+<h3>Auditoria</h3>
+<p>Serviços especializados para apoiar controles, informações, conformidade, gestão de riscos e governança.</p>
+<div class="solution-footer">
+<a class="solution-link" href="https://contato.locatelligroup.com.br/locatelli-lp-auditoria"><span class="arr">→</span>Conhecer soluções de Auditoria</a>
+</div>
+</article>
+<article class="solution-card light" data-reveal="" style="--i:2">
+<span class="solution-k">Estrutura societária</span>
+<h3>Administração e Representação Legal</h3>
+<p>Apoio especializado para demandas de administração e representação legal da empresa.</p>
+<div class="solution-footer">
+<a class="solution-link" href="#form"><span class="arr">→</span>Falar com um especialista</a>
+</div>
+</article>
+<article class="solution-card" data-reveal="" style="--i:3">
+<span class="solution-k">Societário</span>
+<h3>Serviços Paralegais</h3>
+<p>Apoio a demandas societárias, como abertura de empresa, alterações contratuais e atualizações de endereço.</p>
+<div class="solution-footer">
+<a class="solution-link" href="#form"><span class="arr">→</span>Falar com um especialista</a>
+</div>
+</article>
+<article class="solution-card" data-reveal="" style="--i:4">
+<span class="solution-k">Projetos especializados</span>
+<h3>Projetos de Tecnologia e TI</h3>
+<p>Apoio a projetos pontuais de tecnologia, incluindo demandas relacionadas a desenvolvimento e software.</p>
+<div class="solution-footer">
+<a class="solution-link" href="#form"><span class="arr">→</span>Falar com um especialista</a>
+</div>
+</article>
+<article class="solution-card light" data-reveal="" style="--i:5">
+<span class="solution-k">Demanda específica</span>
+<h3>Trabalhos Pontuais e Consultoria Operacional</h3>
+<p>Apoio especializado para demandas pontuais e projetos que exigem conhecimento técnico ou reforço operacional.</p>
+<div class="solution-footer">
+<a class="solution-link" href="#form"><span class="arr">→</span>Falar com um especialista</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="orientation">
+<div class="wrap orientation-grid" data-reveal="">
+<div>
+<h2>Não sabe qual solução se encaixa melhor na sua necessidade?</h2>
+<p>Conte para nós o que sua empresa precisa. Nossa equipe avalia o cenário e direciona sua solicitação para a área mais adequada.</p>
+</div>
+<a class="btn" href="#form">Falar com um especialista →</a>
+</div>
+</section>
+<section class="why">
+<div class="wrap">
+<div class="section-head" data-reveal="">
+<p class="eyebrow">Por que Locatelli</p>
+<h2>Especialistas para apoiar diferentes desafios da sua operação</h2>
+</div>
+<div class="why-grid stagger">
+<article class="why-card" data-reveal="" style="--i:0"><div class="why-num">01</div><h3>Conhecimento especializado</h3><p>Equipes preparadas para atuar em diferentes áreas da operação.</p></article>
+<article class="why-card" data-reveal="" style="--i:1"><div class="why-num">02</div><h3>Soluções adequadas ao contexto</h3><p>Desde operações recorrentes até demandas e projetos específicos.</p></article>
+<article class="why-card" data-reveal="" style="--i:2"><div class="why-num">03</div><h3>Eficiência operacional</h3><p>Processos, tecnologia e especialistas para apoiar estruturas mais eficientes.</p></article>
+<article class="why-card" data-reveal="" style="--i:3"><div class="why-num">04</div><h3>Visão integrada</h3><p>Possibilidade de combinar diferentes frentes conforme as necessidades da empresa.</p></article>
+</div>
+</div>
+</section>
+<section class="form-section" id="form">
+<div class="wrap">
+<div class="form-shell" data-reveal="">
+<div class="form-copy">
+<p class="eyebrow">Converse com um especialista</p>
+<h2>Converse com um especialista da Locatelli Group</h2>
+<p>Preencha seus dados e conte qual tipo de apoio sua empresa está buscando.</p>
+<ul class="form-list">
+<li>BPO · Staff Loan · Auditoria · Administração · Paralegal</li>
+<li>Tecnologia / TI · Consultoria Operacional · Mais de uma solução</li>
+</ul>
+</div>
+<div aria-label="Área destinada ao formulário RD Station" class="form-mount"><div class="rd-generalista-form-mount"><div id="portfolio-form-principal-cwb" role="note" class="portfolio-form-notice"><strong>Integração removida</strong><p>Esta cópia de portfólio não carrega formulário, tracking ou identificadores de produção.</p></div></div></div>
+</div>
+</div>
+</section>
+<section class="faq">
+<div class="wrap">
+<div class="section-head" data-reveal="">
+<p class="eyebrow">FAQ</p>
+<h2>Perguntas frequentes</h2>
+</div>
+<div class="faq-list" data-reveal="">
+<details><summary>O que é a Locatelli Group?</summary><p>A Locatelli Group oferece soluções empresariais e serviços especializados para apoiar diferentes áreas e desafios da operação de seus clientes.</p></details>
+<details><summary>Quais tipos de soluções a Locatelli oferece?</summary><p>A Locatelli atua com BPO, Auditoria, Staff Loan, Administração e Representação Legal, Serviços Paralegais, Projetos de Tecnologia e TI e Trabalhos Pontuais ou Consultoria Operacional.</p></details>
+<details><summary>É possível contratar mais de uma solução?</summary><p>Sim. A necessidade pode envolver mais de uma frente, e a equipe pode avaliar o cenário para direcionar a empresa às soluções mais adequadas.</p></details>
+<details><summary>A Locatelli atende projetos pontuais?</summary><p>Sim. Além de operações recorrentes, a Locatelli atua em trabalhos pontuais e projetos especializados conforme a necessidade da empresa.</p></details>
+<details><summary>Como saber qual serviço é mais adequado para minha empresa?</summary><p>Preencha o formulário e informe sua principal necessidade. A equipe da Locatelli poderá direcionar a solicitação para a área mais adequada.</p></details>
+</div>
+</div>
+</section>
+<section class="final">
+<div class="wrap final-inner" data-reveal="">
+<div>
+<h2>Encontre o apoio certo para o próximo desafio da sua empresa</h2>
+<p>Converse com um especialista da Locatelli Group.</p>
+</div>
+<a class="btn" href="#form">Falar com um especialista →</a>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-brands">
+<a aria-label="Locatelli Group" class="footer-locatelli" href="https://locatelligroup.com.br" rel="noopener noreferrer" target="_blank">
+<img alt="Locatelli Group" src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1777903914/$no173dxvm6">
+</a>
+<span aria-hidden="true" class="footer-divider"></span>
+<a aria-label="PrimeGlobal" class="footer-prime" href="https://www.primeglobal.net/" rel="noopener noreferrer" target="_blank">
+<img alt="PrimeGlobal" src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1786467915/$satd5jeaibd">
+</a>
+</div>
+<div aria-label="Redes sociais" class="social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/locatelli-group/" rel="noopener noreferrer" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+</a>
+<a aria-label="Instagram" href="https://www.instagram.com/locatelli_group/" rel="noopener noreferrer" target="_blank">
+<svg viewbox="0 0 24 24"><rect height="20" rx="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+</a>
+<a aria-label="Facebook" href="https://www.facebook.com/people/Locatelli-Group/61581305894236/" rel="noopener noreferrer" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+</a>
+<a aria-label="Site da Locatelli Group" href="https://locatelligroup.com.br" rel="noopener noreferrer" target="_blank">
+<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg>
+</a>
+</div>
+</div>
+<div class="copyright">© Locatelli Brasil 2026. Todos os direitos reservados.</div>
+</div>
+</footer>
+</div>
+<script>
+(function(){
+  var items=[].slice.call(document.querySelectorAll('#locatelli-generalista [data-reveal]'));
+  if(!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('show')});return;
+  }
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+        obs.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  items.forEach(function(el){obs.observe(el)});
+  setTimeout(function(){items.forEach(function(el){el.classList.add('show')})},2600);
+})();
+</script>
+</body>
+</html>

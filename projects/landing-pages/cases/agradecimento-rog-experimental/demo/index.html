@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Agradecimento ROG-e PT/EN - experimento</title>
+<style data-portfolio-demo="true">
+.portfolio-demo-banner{position:relative;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:8px max(16px,calc((100% - 1180px)/2));background:#fff;color:#081420;font:700 12px/1.35 Arial,sans-serif;border-bottom:3px solid #ff5900}
+.portfolio-demo-banner a,.portfolio-demo-banner a:visited{display:inline-flex;align-items:center;min-height:32px;color:#081420!important;text-decoration:underline;text-underline-offset:3px}
+.portfolio-form-notice{min-height:260px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px;padding:30px;border:1px solid rgba(255,255,255,.18);background:#10283f;color:#fff;font-family:Arial,sans-serif}
+.portfolio-form-notice strong{font-size:21px}.portfolio-form-notice p{margin:0;color:rgba(255,255,255,.78);line-height:1.6}
+@media(max-width:620px){.portfolio-demo-banner{align-items:flex-start;flex-direction:column;padding:10px 16px;gap:2px}.portfolio-form-notice{min-height:220px;padding:22px}}
+</style>
+</head>
+<body>
+<div class="portfolio-demo-banner" role="note"><span>Experimento não validado em produção</span><a href="../index.html">Voltar ao case</a></div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Khand:wght@500;600;700&display=swap');
+
+#locatelli-rog-thanks{
+  --lgrt-navy:#0C1F33;
+  --lgrt-deep:#081420;
+  --lgrt-orange:#ff5900;
+  --lgrt-white:#ffffff;
+  --lgrt-muted:rgba(255,255,255,.66);
+  --lgrt-line:rgba(255,255,255,.10);
+
+  position:relative;
+  left:50%;
+  width:100vw;
+  max-width:100vw;
+  margin-left:-50vw;
+  margin-right:-50vw;
+  overflow:hidden;
+
+  background:var(--lgrt-deep);
+  color:var(--lgrt-white);
+  font-family:Inter,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+#locatelli-rog-thanks,
+#locatelli-rog-thanks *{
+  box-sizing:border-box;
+}
+
+#locatelli-rog-thanks a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#locatelli-rog-thanks .lgrt-wrap{
+  width:min(calc(100% - 64px),1180px);
+  margin-inline:auto;
+}
+
+/* HEADER — mesma arquitetura do seletor usado na ROG-e */
+#locatelli-rog-thanks .lgrt-header{
+  position:relative;
+  z-index:60;
+  border-bottom:1px solid rgba(255,89,0,.22);
+  background:rgba(8,20,32,.92);
+  backdrop-filter:blur(14px);
+}
+
+#locatelli-rog-thanks .lgrt-nav{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  min-width:0 !important;
+  min-height:78px !important;
+  max-width:1180px !important;
+  margin-inline:auto !important;
+  padding:8px 32px !important;
+}
+
+#locatelli-rog-thanks .lgrt-logo{
+  display:inline-flex !important;
+  flex:0 0 auto !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  margin:0 !important;
+  padding:0 !important;
+  line-height:0 !important;
+}
+
+#locatelli-rog-thanks .lgrt-logo img{
+  display:block !important;
+  width:170px !important;
+  max-width:170px !important;
+  height:auto !important;
+  margin:0 !important;
+  transform:none !important;
+}
+
+#locatelli-rog-thanks .lglp-nav-right{
+  display:flex !important;
+  min-width:0 !important;
+  flex:0 0 auto !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  gap:14px !important;
+  margin-left:18px !important;
+}
+
+/* Cópia direta do padrão visual funcional PT/EN da ROG-e */
+#locatelli-rog-thanks .lglp-language{
+  display:inline-flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  flex:0 0 auto !important;
+  gap:2px !important;
+  width:auto !important;
+  height:auto !important;
+  margin:0 !important;
+  padding:3px !important;
+  border:1px solid rgba(255,255,255,.18) !important;
+  border-radius:999px !important;
+  background:rgba(255,255,255,.05) !important;
+}
+
+#locatelli-rog-thanks .lglp-language button{
+  display:inline-flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-width:32px !important;
+  width:auto !important;
+  height:28px !important;
+  margin:0 !important;
+  padding:0 8px !important;
+  border:0 !important;
+  border-radius:999px !important;
+  background:transparent !important;
+  color:rgba(255,255,255,.70) !important;
+  font:700 11px/1 Inter,Arial,sans-serif !important;
+  letter-spacing:.06em !important;
+  text-decoration:none !important;
+  cursor:pointer !important;
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  box-shadow:none !important;
+}
+
+#locatelli-rog-thanks .lglp-language button[aria-pressed="true"]{
+  background:var(--lgrt-orange) !important;
+  color:var(--lgrt-white) !important;
+}
+
+#locatelli-rog-thanks .lglp-language button:focus-visible{
+  outline:2px solid var(--lgrt-orange) !important;
+  outline-offset:2px !important;
+}
+
+/* HERO */
+#locatelli-rog-thanks .lgrt-hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 78% 18%,rgba(255,89,0,.15),transparent 30rem),
+    linear-gradient(145deg,var(--lgrt-navy),var(--lgrt-deep));
+}
+
+#locatelli-rog-thanks .lgrt-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:58px 58px;
+  -webkit-mask-image:linear-gradient(#000,transparent 88%);
+  mask-image:linear-gradient(#000,transparent 88%);
+  pointer-events:none;
+}
+
+#locatelli-rog-thanks .lgrt-hero-grid{
+  position:relative;
+  z-index:1;
+  min-height:calc(100vh - 78px - 150px);
+  padding:92px 0 88px;
+  display:grid;
+  gap:54px;
+  align-items:center;
+}
+
+#locatelli-rog-thanks .lgrt-eyebrow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--lgrt-orange);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+#locatelli-rog-thanks .lgrt-eyebrow::before{
+  content:"";
+  width:22px;
+  height:2px;
+  background:currentColor;
+}
+
+#locatelli-rog-thanks h1{
+  margin:16px 0 18px;
+  max-width:680px;
+  color:#fff;
+  font:600 clamp(3.2rem,7vw,5.8rem)/.96 Khand,"Arial Narrow",sans-serif;
+  letter-spacing:-.02em;
+}
+
+#locatelli-rog-thanks .lgrt-lead{
+  max-width:690px;
+  margin:0;
+  color:var(--lgrt-muted);
+  font-size:17px;
+  line-height:1.72;
+}
+
+#locatelli-rog-thanks .lgrt-support{
+  margin:20px 0 0;
+  color:rgba(255,255,255,.82);
+  font-size:14px;
+  font-weight:600;
+}
+
+#locatelli-rog-thanks .lgrt-btn,
+#locatelli-rog-thanks .lgrt-btn:link,
+#locatelli-rog-thanks .lgrt-btn:visited{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  margin-top:24px;
+  padding:14px 20px;
+  border-radius:999px;
+  background:var(--lgrt-orange);
+  color:#fff !important;
+  font-size:13px;
+  font-weight:800;
+  box-shadow:0 14px 30px rgba(255,89,0,.16);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+
+#locatelli-rog-thanks .lgrt-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 18px 36px rgba(255,89,0,.22);
+}
+
+/* CONFIRMAÇÃO */
+#locatelli-rog-thanks .lgrt-confirmation{
+  position:relative;
+  overflow:hidden;
+  min-height:330px;
+  padding:28px;
+  border:1px solid var(--lgrt-line);
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 82% 14%,rgba(255,89,0,.14),transparent 34%),
+    linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.026));
+  box-shadow:0 30px 70px rgba(0,0,0,.28);
+  display:grid;
+  place-items:center;
+  text-align:center;
+}
+
+#locatelli-rog-thanks .lgrt-confirmation-content{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:250px;
+}
+
+#locatelli-rog-thanks .lgrt-confirmation::before,
+#locatelli-rog-thanks .lgrt-confirmation::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+}
+
+#locatelli-rog-thanks .lgrt-confirmation::before{
+  width:190px;
+  height:190px;
+  left:50%;
+  top:44%;
+  transform:translate(-50%,-50%);
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 0 0 32px rgba(255,255,255,.018),0 0 0 64px rgba(255,255,255,.012);
+}
+
+#locatelli-rog-thanks .lgrt-confirmation::after{
+  width:120px;
+  height:120px;
+  left:50%;
+  top:44%;
+  transform:translate(-50%,-50%);
+  border:1px dashed rgba(255,89,0,.52);
+  animation:lgrt-spin 14s linear infinite;
+}
+
+#locatelli-rog-thanks .lgrt-check{
+  position:absolute;
+  z-index:3;
+  left:50%;
+  top:44%;
+  transform:translate(-50%,-50%);
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--lgrt-orange);
+  color:#fff;
+  font-size:28px;
+  font-weight:800;
+  box-shadow:0 0 28px rgba(255,89,0,.38);
+}
+
+#locatelli-rog-thanks .lgrt-confirmation strong{
+  position:relative;
+  z-index:2;
+  display:block;
+  margin-top:86px;
+  color:#fff;
+  font:600 34px/1 Khand,"Arial Narrow",sans-serif;
+}
+
+#locatelli-rog-thanks .lgrt-confirmation small{
+  position:relative;
+  z-index:2;
+  display:block;
+  margin-top:10px;
+  color:rgba(255,255,255,.46);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+/* FOOTER */
+#locatelli-rog-thanks .lgrt-footer{
+  padding:34px 0;
+  background:#061019;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+
+#locatelli-rog-thanks .lgrt-footer-inner{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:28px;
+}
+
+#locatelli-rog-thanks .lgrt-footer-brand{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  min-width:0;
+}
+
+#locatelli-rog-thanks .lgrt-footer-logo-locatelli{
+  display:block;
+  width:185px;
+  height:auto;
+}
+
+#locatelli-rog-thanks .lgrt-footer-prime{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  line-height:0;
+}
+
+#locatelli-rog-thanks .lgrt-footer-prime img{
+  display:block;
+  width:auto;
+  height:42px;
+  max-width:185px;
+  object-fit:contain;
+}
+
+#locatelli-rog-thanks .lgrt-footer-separator{
+  width:1px;
+  height:42px;
+  background:rgba(255,255,255,.12);
+}
+
+#locatelli-rog-thanks .lgrt-footer-right{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:10px;
+}
+
+#locatelli-rog-thanks .lgrt-socials{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+#locatelli-rog-thanks .lgrt-social,
+#locatelli-rog-thanks .lgrt-social:link,
+#locatelli-rog-thanks .lgrt-social:visited{
+  width:38px;
+  height:38px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+  background:rgba(255,255,255,.03);
+  color:rgba(255,255,255,.82) !important;
+  transition:.2s ease;
+}
+
+#locatelli-rog-thanks .lgrt-social:hover{
+  color:#fff !important;
+  border-color:rgba(255,89,0,.55);
+  transform:translateY(-2px);
+}
+
+#locatelli-rog-thanks .lgrt-social svg{
+  width:16px;
+  height:16px;
+  fill:currentColor;
+}
+
+#locatelli-rog-thanks .lgrt-social--site svg{
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.75;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+#locatelli-rog-thanks .lgrt-footer-copy{
+  margin:0;
+  color:rgba(255,255,255,.42);
+  font-size:11px;
+  line-height:1.5;
+  text-align:right;
+}
+
+@keyframes lgrt-spin{
+  to{transform:translate(-50%,-50%) rotate(360deg)}
+}
+
+@media(min-width:860px){
+  #locatelli-rog-thanks .lgrt-hero-grid{
+    grid-template-columns:1.08fr .72fr;
+    gap:74px;
+  }
+}
+
+@media(max-width:760px){
+  #locatelli-rog-thanks .lgrt-wrap{
+    width:min(calc(100% - 32px),1180px);
+  }
+
+  #locatelli-rog-thanks .lgrt-nav{
+    padding:8px 16px !important;
+  }
+
+  #locatelli-rog-thanks .lgrt-logo img{
+    width:148px !important;
+    max-width:148px !important;
+  }
+
+  #locatelli-rog-thanks .lglp-nav-right{
+    margin-left:12px !important;
+  }
+
+  #locatelli-rog-thanks .lglp-language{
+    padding:2px !important;
+  }
+
+  #locatelli-rog-thanks .lglp-language button{
+    min-width:28px !important;
+    height:26px !important;
+    padding-inline:6px !important;
+    font-size:10px !important;
+  }
+
+  #locatelli-rog-thanks .lgrt-hero-grid{
+    min-height:auto;
+    padding:72px 0;
+  }
+
+  #locatelli-rog-thanks .lgrt-confirmation{
+    min-height:290px;
+  }
+
+  #locatelli-rog-thanks .lgrt-footer-inner{
+    grid-template-columns:1fr;
+    justify-items:center;
+    text-align:center;
+  }
+
+  #locatelli-rog-thanks .lgrt-footer-brand{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  #locatelli-rog-thanks .lgrt-footer-logo-locatelli{
+    width:160px;
+  }
+
+  #locatelli-rog-thanks .lgrt-footer-prime img{
+    height:38px;
+    max-width:165px;
+  }
+
+  #locatelli-rog-thanks .lgrt-footer-right{
+    align-items:center;
+  }
+
+  #locatelli-rog-thanks .lgrt-footer-copy{
+    text-align:center;
+  }
+}
+
+@media(max-width:374px){
+  #locatelli-rog-thanks .lgrt-logo img{
+    width:130px !important;
+    max-width:130px !important;
+  }
+
+  #locatelli-rog-thanks .lglp-language button{
+    min-width:25px !important;
+    padding-inline:4px !important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  #locatelli-rog-thanks *,
+  #locatelli-rog-thanks *::before,
+  #locatelli-rog-thanks *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+  }
+}
+</style>
+
+<div id="locatelli-rog-thanks" lang="pt-BR">
+  <header class="lgrt-header">
+    <nav class="lgrt-nav" aria-label="Navegação principal" data-i18n-aria="nav.region">
+      <a class="lgrt-logo" href="https://locatelligroup.com.br" aria-label="Locatelli Group">
+        <img
+          src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1777903914/$no173dxvm6"
+          alt="Locatelli Group"
+          loading="eager"
+          decoding="async"
+        >
+      </a>
+
+      <div class="lglp-nav-right">
+        <div class="lglp-language" role="group" aria-label="Selecionar idioma" data-i18n-aria="lang.label">
+          <button type="button" data-lglp-lang="pt" aria-pressed="true" lang="pt-BR">PT</button>
+          <button type="button" data-lglp-lang="en" aria-pressed="false" lang="en">EN</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="lgrt-hero">
+      <div class="lgrt-wrap lgrt-hero-grid">
+        <div>
+          <div class="lgrt-eyebrow" data-i18n="hero.eyebrow">Solicitação recebida</div>
+          <h1 data-i18n="hero.title">Obrigado pelo contato</h1>
+          <p class="lgrt-lead" data-i18n-html="hero.lead">
+            Recebemos suas informações.<br><br>
+            Em breve, um especialista da Locatelli Group entrará em contato para entender melhor o cenário da sua empresa e conversar sobre a solução mais adequada para a sua necessidade.
+          </p>
+          <p class="lgrt-support" data-i18n="hero.support">Enquanto isso, você pode conhecer mais sobre a Locatelli Group.</p>
+          <a class="lgrt-btn" href="https://locatelligroup.com.br" data-i18n="hero.cta">Conhecer a Locatelli Group →</a>
+        </div>
+
+        <aside class="lgrt-confirmation" aria-label="Confirmação de envio" data-i18n-aria="confirmation.aria">
+          <div class="lgrt-check" aria-hidden="true">✓</div>
+          <div class="lgrt-confirmation-content">
+            <strong data-i18n="confirmation.title">Solicitação recebida</strong>
+            <small data-i18n="confirmation.meta">dados enviados · análise · contato</small>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lgrt-footer">
+    <div class="lgrt-wrap lgrt-footer-inner">
+      <div class="lgrt-footer-brand">
+        <img
+          class="lgrt-footer-logo-locatelli"
+          src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1777903914/$no173dxvm6"
+          alt="Locatelli Group"
+          loading="lazy"
+          decoding="async"
+        >
+        <span class="lgrt-footer-separator" aria-hidden="true"></span>
+        <a class="lgrt-footer-prime" href="https://www.primeglobal.net/" target="_blank" rel="noopener noreferrer" aria-label="PrimeGlobal - site oficial" data-i18n-aria="footer.prime">
+          <img
+            src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1786467915/$satd5jeaibd"
+            alt="PrimeGlobal"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+      </div>
+
+      <div class="lgrt-footer-right">
+        <div class="lgrt-socials" aria-label="Canais oficiais da Locatelli Group" data-i18n-aria="footer.socials">
+          <a class="lgrt-social" href="https://www.linkedin.com/company/locatelli-group/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Locatelli Group">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9h4v12H3V9Zm6.5 0h3.83v1.64h.05c.53-1.01 1.84-2.08 3.79-2.08 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.59c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95V21h-4V9Z"></path></svg>
+          </a>
+          <a class="lgrt-social" href="https://www.instagram.com/locatelli_group/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Locatelli Group">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path></svg>
+          </a>
+          <a class="lgrt-social" href="https://www.facebook.com/people/Locatelli-Group/61581305894236/" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Locatelli Group">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 22v-9h3l.45-3.5H13.5V7.25c0-1.01.28-1.7 1.73-1.7H17V2.4c-.31-.04-1.38-.13-2.62-.13-2.6 0-4.38 1.59-4.38 4.5V9.5H7v3.5h3v9h3.5Z"></path></svg>
+          </a>
+          <a class="lgrt-social lgrt-social--site" href="https://locatelligroup.com.br" target="_blank" rel="noopener noreferrer" aria-label="Site oficial da Locatelli Group">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="8.25"></circle>
+              <path d="M3.75 12h16.5"></path>
+              <path d="M12 3.75c2.1 2.15 3.15 4.9 3.15 8.25S14.1 18.1 12 20.25"></path>
+              <path d="M12 3.75C9.9 5.9 8.85 8.65 8.85 12S9.9 18.1 12 20.25"></path>
+            </svg>
+          </a>
+        </div>
+        <p class="lgrt-footer-copy" data-i18n="footer.copy">© Locatelli Brasil 2026. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var root = document.getElementById("locatelli-rog-thanks");
+  if(!root) return;
+
+  var copy = {
+    pt:{
+      "meta.title":"Obrigado pelo contato | Locatelli Group",
+      "nav.region":"Navegação principal",
+      "lang.label":"Selecionar idioma",
+      "hero.eyebrow":"Solicitação recebida",
+      "hero.title":"Obrigado pelo contato",
+      "hero.lead":"Recebemos suas informações.<br><br>Em breve, um especialista da Locatelli Group entrará em contato para entender melhor o cenário da sua empresa e conversar sobre a solução mais adequada para a sua necessidade.",
+      "hero.support":"Enquanto isso, você pode conhecer mais sobre a Locatelli Group.",
+      "hero.cta":"Conhecer a Locatelli Group →",
+      "confirmation.aria":"Confirmação de envio",
+      "confirmation.title":"Solicitação recebida",
+      "confirmation.meta":"dados enviados · análise · contato",
+      "footer.prime":"PrimeGlobal - site oficial",
+      "footer.socials":"Canais oficiais da Locatelli Group",
+      "footer.copy":"© Locatelli Brasil 2026. Todos os direitos reservados."
+    },
+    en:{
+      "meta.title":"Thank you for contacting us | Locatelli Group",
+      "nav.region":"Main navigation",
+      "lang.label":"Select language",
+      "hero.eyebrow":"Request received",
+      "hero.title":"Thank you for contacting us",
+      "hero.lead":"We have received your information.<br><br>A Locatelli Group specialist will contact you shortly to better understand your company’s context and discuss the solution that best fits your needs.",
+      "hero.support":"In the meantime, you can learn more about Locatelli Group.",
+      "hero.cta":"Learn more about Locatelli Group →",
+      "confirmation.aria":"Submission confirmation",
+      "confirmation.title":"Request received",
+      "confirmation.meta":"information sent · review · contact",
+      "footer.prime":"PrimeGlobal - official website",
+      "footer.socials":"Official Locatelli Group channels",
+      "footer.copy":"© Locatelli Brasil 2026. All rights reserved."
+    }
+  };
+
+  var currentLanguage = "pt";
+
+  function readStoredLanguage(){
+    try{
+      var stored = window.localStorage.getItem("lglp-language");
+      return stored === "en" || stored === "pt" ? stored : null;
+    }catch(error){
+      return null;
+    }
+  }
+
+  function requestedLanguage(){
+    try{
+      var queryLanguage = new URLSearchParams(window.location.search).get("lang");
+      if(queryLanguage === "en" || queryLanguage === "pt") return queryLanguage;
+    }catch(error){}
+    return readStoredLanguage() || "pt";
+  }
+
+  function translateElement(element, attribute, html){
+    var key = element.getAttribute(attribute);
+    var value = copy[currentLanguage] && copy[currentLanguage][key];
+    if(typeof value !== "string") return;
+
+    if(attribute === "data-i18n-aria"){
+      element.setAttribute("aria-label",value);
+    }else if(html){
+      element.innerHTML = value;
+    }else{
+      element.textContent = value;
+    }
+  }
+
+  function applyLanguage(language){
+    currentLanguage = language === "en" ? "en" : "pt";
+    var languageTag = currentLanguage === "en" ? "en" : "pt-BR";
+
+    root.setAttribute("lang",languageTag);
+    root.dataset.language = currentLanguage;
+
+    root.querySelectorAll("[data-i18n]").forEach(function(element){
+      translateElement(element,"data-i18n",false);
+    });
+
+    root.querySelectorAll("[data-i18n-html]").forEach(function(element){
+      translateElement(element,"data-i18n-html",true);
+    });
+
+    root.querySelectorAll("[data-i18n-aria]").forEach(function(element){
+      translateElement(element,"data-i18n-aria",false);
+    });
+
+    root.querySelectorAll("[data-lglp-lang]").forEach(function(button){
+      button.setAttribute(
+        "aria-pressed",
+        String(button.getAttribute("data-lglp-lang") === currentLanguage)
+      );
+    });
+
+    if(document.documentElement){
+      document.documentElement.lang = languageTag;
+    }
+
+    if(copy[currentLanguage] && copy[currentLanguage]["meta.title"]){
+      document.title = copy[currentLanguage]["meta.title"];
+    }
+
+    try{
+      window.localStorage.setItem("lglp-language",currentLanguage);
+    }catch(error){}
+  }
+
+  root.querySelectorAll("[data-lglp-lang]").forEach(function(button){
+    button.addEventListener("click",function(){
+      applyLanguage(button.getAttribute("data-lglp-lang"));
+    });
+  });
+
+  applyLanguage(requestedLanguage());
+})();
+</script>
+</body>
+</html>

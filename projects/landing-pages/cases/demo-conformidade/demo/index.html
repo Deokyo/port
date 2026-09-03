@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sua empresa está em conformidade? | Locatelli Group</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="LP demonstrativa da Locatelli Group para palestra sobre conformidade, riscos, controles e pontos de atenção para empresas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Khand:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0C1F33;--deep:#081420;--orange:#ff5900;--white:#fff;--muted:#9FA9B6;--line:rgba(255,255,255,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--deep);color:#fff;font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--orange);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.eyebrow:before{content:"";width:22px;height:2px;background:currentColor}
+h1,h2,h3{font-family:Khand,"Arial Narrow",sans-serif;margin-top:0}h1{font-size:clamp(3.5rem,7.5vw,6.8rem);line-height:.92;font-weight:600;letter-spacing:-.025em}h2{font-size:clamp(2.5rem,4.8vw,4.1rem);line-height:.98;font-weight:600}h3{font-size:28px;line-height:1.05}p{line-height:1.72}.muted{color:var(--muted)}
+.header{position:sticky;top:0;z-index:100;background:rgba(8,20,32,.90);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand img{width:170px;height:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 20px;border-radius:999px;font-size:13px;font-weight:800;transition:.25s ease}.btn-primary{background:var(--orange)!important;color:#fff!important;box-shadow:0 14px 32px rgba(255,89,0,.18)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(255,89,0,.26)}.btn-outline{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);color:#fff!important}.btn-outline:hover{border-color:rgba(255,89,0,.38);background:rgba(255,89,0,.07)}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 78% 22%,rgba(255,89,0,.14),transparent 28rem),linear-gradient(145deg,var(--navy),var(--deep))}
+.hero:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(#000,transparent 90%)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center;padding:96px 0 100px}.hero-copy{max-width:680px;color:rgba(255,255,255,.70);font-size:18px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.hero-note{margin-top:20px;color:rgba(255,255,255,.48);font-size:12px}
+.compliance-visual{position:relative;min-height:500px;border:1px solid rgba(255,255,255,.10);border-radius:26px;overflow:hidden;background:radial-gradient(circle at 65% 20%,rgba(255,89,0,.16),transparent 28%),linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.018));box-shadow:0 30px 90px rgba(0,0,0,.32)}
+.cv-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px}
+.cv-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:210px;height:210px;border-radius:50%;display:grid;place-items:center;text-align:center;border:1px solid rgba(255,255,255,.16);box-shadow:0 0 0 34px rgba(255,255,255,.018),0 0 0 68px rgba(255,255,255,.012)}
+.cv-core:before{content:"";position:absolute;inset:26px;border-radius:50%;border:1px dashed rgba(255,89,0,.58);animation:spin 14s linear infinite}.cv-check{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:var(--orange);font-size:31px;font-weight:800;box-shadow:0 0 34px rgba(255,89,0,.42)}.cv-core strong{position:absolute;bottom:34px;font:600 24px/1 Khand;color:#fff}
+.cv-card{position:absolute;width:150px;padding:14px 15px;border-radius:15px;border:1px solid rgba(255,255,255,.11);background:rgba(7,18,30,.80);backdrop-filter:blur(10px);color:#fff;font-size:12px;font-weight:700}.cv-card small{display:block;margin-top:5px;color:rgba(255,255,255,.48);font-size:10px;font-weight:500}.cv1{left:28px;top:38px}.cv2{right:28px;top:70px}.cv3{left:46px;bottom:70px}.cv4{right:40px;bottom:46px}
+.cv-scan{position:absolute;left:-15%;right:-15%;height:86px;top:18%;background:linear-gradient(180deg,transparent,rgba(255,89,0,.07),transparent);transform:rotate(-8deg);animation:scan 4.8s ease-in-out infinite}.cv-dot{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--orange);box-shadow:0 0 18px rgba(255,89,0,.8)}.d1{left:19%;top:42%;animation:pulse 2.3s infinite}.d2{right:17%;top:38%;animation:pulse 2.8s .4s infinite}.d3{right:26%;bottom:18%;animation:pulse 2.1s .8s infinite}
+.section{padding:104px 0}.section-dark{background:var(--deep)}.section-navy{background:var(--navy)}.section-head{max-width:760px;margin-bottom:48px}.section-head p{color:rgba(255,255,255,.66);font-size:17px}
+.context-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:62px;align-items:start}.context-panel{padding:30px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(145deg,#10283f,#0b1c2e)}.context-panel strong{display:block;font:600 34px/1 Khand;margin-bottom:12px}.context-panel p{margin:0;color:rgba(255,255,255,.64)}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{position:relative;overflow:hidden;min-height:240px;padding:28px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.02));transition:.3s ease}.card:before{content:"";position:absolute;left:-10%;top:-20%;width:170px;height:310px;background:linear-gradient(180deg,rgba(255,122,50,.80),rgba(255,89,0,.28),transparent);filter:blur(28px);transform:rotate(18deg);opacity:.48}.card>*{position:relative;z-index:1}.card-num{color:var(--orange);font:700 15px/1 Khand;letter-spacing:.12em}.card h3{margin:52px 0 10px}.card p{margin:0;color:rgba(255,255,255,.64)}.card:hover{transform:translateY(-5px);border-color:rgba(255,89,0,.34)}
+.audience{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.audience-item{padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.035);font-weight:700;color:rgba(255,255,255,.82)}.audience-item span{display:block;margin-top:6px;font-size:12px;font-weight:500;color:rgba(255,255,255,.46)}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.flow-item{padding:26px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.035)}.flow-item b{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(255,89,0,.12);color:var(--orange)}.flow-item h3{margin:22px 0 10px}.flow-item p{margin:0;color:rgba(255,255,255,.60)}
+.event{background:radial-gradient(circle at 80% 30%,rgba(255,89,0,.16),transparent 24rem),linear-gradient(135deg,#10283f,#081420)}.event-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}.event-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.event-detail{padding:18px;border-radius:15px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04)}.event-detail small{display:block;color:var(--orange);font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.event-detail strong{display:block;margin-top:7px;font-size:15px}
+.form-shell{display:grid;grid-template-columns:.88fr 1.12fr;gap:48px;padding:46px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#10283f,#0b1c2e)}.demo-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.demo-form label{display:grid;gap:7px;font-size:11px;font-weight:700;color:rgba(255,255,255,.65)}.demo-form label.full{grid-column:1/-1}.demo-form input,.demo-form select,.demo-form textarea{width:100%;border:1px solid rgba(255,255,255,.13);border-radius:12px;background:rgba(255,255,255,.045);color:#fff;padding:13px 14px;font:500 13px/1.4 Inter}.demo-form textarea{min-height:92px;resize:vertical}.demo-form input::placeholder,.demo-form textarea::placeholder{color:rgba(255,255,255,.34)}.demo-form button{grid-column:1/-1;border:0;cursor:pointer}.demo-badge{display:inline-flex;padding:6px 9px;border-radius:999px;background:rgba(255,89,0,.10);border:1px solid rgba(255,89,0,.22);color:#ff9a66;font-size:10px;font-weight:800;letter-spacing:.10em;text-transform:uppercase}
+.post-event{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;padding:36px;border-radius:22px;border:1px solid rgba(255,89,0,.24);background:linear-gradient(145deg,#152e47,#10283f)}.post-event h2{margin-bottom:14px}.post-event p{color:rgba(255,255,255,.66)}.post-event-actions{display:flex;justify-content:flex-end}
+.footer{padding:30px 0 24px;background:#06111b;border-top:1px solid rgba(255,255,255,.06)}.footer-top{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}.footer-brands{display:flex;align-items:center;gap:18px}.footer-locatelli{width:185px}.footer-divider{width:1px;height:42px;background:rgba(255,255,255,.17)}.footer-prime{height:42px;width:auto}.social{display:flex;gap:10px}.social a{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.09)}.social a:hover{background:var(--orange);transform:translateY(-2px)}.social svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.copy{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.48);font-size:11px}
+.reveal{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.2,.8,.2,1)}.reveal.in{opacity:1;transform:none}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes scan{0%,100%{top:9%;opacity:.35}50%{top:70%;opacity:.85}}@keyframes pulse{0%,100%{transform:scale(.8);opacity:.5}50%{transform:scale(1.25);opacity:1}}
+@media(max-width:980px){.hero-grid,.context-grid,.event-grid,.form-shell,.post-event{grid-template-columns:1fr}.hero-grid{gap:42px}.cards{grid-template-columns:1fr 1fr}.audience{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr}.post-event-actions{justify-content:flex-start}}
+@media(max-width:720px){.wrap{width:min(1180px,calc(100% - 32px))}.nav{min-height:70px}.brand img{width:148px}.header .btn{min-height:42px;padding:0 14px;font-size:11px}.hero-grid{padding:72px 0}.compliance-visual{min-height:390px}.cv-card{width:125px;font-size:10px}.cv1{left:16px}.cv2{right:16px}.cv3{left:20px}.cv4{right:18px}.cv-core{width:170px;height:170px}.section{padding:76px 0}.cards,.audience,.event-list,.demo-form{grid-template-columns:1fr}.demo-form label.full,.demo-form button{grid-column:auto}.form-shell{padding:26px}.footer-top{justify-content:center;text-align:center}.footer-brands{justify-content:center;flex-wrap:wrap}.footer-locatelli{width:160px}.footer-prime{height:38px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+<style data-portfolio-demo="true">
+.portfolio-demo-banner{position:relative;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:8px max(16px,calc((100% - 1180px)/2));background:#fff;color:#081420;font:700 12px/1.35 Arial,sans-serif;border-bottom:3px solid #ff5900}
+.portfolio-demo-banner a,.portfolio-demo-banner a:visited{display:inline-flex;align-items:center;min-height:32px;color:#081420!important;text-decoration:underline;text-underline-offset:3px}
+.portfolio-form-notice{min-height:260px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px;padding:30px;border:1px solid rgba(255,255,255,.18);background:#10283f;color:#fff;font-family:Arial,sans-serif}
+.portfolio-form-notice strong{font-size:21px}.portfolio-form-notice p{margin:0;color:rgba(255,255,255,.78);line-height:1.6}
+@media(max-width:620px){.portfolio-demo-banner{align-items:flex-start;flex-direction:column;padding:10px 16px;gap:2px}.portfolio-form-notice{min-height:220px;padding:22px}}
+</style></head>
+<body>
+<div class="portfolio-demo-banner" role="note"><span>Demo conceitual - não publicada</span><a href="../index.html">Voltar ao case</a></div><header class="header"><div class="wrap nav">
+<a class="brand" href="https://locatelligroup.com.br" aria-label="Locatelli Group"><img src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1787573740/$49squ8s1wun" alt="Locatelli Group"></a>
+<a class="btn btn-primary" href="#inscricao">Inscreva-se</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap hero-grid">
+<div class="reveal">
+<p class="eyebrow">Palestra · conformidade empresarial</p>
+<h1>Sua empresa está realmente em <span style="color:#ff5900">conformidade?</span></h1>
+<p class="hero-copy">Manter obrigações, registros, processos e controles em dia exige atenção constante. Falhas ou inconsistências podem aumentar a exposição da empresa e comprometer a segurança das decisões.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#inscricao">Inscreva-se →</a><a class="btn btn-outline" href="#conteudo">Ver conteúdo da palestra</a></div>
+<p class="hero-note">LP demonstrativa · informações do evento ainda sujeitas à definição final.</p>
+</div>
+<div class="compliance-visual reveal" aria-label="Visual abstrato sobre conformidade, riscos e controles">
+<div class="cv-grid"></div><div class="cv-scan"></div>
+<div class="cv-card cv1">Obrigações<small>registros · prazos</small></div>
+<div class="cv-card cv2">Controles<small>processos · evidências</small></div>
+<div class="cv-card cv3">Riscos<small>fragilidades · exposição</small></div>
+<div class="cv-card cv4">Decisão<small>segurança · governança</small></div>
+<div class="cv-core"><div class="cv-check">✓</div><strong>Conformidade</strong></div>
+<span class="cv-dot d1"></span><span class="cv-dot d2"></span><span class="cv-dot d3"></span>
+</div>
+</div></section>
+
+<section class="section section-navy"><div class="wrap context-grid">
+<div class="section-head reveal"><p class="eyebrow">Por que esse tema importa</p><h2>Conformidade exige visão integrada da operação.</h2></div>
+<div class="context-panel reveal"><strong>Processos, registros e controles precisam conversar entre si.</strong><p>A ausência de consistência entre áreas, evidências e rotinas pode aumentar riscos e dificultar a identificação de fragilidades antes que elas se transformem em problemas maiores.</p></div>
+</div></section>
+
+<section class="section section-dark" id="conteudo"><div class="wrap">
+<div class="section-head reveal"><p class="eyebrow">Conteúdo da palestra</p><h2>Uma visão prática sobre os principais pontos de atenção.</h2><p>O encontro foi estruturado para ajudar profissionais e lideranças a reconhecer sinais de risco e organizar melhor seus próximos passos.</p></div>
+<div class="cards">
+<article class="card reveal"><span class="card-num">01</span><h3>Principais pontos de atenção</h3><p>Aspectos que merecem acompanhamento recorrente dentro da organização.</p></article>
+<article class="card reveal"><span class="card-num">02</span><h3>Riscos em processos e controles</h3><p>Como inconsistências operacionais podem ampliar a exposição da empresa.</p></article>
+<article class="card reveal"><span class="card-num">03</span><h3>Identificação de fragilidades</h3><p>Indicadores e situações que podem sinalizar necessidade de revisão ou aprofundamento.</p></article>
+<article class="card reveal"><span class="card-num">04</span><h3>Operação mais estruturada</h3><p>Caminhos para fortalecer controles, organização e confiabilidade das informações.</p></article>
+</div></div></section>
+
+<section class="section section-navy"><div class="wrap">
+<div class="section-head reveal"><p class="eyebrow">Para quem é</p><h2>Um encontro para quem participa das decisões e dos controles da empresa.</h2></div>
+<div class="audience">
+<div class="audience-item reveal">Empresários e sócios<span>visão estratégica e exposição do negócio</span></div>
+<div class="audience-item reveal">Executivos e lideranças<span>prioridades, governança e tomada de decisão</span></div>
+<div class="audience-item reveal">Contábil e fiscal<span>obrigações, registros e consistência das informações</span></div>
+<div class="audience-item reveal">Financeiro e administrativo<span>processos, controles e previsibilidade</span></div>
+<div class="audience-item reveal">Jurídico<span>riscos, exigências e suporte à organização</span></div>
+<div class="audience-item reveal">Compliance<span>monitoramento, evidências e melhoria contínua</span></div>
+</div></div></section>
+
+<section class="section section-dark"><div class="wrap">
+<div class="section-head reveal"><p class="eyebrow">Abordagem</p><h2>Do risco percebido ao próximo passo.</h2></div>
+<div class="flow">
+<article class="flow-item reveal"><b>1</b><h3>Entender</h3><p>Reconhecer os pontos de atenção e onde eles aparecem na rotina da empresa.</p></article>
+<article class="flow-item reveal"><b>2</b><h3>Identificar</h3><p>Perceber fragilidades de processo, controle, documentação ou governança.</p></article>
+<article class="flow-item reveal"><b>3</b><h3>Estruturar</h3><p>Organizar prioridades e caminhos possíveis para uma operação mais confiável.</p></article>
+</div></div></section>
+
+<section class="section event"><div class="wrap event-grid">
+<div class="reveal"><p class="eyebrow">Informações do encontro</p><h2>Detalhes do evento serão definidos na versão final.</h2><p class="muted">O tema oficial, o escopo da conformidade e a referência aos órgãos públicos ainda precisam ser delimitados para evitar uma promessa ampla demais.</p></div>
+<div class="event-list reveal">
+<div class="event-detail"><small>Data</small><strong>A definir</strong></div>
+<div class="event-detail"><small>Horário</small><strong>A definir</strong></div>
+<div class="event-detail"><small>Formato / local</small><strong>A definir</strong></div>
+<div class="event-detail"><small>Palestrante</small><strong>A definir</strong></div>
+<div class="event-detail"><small>Gratuidade</small><strong>A confirmar</strong></div>
+<div class="event-detail"><small>Vagas / confirmação</small><strong>A definir</strong></div>
+</div></div></section>
+
+<section class="section section-dark" id="inscricao"><div class="wrap form-shell">
+<div class="reveal"><span class="demo-badge">Formulário demonstrativo</span><h2 style="margin-top:18px">Inscreva-se para participar.</h2><p class="muted">Esta versão usa um formulário visual apenas para demonstrar a experiência da LP. Na versão final, o bloco deve ser substituído pelo formulário oficial do RD Station.</p></div>
+<form class="demo-form reveal" onsubmit="event.preventDefault();alert('Formulário demonstrativo. Integrar RD Station na versão final.');">
+<label>Nome<input type="text" placeholder="Seu nome"></label>
+<label>E-mail corporativo<input type="email" placeholder="voce@empresa.com.br"></label>
+<label>Empresa<input type="text" placeholder="Nome da empresa"></label>
+<label>Cargo<input type="text" placeholder="Seu cargo"></label>
+<label>Área de atuação<select><option>Selecione</option><option>Contábil</option><option>Fiscal</option><option>Financeira</option><option>Administrativa</option><option>Jurídica</option><option>Compliance</option><option>Outra</option></select></label>
+<label>Principal preocupação<select><option>Selecione</option><option>Conformidade de processos</option><option>Controles internos</option><option>Fiscalização ou notificação</option><option>Documentação e registros</option><option>Outro</option></select></label>
+<label class="full">Contexto ou tema de maior interesse<textarea placeholder="Conte brevemente o que você gostaria de entender melhor."></textarea></label>
+<button class="btn btn-primary" type="submit">Inscreva-se</button>
+</form>
+</div></section>
+
+<section class="section section-navy"><div class="wrap post-event reveal">
+<div><p class="eyebrow">Após a palestra</p><h2>Quer entender como esses pontos se aplicam à realidade da sua empresa?</h2><p>Converse com o time da Locatelli Group. Nossos especialistas poderão conhecer o seu cenário, identificar a necessidade da organização e orientar os próximos passos.</p></div>
+<div class="post-event-actions"><a class="btn btn-primary" href="https://locatelligroup.com.br">Falar com um especialista →</a></div>
+</div></section>
+</main>
+
+<footer class="footer"><div class="wrap">
+<div class="footer-top">
+<div class="footer-brands"><img class="footer-locatelli" src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1787573740/$49squ8s1wun" alt="Locatelli Group"><span class="footer-divider"></span><a href="https://www.primeglobal.net/" target="_blank" rel="noopener noreferrer"><img class="footer-prime" src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1786467915/$satd5jeaibd" alt="PrimeGlobal"></a></div>
+<div class="social">
+<a href="https://www.linkedin.com/company/locatelli-group/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewbox="0 0 24 24"><path d="M4 9v11M4 5v.01M9 20v-7a4 4 0 0 1 8 0v7M9 9v11"></path></svg></a>
+<a href="https://www.instagram.com/locatelli_group/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewbox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg></a>
+<a href="https://www.facebook.com/people/Locatelli-Group/61581305894236/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewbox="0 0 24 24"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.6.4-1 1-1Z"></path></svg></a>
+<a href="https://locatelligroup.com.br" target="_blank" rel="noopener noreferrer" aria-label="Site"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.4 2.5 3.6 5.5 3.6 9S14.4 18.5 12 21M12 3C9.6 5.5 8.4 8.5 8.4 12s1.2 6.5 3.6 9"></path></svg></a>
+</div></div>
+<div class="copy">© Locatelli Brasil 2026. Todos os direitos reservados.</div>
+</div></footer>
+
+<script>
+const io=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add('in');io.unobserve(entry.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=((i%5)*55)+'ms';io.observe(el)});
+</script>
+</body>
+</html>

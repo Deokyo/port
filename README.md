@@ -5,17 +5,18 @@ estratégia digital, landing pages, experiências internas e implementação té
 
 ## Projetos em destaque
 
-- [Programa WIN](projects/programa-win/): produto interno gamificado com mapa de
+- [Programa WIN](projects/programa-win/index.html): produto interno gamificado com mapa de
   oportunidades, ranking, conquistas, perfil e painel administrativo.
-- [Ecossistema de Landing Pages Locatelli](projects/landing-pages/): sistema de nove páginas
-  com arquitetura de conversão, SEO, responsividade, integração RD Station e alinhamento com
-  mídia paga.
+- [Ecossistema de Landing Pages Locatelli](projects/landing-pages/index.html): 12 projetos
+  verificados no manifesto, distribuídos entre oito páginas de produção, duas variantes de
+  teste A/B e duas demos. Um experimento suplementar é apresentado separadamente e não é
+  descrito como produção.
 
 ## Executar localmente
 
 O portfólio é estático e não precisa de instalação:
 
-1. Abra `index.html` no navegador; ou
+1. Abra `index.html` diretamente no navegador; ou
 2. Execute `python -m http.server 8080` para testar as rotas como site.
 
 O comando opcional `node scripts/check-site.mjs` valida estrutura, links locais, IDs duplicados
@@ -27,5 +28,8 @@ Os trabalhos da Locatelli Group são apresentados com autorização. Formulário
 identificadores de integração, dados pessoais, palavras de campanha e documentação interna
 foram excluídos das demonstrações públicas.
 
-Não há licença aberta para reutilização dos materiais de clientes. Consulte [NOTICE.md](NOTICE.md).
+Cada landing page possui um case técnico próprio e uma cópia sanitizada. As fontes originais
+do pacote de handoff não foram modificadas. Resultados de conversão não são atribuídos sem
+evidência pública comparável.
 
+Não há licença aberta para reutilização dos materiais de clientes. Consulte [NOTICE.md](NOTICE.md).

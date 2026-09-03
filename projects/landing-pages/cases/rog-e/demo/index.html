@@ -1,0 +1,2261 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Diagnóstico de Eficiência em BPO | Locatelli Group</title><script>
+(function() {
+  function upsertMeta(selector, attrs) {
+    var el = document.head.querySelector(selector);
+    if (!el) {
+      el = document.createElement(attrs.tag || 'meta');
+      document.head.appendChild(el);
+    }
+    Object.keys(attrs).forEach(function(key) {
+      if (key !== 'tag') el.setAttribute(key, attrs[key]);
+    });
+    return el;
+  }
+
+  document.title = 'Diagnóstico de Eficiência em BPO | Locatelli Group';
+
+  upsertMeta('meta[name="description"]', {
+    name: 'description',
+    content: 'Diagnóstico consultivo de eficiência em BPO para empresas do setor de Óleo & Gás. Avalie processos financeiros, contábeis, fiscais e de folha de pagamento com a Locatelli Group.'
+  });
+
+  upsertMeta('meta[name="robots"]', {
+    name: 'robots',
+    content: 'noindex,nofollow'
+  });
+
+  var canonical = document.head.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement('link');
+    canonical.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonical);
+  }
+  canonical.setAttribute('href', 'https://contato.locatelligroup.com.br/rog-e');
+
+  upsertMeta('meta[property="og:url"]', {
+    property: 'og:url',
+    content: 'https://contato.locatelligroup.com.br/rog-e'
+  });
+
+  upsertMeta('meta[property="og:title"]', {
+    property: 'og:title',
+    content: 'Diagnóstico de Eficiência em BPO | Locatelli Group'
+  });
+
+  upsertMeta('meta[property="og:description"]', {
+    property: 'og:description',
+    content: 'Diagnóstico consultivo de eficiência em BPO para empresas do setor de Óleo & Gás. Avalie processos financeiros, contábeis, fiscais e de folha de pagamento com a Locatelli Group.'
+  });
+
+  upsertMeta('meta[property="og:type"]', {
+    property: 'og:type',
+    content: 'website'
+  });
+
+  upsertMeta('meta[name="twitter:card"]', {
+    name: 'twitter:card',
+    content: 'summary_large_image'
+  });
+})();
+</script><style>
+@import url("https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
+
+/* Locatelli Group - BPO landing page
+   CSS intentionally scoped to #locatelli-bpo-lp so it does not reset RD Station globally. */
+
+#locatelli-bpo-lp {
+  --lglp-navy: #0C1F33;
+  --lglp-navy-deep: #081420;
+  --lglp-gdk: #2A2E34;
+  --lglp-orange: #FF5900;
+  --lglp-white: #FFFFFF;
+  --lglp-bg: #E7E7E7;
+  --lglp-gray-mid: #5D626B;
+  --lglp-ink: #1E1E1E;
+  --lglp-ink-soft: #4A4A4A;
+  --lglp-line: rgba(12, 31, 51, 0.10);
+  --lglp-line-on-navy: rgba(255, 255, 255, 0.14);
+  --lglp-font-body: "Inter", Arial, Helvetica, sans-serif;
+  --lglp-font-display: "Khand", "Arial Narrow", Arial, sans-serif;
+
+  position: relative;
+  z-index: 0;
+  width: 100vw;
+  max-width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  background: var(--lglp-white);
+  color: var(--lglp-ink);
+  font-family: var(--lglp-font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#locatelli-bpo-lp,
+#locatelli-bpo-lp * {
+  box-sizing: border-box;
+}
+
+#locatelli-bpo-lp .lglp-skip {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  transform: translateY(-160%);
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--lglp-white);
+  color: var(--lglp-navy);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+#locatelli-bpo-lp .lglp-skip:focus {
+  transform: translateY(0);
+}
+
+#locatelli-bpo-lp .lglp-wrap {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+
+#locatelli-bpo-lp .lglp-display {
+  margin: 0;
+  color: var(--lglp-navy);
+  font-family: var(--lglp-font-display);
+  font-weight: 600;
+  letter-spacing: 0.005em;
+}
+
+#locatelli-bpo-lp .lglp-accent {
+  color: var(--lglp-orange);
+}
+
+#locatelli-bpo-lp .lglp-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--lglp-orange);
+  font-family: var(--lglp-font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+#locatelli-bpo-lp .lglp-eyebrow::before {
+  content: "";
+  flex: 0 0 22px;
+  width: 22px;
+  height: 2px;
+  background: var(--lglp-orange);
+}
+
+#locatelli-bpo-lp .lglp-section-head {
+  max-width: 680px;
+  margin-bottom: 52px;
+}
+
+#locatelli-bpo-lp .lglp-section-head h2 {
+  margin: 16px 0 0;
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.18;
+}
+
+#locatelli-bpo-lp .lglp-section-head p {
+  max-width: 56ch;
+  margin: 14px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Reveal animation: content is visible by default.
+   The enhanced class is added inline; a CSS fail-safe reveals everything after 2.5s. */
+#locatelli-bpo-lp .lglp-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+#locatelli-bpo-lp.lglp-enhanced .lglp-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+  animation: lglp-reveal-failsafe 0.01s linear 2.5s forwards;
+}
+
+#locatelli-bpo-lp.lglp-enhanced .lglp-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes lglp-reveal-failsafe {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Header */
+#locatelli-bpo-lp .lglp-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  border-bottom: 3px solid var(--lglp-orange);
+  background: var(--lglp-navy);
+}
+
+#locatelli-bpo-lp .lglp-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  max-width: 1180px;
+  min-height: 78px;
+  margin-inline: auto;
+  padding: 8px 32px;
+}
+
+#locatelli-bpo-lp .lglp-logo {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  color: var(--lglp-white);
+  text-decoration: none;
+}
+
+#locatelli-bpo-lp .lglp-logo-window {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+#locatelli-bpo-lp .lglp-logo-window--header {
+  width: 94px;
+  height: 59px;
+}
+
+#locatelli-bpo-lp .lglp-logo-window--footer {
+  width: 112px;
+  height: 70px;
+}
+
+#locatelli-bpo-lp .lglp-logo-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 172.5%;
+  max-width: none;
+  height: auto;
+  transform: translate(-50%, -50.5%);
+}
+
+#locatelli-bpo-lp .lglp-nav-right {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-left: 18px;
+}
+
+#locatelli-bpo-lp .lglp-language {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#locatelli-bpo-lp .lglp-language button {
+  min-width: 32px;
+  height: 28px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font: 700 11px/1 var(--lglp-font-body);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+#locatelli-bpo-lp .lglp-language button[aria-pressed="true"] {
+  background: var(--lglp-orange);
+  color: var(--lglp-white);
+}
+
+#locatelli-bpo-lp .lglp-badge {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid rgba(255, 89, 0, 0.55);
+  border-radius: 999px;
+  color: var(--lglp-white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+#locatelli-bpo-lp .lglp-flow-btn {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  gap: 4px;
+  overflow: hidden;
+  padding: 10px 24px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--lglp-white);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    border-color 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    border-radius 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.2s ease;
+}
+
+#locatelli-bpo-lp .lglp-flow-btn .lglp-flow-text {
+  position: relative;
+  z-index: 2;
+  transform: translateX(-8px);
+  transition: transform 0.8s ease-out;
+  white-space: nowrap;
+}
+
+#locatelli-bpo-lp .lglp-flow-btn .lglp-mobile-label {
+  display: none;
+}
+
+#locatelli-bpo-lp .lglp-flow-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--lglp-orange);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.8s cubic-bezier(0.19, 1, 0.22, 1),
+    height 0.8s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#locatelli-bpo-lp .lglp-flow-arrow {
+  position: absolute;
+  z-index: 3;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--lglp-white);
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#locatelli-bpo-lp .lglp-flow-arrow-left {
+  left: -25%;
+}
+
+#locatelli-bpo-lp .lglp-flow-arrow-right {
+  right: 16px;
+}
+
+@media (hover: hover) {
+  #locatelli-bpo-lp .lglp-flow-btn:hover {
+    border-color: transparent;
+    border-radius: 12px;
+  }
+
+  #locatelli-bpo-lp .lglp-flow-btn:hover .lglp-flow-text {
+    transform: translateX(10px);
+  }
+
+  #locatelli-bpo-lp .lglp-flow-btn:hover .lglp-flow-circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+
+  #locatelli-bpo-lp .lglp-flow-btn:hover .lglp-flow-arrow-left {
+    left: 16px;
+  }
+
+  #locatelli-bpo-lp .lglp-flow-btn:hover .lglp-flow-arrow-right {
+    right: -25%;
+  }
+}
+
+#locatelli-bpo-lp .lglp-flow-btn:active {
+  transform: scale(0.96);
+}
+
+/* Hero */
+#locatelli-bpo-lp .lglp-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 88px 0 0;
+  background:
+    radial-gradient(1100px 520px at 82% -10%, rgba(255, 89, 0, 0.14), transparent 60%),
+    linear-gradient(180deg, var(--lglp-navy) 0%, var(--lglp-navy-deep) 100%);
+}
+
+#locatelli-bpo-lp .lglp-hero-tech {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-image:
+    linear-gradient(var(--lglp-line-on-navy) 1px, transparent 1px),
+    linear-gradient(90deg, var(--lglp-line-on-navy) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: linear-gradient(180deg, black, transparent 78%);
+  mask-image: linear-gradient(180deg, black, transparent 78%);
+  pointer-events: none;
+}
+
+#locatelli-bpo-lp .lglp-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 56px;
+  padding-bottom: 64px;
+}
+
+#locatelli-bpo-lp .lglp-hero h1 {
+  margin: 20px 0 24px;
+  color: var(--lglp-white);
+  font-size: clamp(30px, 4.3vw, 54px);
+  line-height: 1.06;
+}
+
+#locatelli-bpo-lp .lglp-hero-lede {
+  max-width: 52ch;
+  margin: 0 0 32px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+#locatelli-bpo-lp .lglp-hero-ctas {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+#locatelli-bpo-lp .lglp-motion-btn {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 420px;
+  height: 56px;
+  padding: 4px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--lglp-white);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#locatelli-bpo-lp .lglp-motion-circle {
+  display: block;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--lglp-orange);
+  transition: width 0.5s ease;
+}
+
+#locatelli-bpo-lp .lglp-motion-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease;
+}
+
+#locatelli-bpo-lp .lglp-motion-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--lglp-white);
+  stroke-width: 2;
+}
+
+#locatelli-bpo-lp .lglp-motion-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: calc(100% - 92px);
+  margin-left: 14px;
+  color: var(--lglp-white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+@media (hover: hover) {
+  #locatelli-bpo-lp .lglp-motion-btn:hover .lglp-motion-circle {
+    width: 100%;
+  }
+
+  #locatelli-bpo-lp .lglp-motion-btn:hover .lglp-motion-icon {
+    transform: translate(6px, -50%);
+  }
+}
+
+#locatelli-bpo-lp .lglp-ghost-link {
+  display: inline-block;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--lglp-line-on-navy);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Gauge */
+#locatelli-bpo-lp .lglp-diag-card {
+  position: relative;
+  padding: 30px 28px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+#locatelli-bpo-lp .lglp-diag-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 24px;
+  left: 24px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: var(--lglp-orange);
+}
+
+#locatelli-bpo-lp .lglp-diag-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+#locatelli-bpo-lp .lglp-gauge {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+#locatelli-bpo-lp #lglp-needle {
+  transform-origin: 150px 160px;
+  transition: transform 1.5s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+#locatelli-bpo-lp .lglp-diag-readout {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 4px;
+  color: var(--lglp-white);
+  font-family: var(--lglp-font-display);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+#locatelli-bpo-lp .lglp-diag-unit {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--lglp-font-body);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+#locatelli-bpo-lp .lglp-diag-foot {
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+/* Trust strip */
+#locatelli-bpo-lp .lglp-trust-strip {
+  border-top: 1px solid var(--lglp-line);
+  background: var(--lglp-bg);
+}
+
+#locatelli-bpo-lp .lglp-trust-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  color: var(--lglp-ink-soft);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+
+#locatelli-bpo-lp .lglp-trust-inner strong {
+  color: var(--lglp-navy);
+  font-weight: 700;
+}
+
+#locatelli-bpo-lp .lglp-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--lglp-gray-mid);
+}
+
+/* Challenges */
+#locatelli-bpo-lp .lglp-challenges {
+  padding: 96px 0;
+  background: var(--lglp-navy-deep);
+}
+
+#locatelli-bpo-lp .lglp-challenges .lglp-section-head h2 {
+  color: var(--lglp-white);
+}
+
+#locatelli-bpo-lp .lglp-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Shared brand-neon palette used by both card sections. */
+#locatelli-bpo-lp .lglp-grad-orange {
+  --lglp-neon-shadow: rgba(255, 89, 0, 0.42);
+  background: linear-gradient(315deg, #FFB27A 0%, #E95100 100%);
+}
+
+#locatelli-bpo-lp .lglp-grad-blue {
+  --lglp-neon-shadow: rgba(54, 137, 201, 0.40);
+  background: linear-gradient(315deg, #83BFE8 0%, #215F91 100%);
+}
+
+#locatelli-bpo-lp .lglp-grad-slate {
+  --lglp-neon-shadow: rgba(137, 154, 171, 0.32);
+  background: linear-gradient(315deg, #BEC9D2 0%, #4B5A69 100%);
+}
+
+#locatelli-bpo-lp .lglp-shader-card {
+  position: relative;
+  isolation: isolate;
+  min-height: 128px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  background:
+    linear-gradient(145deg, rgba(19, 38, 57, 0.92), rgba(8, 20, 32, 0.98));
+  box-shadow:
+    0 18px 42px -30px rgba(0, 0, 0, 0.78),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#locatelli-bpo-lp .lglp-shader-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 20, 32, 0.94) 0%,
+      rgba(8, 20, 32, 0.82) 48%,
+      rgba(8, 20, 32, 0.54) 72%,
+      rgba(8, 20, 32, 0.78) 100%
+    );
+}
+
+#locatelli-bpo-lp .lglp-shader-bg {
+  position: absolute;
+  top: -28%;
+  left: 57%;
+  z-index: 0;
+  width: 26%;
+  height: 158%;
+  border-radius: 10px;
+  opacity: 0.56;
+  transform: skewX(15deg);
+  background-size: 160% 160%;
+  box-shadow: 0 0 50px var(--lglp-neon-shadow, rgba(255, 89, 0, 0.34));
+  filter: saturate(0.88);
+  animation: lglp-smooth-warp 8s ease-in-out infinite alternate;
+  transition:
+    left 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.5s ease,
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#locatelli-bpo-lp .lglp-shader-bg::before {
+  content: "";
+  position: absolute;
+  inset: -15%;
+  border-radius: inherit;
+  background: inherit;
+  opacity: 0.70;
+  filter: blur(28px);
+}
+
+#locatelli-bpo-lp .lglp-shader-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 128px;
+  padding: 24px;
+}
+
+#locatelli-bpo-lp .lglp-check-icon {
+  display: flex;
+  flex: 0 0 34px;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10);
+}
+
+#locatelli-bpo-lp .lglp-check-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--lglp-orange);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#locatelli-bpo-lp .lglp-shader-content p {
+  margin: 0;
+  color: #F0F3F6;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.45);
+}
+
+#locatelli-bpo-lp .lglp-check-note {
+  margin: 32px 0 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--lglp-orange);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+@keyframes lglp-smooth-warp {
+  from { background-position: 0% 0%; }
+  to { background-position: 100% 100%; }
+}
+
+@media (hover: hover) {
+  #locatelli-bpo-lp .lglp-shader-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.17);
+    box-shadow:
+      0 22px 48px -28px rgba(0, 0, 0, 0.82),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  #locatelli-bpo-lp .lglp-shader-card:hover .lglp-shader-bg {
+    left: 47%;
+    width: 38%;
+    opacity: 0.68;
+    transform: skewX(4deg);
+  }
+}
+
+/* Scope / services */
+#locatelli-bpo-lp .lglp-services-section {
+  overflow: hidden;
+  padding-bottom: 96px;
+  background: var(--lglp-navy-deep);
+}
+
+#locatelli-bpo-lp .lglp-services-section .lglp-section-head h2 {
+  color: var(--lglp-white);
+}
+
+#locatelli-bpo-lp .lglp-services-section .lglp-section-head p {
+  color: rgba(255, 255, 255, 0.70);
+}
+
+#locatelli-bpo-lp .lglp-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  padding-top: 30px;
+}
+
+#locatelli-bpo-lp .lglp-skew-card {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 320px;
+  height: 380px;
+  margin-inline: auto;
+}
+
+#locatelli-bpo-lp .lglp-skew-bg,
+#locatelli-bpo-lp .lglp-skew-blur {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  z-index: 0;
+  pointer-events: none;
+  width: 50%;
+  height: 100%;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  background-size: 160% 160%;
+  transition:
+    left 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.5s ease,
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#locatelli-bpo-lp .lglp-skew-bg {
+  opacity: 0.68;
+  filter: saturate(0.80);
+}
+
+#locatelli-bpo-lp .lglp-skew-blur {
+  opacity: 0.52;
+  filter: blur(32px) saturate(0.82);
+}
+
+#locatelli-bpo-lp .lglp-skew-content {
+  position: relative;
+  z-index: 2;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 40px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.085);
+  border-radius: 12px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(12, 31, 51, 0.30) 0%,
+      rgba(8, 20, 32, 0.58) 62%,
+      rgba(8, 20, 32, 0.80) 100%
+    );
+  box-shadow:
+    0 18px 42px -26px rgba(0, 0, 0, 0.72),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition:
+    left 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.5s ease,
+    background 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+#locatelli-bpo-lp .lglp-service-tag {
+  margin-bottom: auto;
+  color: var(--lglp-white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  opacity: 0.76;
+}
+
+#locatelli-bpo-lp .lglp-skew-content h3 {
+  margin: 0 0 12px;
+  color: var(--lglp-white);
+  font-family: var(--lglp-font-display);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.48);
+}
+
+#locatelli-bpo-lp .lglp-skew-content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  line-height: 1.6;
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.42);
+}
+
+@media (hover: hover) {
+  #locatelli-bpo-lp .lglp-skew-card:hover .lglp-skew-bg,
+  #locatelli-bpo-lp .lglp-skew-card:hover .lglp-skew-blur {
+    left: 20px;
+    width: calc(100% - 40px);
+    transform: skewX(0deg);
+  }
+
+  #locatelli-bpo-lp .lglp-skew-card:hover .lglp-skew-bg {
+    opacity: 0.70;
+  }
+
+  #locatelli-bpo-lp .lglp-skew-card:hover .lglp-skew-blur {
+    opacity: 0.52;
+  }
+
+  #locatelli-bpo-lp .lglp-skew-card:hover .lglp-skew-content {
+    left: -15px;
+    padding: 60px 30px 30px;
+    border-color: rgba(255, 255, 255, 0.17);
+    background:
+      linear-gradient(
+        180deg,
+        rgba(12, 31, 51, 0.22) 0%,
+        rgba(8, 20, 32, 0.52) 56%,
+        rgba(8, 20, 32, 0.78) 100%
+      );
+    box-shadow:
+      0 24px 48px -26px rgba(0, 0, 0, 0.78),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+}
+
+/* Differentials band */
+#locatelli-bpo-lp .lglp-band {
+  background: var(--lglp-gdk);
+}
+
+#locatelli-bpo-lp .lglp-band-inner {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+#locatelli-bpo-lp .lglp-band-item {
+  padding: 46px 30px;
+  border-left: 3px solid var(--lglp-orange);
+}
+
+#locatelli-bpo-lp .lglp-band-k {
+  margin-bottom: 10px;
+  color: var(--lglp-orange);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+#locatelli-bpo-lp .lglp-band-v {
+  color: var(--lglp-white);
+  font-family: var(--lglp-font-display);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+/* Event */
+#locatelli-bpo-lp .lglp-event {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, var(--lglp-navy-deep) 0%, var(--lglp-navy) 60%);
+}
+
+#locatelli-bpo-lp .lglp-event-tech {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(255, 89, 0, 0.25);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+#locatelli-bpo-lp .lglp-event-tech::before {
+  content: "";
+  position: absolute;
+  inset: 56px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+}
+
+#locatelli-bpo-lp .lglp-event-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+#locatelli-bpo-lp .lglp-event-copy {
+  max-width: 600px;
+}
+
+#locatelli-bpo-lp .lglp-event h2 {
+  margin: 14px 0 12px;
+  color: var(--lglp-white);
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.25;
+}
+
+#locatelli-bpo-lp .lglp-event-copy > p:not(.lglp-eyebrow) {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#locatelli-bpo-lp .lglp-event-dates {
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 13px;
+  text-align: right;
+}
+
+#locatelli-bpo-lp .lglp-event-big {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--lglp-white);
+  font-family: var(--lglp-font-display);
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+/* Form */
+#locatelli-bpo-lp .lglp-form-section {
+  padding: 96px 0;
+  background: var(--lglp-navy);
+}
+
+#locatelli-bpo-lp .lglp-form-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 56px;
+  border-radius: 16px;
+  background: var(--lglp-bg);
+}
+
+#locatelli-bpo-lp .lglp-form-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--lglp-orange);
+}
+
+#locatelli-bpo-lp .lglp-form-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 52px;
+}
+
+#locatelli-bpo-lp .lglp-form-copy h2 {
+  margin: 16px 0;
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.55;
+}
+
+#locatelli-bpo-lp .lglp-form-copy > p {
+  max-width: 44ch;
+  margin: 0;
+  color: var(--lglp-ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#locatelli-bpo-lp .lglp-form-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#locatelli-bpo-lp .lglp-form-facts li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 0;
+  border-top: 1px solid var(--lglp-line);
+  font-size: 13.5px;
+}
+
+#locatelli-bpo-lp .lglp-form-facts li:last-child {
+  border-bottom: 1px solid var(--lglp-line);
+}
+
+#locatelli-bpo-lp .lglp-form-k {
+  color: var(--lglp-gray-mid);
+  font-weight: 500;
+}
+
+#locatelli-bpo-lp .lglp-form-v {
+  color: var(--lglp-navy);
+  font-weight: 700;
+  text-align: right;
+}
+
+#locatelli-bpo-lp .lglp-form-mount {
+  min-width: 0;
+  min-height: 310px;
+  padding: 32px;
+  border-radius: 12px;
+  background: var(--lglp-white);
+  box-shadow: 0 24px 50px -24px rgba(12, 31, 51, 0.28);
+}
+
+#locatelli-bpo-lp .lglp-form-status {
+  margin: 0;
+  padding: 12px 0;
+  color: var(--lglp-ink-soft);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#locatelli-bpo-lp .lglp-form-slot {
+  min-width: 0;
+  max-width: 100%;
+}
+
+#locatelli-bpo-lp .lglp-form-slot[hidden],
+#locatelli-bpo-lp .lglp-form-status[hidden] {
+  display: none !important;
+}
+
+/* Keep each embedded RD form inside its column without globally resetting RD classes. */
+#locatelli-bpo-lp .lglp-form-mount,
+#locatelli-bpo-lp .lglp-form-mount > div,
+#locatelli-bpo-lp .lglp-form-slot,
+#locatelli-bpo-lp .lglp-form-slot > div {
+  max-width: 100%;
+}
+
+#locatelli-bpo-lp .lglp-form-mount input,
+#locatelli-bpo-lp .lglp-form-mount select,
+#locatelli-bpo-lp .lglp-form-mount textarea,
+#locatelli-bpo-lp .lglp-form-mount button {
+  max-width: 100%;
+}
+
+/* Footer */
+#locatelli-bpo-lp .lglp-footer {
+  padding: 28px 0 24px;
+  background: var(--lglp-navy);
+}
+
+#locatelli-bpo-lp .lglp-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+}
+
+#locatelli-bpo-lp .lglp-footer-brands {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+#locatelli-bpo-lp .lglp-footer-brand-divider {
+  flex: 0 0 1px;
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+#locatelli-bpo-lp .lglp-primeglobal-brand {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+#locatelli-bpo-lp .lglp-primeglobal-logo {
+  display: block;
+  width: 170px;
+  max-width: 42vw;
+  height: auto;
+  opacity: 0.94;
+}
+
+#locatelli-bpo-lp .lglp-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#locatelli-bpo-lp .lglp-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--lglp-white);
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+#locatelli-bpo-lp .lglp-social-link svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (hover: hover) {
+  #locatelli-bpo-lp .lglp-social-link:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    background: var(--lglp-orange);
+    transform: translateY(-2px);
+  }
+}
+
+#locatelli-bpo-lp .lglp-footer-meta {
+  color: rgba(255, 255, 255, 0.50);
+  font-size: 12px;
+}
+
+/* Focus */
+#locatelli-bpo-lp :is(a, button):focus-visible {
+  outline: 3px solid rgba(255, 188, 0, 0.95);
+  outline-offset: 3px;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  #locatelli-bpo-lp .lglp-badge {
+    display: none;
+  }
+
+  #locatelli-bpo-lp .lglp-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  #locatelli-bpo-lp .lglp-hero {
+    padding-top: 64px;
+  }
+
+  #locatelli-bpo-lp .lglp-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  #locatelli-bpo-lp .lglp-checklist {
+    grid-template-columns: 1fr;
+  }
+
+  #locatelli-bpo-lp .lglp-band-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #locatelli-bpo-lp .lglp-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #locatelli-bpo-lp .lglp-form-panel {
+    padding: 34px 24px;
+  }
+
+  #locatelli-bpo-lp .lglp-challenges {
+    padding: 64px 0;
+  }
+
+  #locatelli-bpo-lp .lglp-services-section {
+    padding-bottom: 64px;
+  }
+
+  #locatelli-bpo-lp .lglp-form-section {
+    padding: 64px 0;
+  }
+
+  #locatelli-bpo-lp .lglp-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 639px) {
+  #locatelli-bpo-lp .lglp-wrap {
+    padding-inline: 16px;
+  }
+
+  #locatelli-bpo-lp .lglp-nav {
+    min-height: 68px;
+    padding: 7px 16px;
+  }
+
+  #locatelli-bpo-lp .lglp-logo-window--header {
+    width: 78px;
+    height: 49px;
+  }
+
+  #locatelli-bpo-lp .lglp-nav-right {
+    gap: 8px;
+    margin-left: 10px;
+  }
+
+  #locatelli-bpo-lp .lglp-language {
+    padding: 2px;
+  }
+
+  #locatelli-bpo-lp .lglp-language button {
+    min-width: 28px;
+    height: 26px;
+    padding-inline: 6px;
+    font-size: 10px;
+  }
+
+  #locatelli-bpo-lp .lglp-flow-btn {
+    min-height: 40px;
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+
+  #locatelli-bpo-lp .lglp-flow-btn .lglp-desktop-label {
+    display: none;
+  }
+
+  #locatelli-bpo-lp .lglp-flow-btn .lglp-mobile-label {
+    display: inline;
+  }
+
+  #locatelli-bpo-lp .lglp-flow-arrow-left {
+    display: none;
+  }
+
+  #locatelli-bpo-lp .lglp-flow-btn .lglp-flow-text {
+    transform: none;
+  }
+
+  #locatelli-bpo-lp .lglp-flow-arrow-right {
+    right: 10px;
+  }
+
+  #locatelli-bpo-lp .lglp-hero {
+    padding-top: 52px;
+  }
+
+  #locatelli-bpo-lp .lglp-hero h1 {
+    margin-top: 18px;
+    font-size: clamp(32px, 9.5vw, 42px);
+  }
+
+  #locatelli-bpo-lp .lglp-hero-lede {
+    font-size: 16px;
+  }
+
+  #locatelli-bpo-lp .lglp-motion-btn {
+    max-width: none;
+  }
+
+  #locatelli-bpo-lp .lglp-motion-text {
+    width: calc(100% - 76px);
+    margin-left: 10px;
+    font-size: 12.5px;
+    white-space: normal;
+  }
+
+  #locatelli-bpo-lp .lglp-diag-card {
+    padding: 26px 20px 22px;
+  }
+
+  #locatelli-bpo-lp .lglp-diag-head {
+    align-items: flex-start;
+    font-size: 10px;
+  }
+
+  #locatelli-bpo-lp .lglp-trust-inner {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #locatelli-bpo-lp .lglp-trust-inner .lglp-dot {
+    display: none;
+  }
+
+  #locatelli-bpo-lp .lglp-section-head {
+    margin-bottom: 36px;
+  }
+
+  #locatelli-bpo-lp .lglp-shader-content {
+    padding: 20px;
+  }
+
+  #locatelli-bpo-lp .lglp-shader-bg {
+    left: 62%;
+    width: 30%;
+  }
+
+  #locatelli-bpo-lp .lglp-footer-brands {
+    gap: 14px;
+  }
+
+  #locatelli-bpo-lp .lglp-logo-window--footer {
+    width: 96px;
+    height: 60px;
+  }
+
+  #locatelli-bpo-lp .lglp-footer-brand-divider {
+    height: 32px;
+  }
+
+  #locatelli-bpo-lp .lglp-primeglobal-logo {
+    width: 145px;
+    max-width: 50vw;
+  }
+
+  #locatelli-bpo-lp .lglp-services-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 8px;
+  }
+
+  #locatelli-bpo-lp .lglp-skew-card {
+    max-width: 360px;
+    height: 340px;
+  }
+
+  #locatelli-bpo-lp .lglp-skew-content {
+    padding: 34px 26px;
+  }
+
+  #locatelli-bpo-lp .lglp-band-inner {
+    grid-template-columns: 1fr;
+  }
+
+  #locatelli-bpo-lp .lglp-band-item {
+    padding: 32px 22px;
+  }
+
+  #locatelli-bpo-lp .lglp-event-inner {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  #locatelli-bpo-lp .lglp-event-dates {
+    text-align: left;
+  }
+
+  #locatelli-bpo-lp .lglp-event-big {
+    font-size: 38px;
+  }
+
+  #locatelli-bpo-lp .lglp-form-panel {
+    padding: 30px 18px 22px;
+  }
+
+  #locatelli-bpo-lp .lglp-form-copy h2 {
+    line-height: 1.3;
+  }
+
+  #locatelli-bpo-lp .lglp-form-facts li {
+    align-items: flex-start;
+  }
+
+  #locatelli-bpo-lp .lglp-form-mount {
+    min-height: 260px;
+    padding: 20px 14px;
+  }
+}
+
+@media (max-width: 374px) {
+  #locatelli-bpo-lp .lglp-logo-window--header {
+    width: 72px;
+    height: 45px;
+  }
+
+  #locatelli-bpo-lp .lglp-language button {
+    min-width: 25px;
+    padding-inline: 4px;
+  }
+
+  #locatelli-bpo-lp .lglp-flow-btn {
+    padding-inline: 12px 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #locatelli-bpo-lp {
+    scroll-behavior: auto;
+  }
+
+  #locatelli-bpo-lp .lglp-reveal,
+  #locatelli-bpo-lp.lglp-enhanced .lglp-reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+
+  #locatelli-bpo-lp .lglp-shader-bg {
+    animation: none;
+  }
+
+  #locatelli-bpo-lp * {
+    scroll-behavior: auto !important;
+  }
+}
+
+</style>
+<meta name="robots" content="noindex,nofollow"><style data-portfolio-demo="true">
+.portfolio-demo-banner{position:relative;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:8px max(16px,calc((100% - 1180px)/2));background:#fff;color:#081420;font:700 12px/1.35 Arial,sans-serif;border-bottom:3px solid #ff5900}
+.portfolio-demo-banner a,.portfolio-demo-banner a:visited{display:inline-flex;align-items:center;min-height:32px;color:#081420!important;text-decoration:underline;text-underline-offset:3px}
+.portfolio-form-notice{min-height:260px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px;padding:30px;border:1px solid rgba(255,255,255,.18);background:#10283f;color:#fff;font-family:Arial,sans-serif}
+.portfolio-form-notice strong{font-size:21px}.portfolio-form-notice p{margin:0;color:rgba(255,255,255,.78);line-height:1.6}
+@media(max-width:620px){.portfolio-demo-banner{align-items:flex-start;flex-direction:column;padding:10px 16px;gap:2px}.portfolio-form-notice{min-height:220px;padding:22px}}
+</style></head><body><div class="portfolio-demo-banner" role="note"><span>Cópia sanitizada de página de produção</span><a href="../index.html">Voltar ao case</a></div><div id="locatelli-bpo-lp" lang="pt-BR">
+<script>
+    (function () {
+      var root = document.getElementById('locatelli-bpo-lp');
+      if (root) root.classList.add('lglp-enhanced');
+    }());
+  </script>
+<a class="lglp-skip" data-i18n="skip" href="#lglp-main">Ir para o conteúdo principal</a>
+<header class="lglp-header">
+<nav aria-label="Navegação principal" class="lglp-nav" data-i18n-aria="nav.region">
+<a aria-label="Locatelli Group" class="lglp-logo lglp-logo--header" href="#lglp-main">
+<span aria-hidden="true" class="lglp-logo-window lglp-logo-window--header">
+<img alt="" class="lglp-logo-image" decoding="async" height="750" loading="eager" src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1777903914/$no173dxvm6" width="1000">
+</span>
+</a>
+<div class="lglp-nav-right">
+<div aria-label="Selecionar idioma" class="lglp-language" data-i18n-aria="lang.label" role="group">
+<button aria-pressed="true" data-lglp-lang="pt" lang="pt-BR" type="button">PT</button>
+<button aria-pressed="false" data-lglp-lang="en" lang="en" type="button">EN</button>
+</div>
+<span class="lglp-badge" data-i18n="nav.badge">Consultor Oficial · ROG-e 2026</span>
+<a class="lglp-flow-btn" href="#diagnostico">
+<svg aria-hidden="true" class="lglp-flow-arrow lglp-flow-arrow-left" viewbox="0 0 24 24">
+<path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="lglp-flow-text">
+<span class="lglp-desktop-label" data-i18n="nav.cta">Agendar diagnóstico</span>
+<span class="lglp-mobile-label" data-i18n="nav.ctaShort">Agendar</span>
+</span>
+<span aria-hidden="true" class="lglp-flow-circle"></span>
+<svg aria-hidden="true" class="lglp-flow-arrow lglp-flow-arrow-right" viewbox="0 0 24 24">
+<path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</nav>
+</header>
+<main id="lglp-main">
+<section aria-labelledby="lglp-hero-title" class="lglp-hero">
+<div aria-hidden="true" class="lglp-hero-tech"></div>
+<div class="lglp-wrap lglp-hero-grid">
+<div>
+<p class="lglp-eyebrow lglp-reveal" data-i18n="hero.eyebrow">Diagnóstico de Eficiência em BPO · Setor de Óleo &amp; Gás</p>
+<h1 class="lglp-display lglp-reveal" data-i18n-html="hero.title" id="lglp-hero-title">Sua operação está preparada para acompanhar a complexidade e o crescimento do setor de <span class="lglp-accent">Óleo &amp; Gás</span>?</h1>
+<p class="lglp-hero-lede lglp-reveal" data-i18n="hero.lede">O Locatelli Group conduz um diagnóstico consultivo dos seus processos financeiros, contábeis, fiscais e de folha de pagamento — para reduzir riscos, aumentar a produtividade e apoiar decisões com mais segurança.</p>
+<div class="lglp-hero-ctas lglp-reveal">
+<a class="lglp-motion-btn" href="#diagnostico">
+<span aria-hidden="true" class="lglp-motion-circle"></span>
+<span aria-hidden="true" class="lglp-motion-icon">
+<svg viewbox="0 0 24 24">
+<path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span>
+<span class="lglp-motion-text" data-i18n="hero.primary">Quero avaliar a eficiência do meu BackOffice</span>
+</a>
+<a class="lglp-ghost-link" data-i18n="hero.secondary" href="#desafios">Ver desafios do setor ↓</a>
+</div>
+</div>
+<aside aria-label="Indicador ilustrativo de eficiência potencial do BackOffice" class="lglp-diag-card lglp-reveal" data-i18n-aria="gauge.aria">
+<div class="lglp-diag-head">
+<span data-i18n="gauge.head">Painel de diagnóstico</span>
+<span data-i18n="gauge.scope">BackOffice · O&amp;G</span>
+</div>
+<svg aria-hidden="true" class="lglp-gauge" viewbox="0 0 300 200">
+<path d="M 30 165 A 120 120 0 0 1 270 165" fill="none" stroke="rgba(255,255,255,0.14)" stroke-linecap="round" stroke-width="14"></path>
+<path d="M 30 165 A 120 120 0 0 1 270 165" fill="none" id="lglp-arc-fill" stroke="#FF5900" stroke-dasharray="377" stroke-dashoffset="377" stroke-linecap="round" stroke-width="14"></path>
+<g id="lglp-needle" style="transform: rotate(-90deg);">
+<line stroke="#FFFFFF" stroke-width="2.5" x1="150" x2="150" y1="165" y2="62"></line>
+<circle cx="150" cy="165" fill="#FFFFFF" r="6"></circle>
+</g>
+</svg>
+<div aria-live="polite" class="lglp-diag-readout">
+<span id="lglp-gauge-value">—</span>
+<span class="lglp-diag-unit" data-i18n="gauge.unit">/ 100 · eficiência potencial de BackOffice</span>
+</div>
+<p class="lglp-diag-foot" data-i18n="gauge.foot">Resultado ilustrativo. O diagnóstico real mapeia BPO Financeiro, Contábil, Fiscal e de Folha de Pagamento.</p>
+</aside>
+</div>
+</section>
+<div aria-label="Informações do evento" class="lglp-trust-strip" data-i18n-aria="trust.region">
+<div class="lglp-wrap lglp-trust-inner">
+<span data-i18n-html="trust.official"><strong>Consultor Oficial</strong> · ROG-e 2026</span>
+<span aria-hidden="true" class="lglp-dot"></span>
+<span data-i18n="trust.event">Maior evento de Óleo &amp; Gás da América Latina</span>
+<span aria-hidden="true" class="lglp-dot"></span>
+<span data-i18n="trust.date">21–24 Setembro · Rio de Janeiro</span>
+</div>
+</div>
+<section aria-labelledby="lglp-challenges-title" class="lglp-challenges" id="desafios">
+<div class="lglp-wrap">
+<div class="lglp-section-head lglp-reveal">
+<p class="lglp-eyebrow" data-i18n="challenges.eyebrow">Diagnóstico rápido</p>
+<h2 class="lglp-display" data-i18n="challenges.title" id="lglp-challenges-title">Sua empresa enfrenta algum destes desafios?</h2>
+</div>
+<div class="lglp-checklist">
+<article class="lglp-shader-card lglp-reveal">
+<div aria-hidden="true" class="lglp-shader-bg lglp-grad-orange"></div>
+<div class="lglp-shader-content">
+<span aria-hidden="true" class="lglp-check-icon">
+<svg viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+</span>
+<p data-i18n="challenge.1">Processos financeiros descentralizados e pouco eficientes.</p>
+</div>
+</article>
+<article class="lglp-shader-card lglp-reveal" style="transition-delay: 100ms;">
+<div aria-hidden="true" class="lglp-shader-bg lglp-grad-blue"></div>
+<div class="lglp-shader-content">
+<span aria-hidden="true" class="lglp-check-icon">
+<svg viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+</span>
+<p data-i18n="challenge.2">Elevada complexidade fiscal e tributária.</p>
+</div>
+</article>
+<article class="lglp-shader-card lglp-reveal" style="transition-delay: 200ms;">
+<div aria-hidden="true" class="lglp-shader-bg lglp-grad-slate"></div>
+<div class="lglp-shader-content">
+<span aria-hidden="true" class="lglp-check-icon">
+<svg viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+</span>
+<p data-i18n="challenge.3">Dificuldade para obter informações confiáveis para tomada de decisão.</p>
+</div>
+</article>
+<article class="lglp-shader-card lglp-reveal" style="transition-delay: 300ms;">
+<div aria-hidden="true" class="lglp-shader-bg lglp-grad-orange"></div>
+<div class="lglp-shader-content">
+<span aria-hidden="true" class="lglp-check-icon">
+<svg viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+</span>
+<p data-i18n="challenge.4">Alto volume de atividades operacionais que comprometem a produtividade da equipe.</p>
+</div>
+</article>
+<article class="lglp-shader-card lglp-reveal" style="transition-delay: 400ms;">
+<div aria-hidden="true" class="lglp-shader-bg lglp-grad-blue"></div>
+<div class="lglp-shader-content">
+<span aria-hidden="true" class="lglp-check-icon">
+<svg viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+</span>
+<p data-i18n="challenge.5">Necessidade de fortalecer controles internos, compliance e governança.</p>
+</div>
+</article>
+<article class="lglp-shader-card lglp-reveal" style="transition-delay: 500ms;">
+<div aria-hidden="true" class="lglp-shader-bg lglp-grad-slate"></div>
+<div class="lglp-shader-content">
+<span aria-hidden="true" class="lglp-check-icon">
+<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4M12 16h.01"></path></svg>
+</span>
+<p data-i18n="challenge.6">Sem visibilidade clara do que priorizar antes do próximo ciclo de crescimento.</p>
+</div>
+</article>
+</div>
+<p class="lglp-check-note lglp-reveal" data-i18n="challenges.note">Se você identificou um ou mais desses pontos, o diagnóstico pode mostrar exatamente onde estão as oportunidades de melhoria.</p>
+</div>
+</section>
+<section aria-labelledby="lglp-services-title" class="lglp-services-section">
+<div class="lglp-wrap">
+<div class="lglp-section-head lglp-reveal">
+<p class="lglp-eyebrow" data-i18n="services.eyebrow">Escopo do diagnóstico</p>
+<h2 class="lglp-display" data-i18n="services.title" id="lglp-services-title">Áreas avaliadas no seu BackOffice</h2>
+<p data-i18n="services.copy">Um mapeamento consultivo, conduzido por especialistas, cobrindo as quatro frentes que mais impactam eficiência e risco no setor de Óleo &amp; Gás.</p>
+</div>
+<div class="lglp-services-grid">
+<article class="lglp-skew-card lglp-reveal">
+<span aria-hidden="true" class="lglp-skew-bg lglp-grad-orange"></span>
+<span aria-hidden="true" class="lglp-skew-blur lglp-grad-orange"></span>
+<div class="lglp-skew-content">
+<span class="lglp-service-tag" data-i18n="services.area1">Área 01</span>
+<h3 class="lglp-display" data-i18n="services.title1">BPO Financeiro</h3>
+<p data-i18n="services.copy1">Fluxo de caixa, contas a pagar e receber, conciliações e controles de tesouraria.</p>
+</div>
+</article>
+<article class="lglp-skew-card lglp-reveal" style="transition-delay: 100ms;">
+<span aria-hidden="true" class="lglp-skew-bg lglp-grad-blue"></span>
+<span aria-hidden="true" class="lglp-skew-blur lglp-grad-blue"></span>
+<div class="lglp-skew-content">
+<span class="lglp-service-tag" data-i18n="services.area2">Área 02</span>
+<h3 class="lglp-display" data-i18n="services.title2">BPO Contábil</h3>
+<p data-i18n="services.copy2">Escrituração, fechamento contábil e confiabilidade das informações para decisão.</p>
+</div>
+</article>
+<article class="lglp-skew-card lglp-reveal" style="transition-delay: 200ms;">
+<span aria-hidden="true" class="lglp-skew-bg lglp-grad-slate"></span>
+<span aria-hidden="true" class="lglp-skew-blur lglp-grad-slate"></span>
+<div class="lglp-skew-content">
+<span class="lglp-service-tag" data-i18n="services.area3">Área 03</span>
+<h3 class="lglp-display" data-i18n="services.title3">BPO Fiscal</h3>
+<p data-i18n="services.copy3">Apuração, obrigações acessórias e redução de riscos em ambiente de alta complexidade tributária.</p>
+</div>
+</article>
+<article class="lglp-skew-card lglp-reveal" style="transition-delay: 300ms;">
+<span aria-hidden="true" class="lglp-skew-bg lglp-grad-orange"></span>
+<span aria-hidden="true" class="lglp-skew-blur lglp-grad-orange"></span>
+<div class="lglp-skew-content">
+<span class="lglp-service-tag" data-i18n="services.area4">Área 04</span>
+<h3 class="lglp-display" data-i18n="services.title4">BPO Folha de Pagamento</h3>
+<p data-i18n="services.copy4">Processamento, encargos e conformidade trabalhista com precisão operacional.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section aria-label="Diferenciais do diagnóstico" class="lglp-band" data-i18n-aria="band.region">
+<div class="lglp-wrap">
+<div class="lglp-band-inner">
+<article class="lglp-band-item lglp-reveal">
+<div class="lglp-band-k" data-i18n="band.k1">Abordagem</div>
+<div class="lglp-band-v" data-i18n="band.v1">Diagnóstico consultivo, não um formulário genérico</div>
+</article>
+<article class="lglp-band-item lglp-reveal">
+<div class="lglp-band-k" data-i18n="band.k2">Foco setorial</div>
+<div class="lglp-band-v" data-i18n="band.v2">Dedicado ao contexto de Óleo, Gás &amp; Energia</div>
+</article>
+<article class="lglp-band-item lglp-reveal">
+<div class="lglp-band-k" data-i18n="band.k3">Cobertura</div>
+<div class="lglp-band-v" data-i18n="band.v3">Financeiro · Contábil · Fiscal · Folha</div>
+</article>
+<article class="lglp-band-item lglp-reveal">
+<div class="lglp-band-k" data-i18n="band.k4">Entrega</div>
+<div class="lglp-band-v" data-i18n="band.v4">Conversa direta com especialista, sem intermediários</div>
+</article>
+</div>
+</div>
+</section>
+<section aria-labelledby="lglp-event-title" class="lglp-event">
+<div aria-hidden="true" class="lglp-event-tech"></div>
+<div class="lglp-wrap lglp-event-inner">
+<div class="lglp-event-copy">
+<p class="lglp-eyebrow lglp-reveal" data-i18n="event.eyebrow">Locatelli Group no ROG-e</p>
+<h2 class="lglp-display lglp-reveal" data-i18n="event.title" id="lglp-event-title">Consultor Oficial do ROG-e 2026 — o maior evento de Óleo &amp; Gás da América Latina</h2>
+<p class="lglp-reveal" data-i18n="event.copy">Preencha o diagnóstico antes do evento e chegue à nossa conversa com um contexto prévio dos desafios da sua operação — uma abordagem mais consultiva, direto ao ponto.</p>
+</div>
+<div class="lglp-event-dates lglp-reveal">
+<strong class="lglp-event-big" data-i18n="event.date">21–24 SET</strong>
+<span data-i18n="event.place">Rio de Janeiro · Estande Locatelli Group</span>
+</div>
+</div>
+</section>
+<section aria-labelledby="lglp-form-title" class="lglp-form-section" id="diagnostico">
+<div class="lglp-wrap">
+<div class="lglp-form-panel lglp-reveal">
+<div class="lglp-form-grid">
+<div class="lglp-form-copy">
+<p class="lglp-eyebrow" data-i18n="form.eyebrow">Agende sua avaliação</p>
+<h2 class="lglp-display" data-i18n="form.title" id="lglp-form-title">Agende uma conversa com nossos especialistas</h2>
+<p data-i18n="form.copy">Um diagnóstico consultivo, sem custo, para identificar oportunidades de otimização nos processos financeiros, contábeis, fiscais e de folha de pagamento da sua empresa.</p>
+<ul class="lglp-form-facts">
+<li>
+<span class="lglp-form-k" data-i18n="form.k1">Retorno</span>
+<span class="lglp-form-v" data-i18n="form.v1">Especialista Locatelli Group</span>
+</li>
+<li>
+<span class="lglp-form-k" data-i18n="form.k2">Formato</span>
+<span class="lglp-form-v" data-i18n="form.v2">Conversa consultiva</span>
+</li>
+<li>
+<span class="lglp-form-k" data-i18n="form.k3">Investimento</span>
+<span class="lglp-form-v" data-i18n="form.v3">Sem custo</span>
+</li>
+</ul>
+</div>
+<div aria-label="Formulário de agendamento do diagnóstico" class="lglp-form-mount" data-i18n-aria="form.region" role="region">
+<div class="lglp-form-slot" data-lglp-form-lang="pt" lang="pt-BR">
+<div id="portfolio-form-rog-e-pt" role="note" class="portfolio-form-notice"><strong>Integração removida</strong><p>Esta cópia de portfólio não carrega formulário, tracking ou identificadores de produção.</p></div>
+</div>
+<div aria-hidden="true" class="lglp-form-slot" data-lglp-form-lang="en" hidden="" lang="en">
+<div id="portfolio-form-rog-e-en" role="note" class="portfolio-form-notice"><strong>Integração removida</strong><p>Esta cópia de portfólio não carrega formulário, tracking ou identificadores de produção.</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="lglp-footer">
+<div class="lglp-wrap lglp-footer-inner">
+<div aria-label="Locatelli Group e PrimeGlobal" class="lglp-footer-brands" data-i18n-aria="footer.brands" role="group">
+<a aria-label="Locatelli Group" class="lglp-logo lglp-logo--footer" href="#lglp-main">
+<span aria-hidden="true" class="lglp-logo-window lglp-logo-window--footer">
+<img alt="" class="lglp-logo-image" decoding="async" height="750" loading="lazy" src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1777903914/$no173dxvm6" width="1000">
+</span>
+</a>
+<span aria-hidden="true" class="lglp-footer-brand-divider"></span>
+<span class="lglp-primeglobal-brand">
+<img alt="PrimeGlobal" class="lglp-primeglobal-logo" decoding="async" height="74" loading="lazy" src="https://d335luupugsy2.cloudfront.net/cms/files/65187/1786467915/$satd5jeaibd" width="696">
+</span>
+</div>
+<div aria-label="Redes sociais" class="lglp-social" data-i18n-aria="social.region">
+<a aria-label="Abrir LinkedIn da Locatelli Group" class="lglp-social-link" data-i18n-aria="social.linkedin" href="https://www.linkedin.com/company/locatelli-group/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+</a>
+<a aria-label="Abrir Instagram da Locatelli Group" class="lglp-social-link" data-i18n-aria="social.instagram" href="https://www.instagram.com/locatelli_group/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+</a>
+<a aria-label="Abrir Facebook da Locatelli Group" class="lglp-social-link" data-i18n-aria="social.facebook" href="https://www.facebook.com/people/Locatelli-Group/61581305894236/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+</a>
+<a aria-label="Abrir o site da Locatelli Group" class="lglp-social-link" data-i18n-aria="social.website" href="https://locatelligroup.com.br/" rel="noopener noreferrer" target="_blank" title="locatelligroup.com.br">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
+</svg>
+</a>
+</div>
+<span class="lglp-footer-meta" data-i18n="footer.meta">© Locatelli Brasil 2026. Todos os direitos reservados.</span>
+</div>
+</footer>
+</div>
+<script>
+(function () {
+  "use strict";
+
+  var root = document.getElementById("locatelli-bpo-lp");
+  if (!root || root.dataset.lglpBooted === "true") return;
+  root.dataset.lglpBooted = "true";
+
+  var copy = {"pt":{"meta.title":"Diagnóstico de Eficiência em BPO | Locatelli Group","skip":"Ir para o conteúdo principal","lang.label":"Selecionar idioma","nav.badge":"Consultor Oficial · ROG-e 2026","nav.cta":"Agendar diagnóstico","nav.ctaShort":"Agendar","hero.eyebrow":"Diagnóstico de Eficiência em BPO · Setor de Óleo & Gás","hero.title":"Sua operação está preparada para acompanhar a complexidade e o crescimento do setor de <span class=\"lglp-accent\">Óleo &amp; Gás</span>?","hero.lede":"O Locatelli Group conduz um diagnóstico consultivo dos seus processos financeiros, contábeis, fiscais e de folha de pagamento — para reduzir riscos, aumentar a produtividade e apoiar decisões com mais segurança.","hero.primary":"Quero avaliar a eficiência do meu BackOffice","hero.secondary":"Ver desafios do setor ↓","gauge.head":"Painel de diagnóstico","gauge.scope":"BackOffice · O&G","gauge.unit":"/ 100 · eficiência potencial de BackOffice","gauge.foot":"Resultado ilustrativo. O diagnóstico real mapeia BPO Financeiro, Contábil, Fiscal e de Folha de Pagamento.","trust.official":"<strong>Consultor Oficial</strong> · ROG-e 2026","trust.event":"Maior evento de Óleo & Gás da América Latina","trust.date":"21–24 Setembro · Rio de Janeiro","challenges.eyebrow":"Diagnóstico rápido","challenges.title":"Sua empresa enfrenta algum destes desafios?","challenge.1":"Processos financeiros descentralizados e pouco eficientes.","challenge.2":"Elevada complexidade fiscal e tributária.","challenge.3":"Dificuldade para obter informações confiáveis para tomada de decisão.","challenge.4":"Alto volume de atividades operacionais que comprometem a produtividade da equipe.","challenge.5":"Necessidade de fortalecer controles internos, compliance e governança.","challenge.6":"Sem visibilidade clara do que priorizar antes do próximo ciclo de crescimento.","challenges.note":"Se você identificou um ou mais desses pontos, o diagnóstico pode mostrar exatamente onde estão as oportunidades de melhoria.","services.eyebrow":"Escopo do diagnóstico","services.title":"Áreas avaliadas no seu BackOffice","services.copy":"Um mapeamento consultivo, conduzido por especialistas, cobrindo as quatro frentes que mais impactam eficiência e risco no setor de Óleo & Gás.","services.area1":"Área 01","services.area2":"Área 02","services.area3":"Área 03","services.area4":"Área 04","services.title1":"BPO Financeiro","services.title2":"BPO Contábil","services.title3":"BPO Fiscal","services.title4":"BPO Folha de Pagamento","services.copy1":"Fluxo de caixa, contas a pagar e receber, conciliações e controles de tesouraria.","services.copy2":"Escrituração, fechamento contábil e confiabilidade das informações para decisão.","services.copy3":"Apuração, obrigações acessórias e redução de riscos em ambiente de alta complexidade tributária.","services.copy4":"Processamento, encargos e conformidade trabalhista com precisão operacional.","band.k1":"Abordagem","band.v1":"Diagnóstico consultivo, não um formulário genérico","band.k2":"Foco setorial","band.v2":"Dedicado ao contexto de Óleo, Gás & Energia","band.k3":"Cobertura","band.v3":"Financeiro · Contábil · Fiscal · Folha","band.k4":"Entrega","band.v4":"Conversa direta com especialista, sem intermediários","event.eyebrow":"Locatelli Group no ROG-e","event.title":"Consultor Oficial do ROG-e 2026 — o maior evento de Óleo & Gás da América Latina","event.copy":"Preencha o diagnóstico antes do evento e chegue à nossa conversa com um contexto prévio dos desafios da sua operação — uma abordagem mais consultiva, direto ao ponto.","event.date":"21–24 SET","event.place":"Rio de Janeiro · Estande Locatelli Group","form.eyebrow":"Agende sua avaliação","form.title":"Agende uma conversa com nossos especialistas","form.copy":"Um diagnóstico consultivo, sem custo, para identificar oportunidades de otimização nos processos financeiros, contábeis, fiscais e de folha de pagamento da sua empresa.","form.k1":"Retorno","form.v1":"Especialista Locatelli Group","form.k2":"Formato","form.v2":"Conversa consultiva","form.k3":"Investimento","form.v3":"Sem custo","form.loading":"Carregando formulário…","form.error":"Não foi possível carregar o formulário. Recarregue a página e tente novamente.","footer.meta":"© Locatelli Brasil 2026. Todos os direitos reservados.","social.linkedin":"Abrir LinkedIn da Locatelli Group","social.instagram":"Abrir Instagram da Locatelli Group","social.facebook":"Abrir Facebook da Locatelli Group","gauge.aria":"Indicador ilustrativo de eficiência potencial do BackOffice","form.region":"Formulário de agendamento do diagnóstico","nav.region":"Navegação principal","trust.region":"Informações do evento","band.region":"Diferenciais do diagnóstico","social.region":"Redes sociais","footer.brands":"Locatelli Group e PrimeGlobal","social.website":"Abrir o site da Locatelli Group"},"en":{"meta.title":"BPO Efficiency Assessment | Locatelli Group","skip":"Skip to main content","lang.label":"Select language","nav.badge":"Official Consultant · ROG-e 2026","nav.cta":"Schedule assessment","nav.ctaShort":"Schedule","hero.eyebrow":"BPO Efficiency Assessment · Oil & Gas Sector","hero.title":"Is your operation ready to keep up with the complexity and growth of the <span class=\"lglp-accent\">Oil &amp; Gas</span> sector?","hero.lede":"Locatelli Group conducts a consultative assessment of your financial, accounting, tax, and payroll processes — helping reduce risks, increase productivity, and support safer decisions.","hero.primary":"I want to assess my BackOffice efficiency","hero.secondary":"See sector challenges ↓","gauge.head":"Assessment dashboard","gauge.scope":"BackOffice · O&G","gauge.unit":"/ 100 · potential BackOffice efficiency","gauge.foot":"Illustrative result. The actual assessment maps Financial, Accounting, Tax, and Payroll BPO.","trust.official":"<strong>Official Consultant</strong> · ROG-e 2026","trust.event":"Largest Oil & Gas event in Latin America","trust.date":"September 21–24 · Rio de Janeiro","challenges.eyebrow":"Quick assessment","challenges.title":"Does your company face any of these challenges?","challenge.1":"Decentralized and inefficient financial processes.","challenge.2":"High tax and fiscal complexity.","challenge.3":"Difficulty obtaining reliable information for decision-making.","challenge.4":"A high volume of operational work that compromises team productivity.","challenge.5":"Need to strengthen internal controls, compliance, and governance.","challenge.6":"No clear visibility on what to prioritize before the next growth cycle.","challenges.note":"If you identified one or more of these points, the assessment can show exactly where the improvement opportunities are.","services.eyebrow":"Assessment scope","services.title":"Areas evaluated in your BackOffice","services.copy":"A consultative mapping conducted by specialists, covering the four areas with the greatest impact on efficiency and risk in the Oil & Gas sector.","services.area1":"Area 01","services.area2":"Area 02","services.area3":"Area 03","services.area4":"Area 04","services.title1":"Financial BPO","services.title2":"Accounting BPO","services.title3":"Tax BPO","services.title4":"Payroll BPO","services.copy1":"Cash flow, accounts payable and receivable, reconciliations, and treasury controls.","services.copy2":"Bookkeeping, accounting close, and reliable information for decision-making.","services.copy3":"Tax calculation, ancillary obligations, and risk reduction in a highly complex tax environment.","services.copy4":"Payroll processing, labor charges, and compliance with operational accuracy.","band.k1":"Approach","band.v1":"A consultative assessment, not a generic form","band.k2":"Industry focus","band.v2":"Dedicated to the Oil, Gas & Energy context","band.k3":"Coverage","band.v3":"Finance · Accounting · Tax · Payroll","band.k4":"Delivery","band.v4":"Direct conversation with a specialist, with no intermediaries","event.eyebrow":"Locatelli Group at ROG-e","event.title":"Official Consultant of ROG-e 2026 — the largest Oil & Gas event in Latin America","event.copy":"Complete the assessment before the event and arrive at our meeting with prior context about your operation’s challenges — a more consultative, straight-to-the-point approach.","event.date":"21–24 SEP","event.place":"Rio de Janeiro · Locatelli Group Booth","form.eyebrow":"Schedule your assessment","form.title":"Schedule a conversation with our specialists","form.copy":"A free consultative assessment to identify optimization opportunities in your company’s financial, accounting, tax, and payroll processes.","form.k1":"Follow-up","form.v1":"Locatelli Group Specialist","form.k2":"Format","form.v2":"Consultative conversation","form.k3":"Investment","form.v3":"Free of charge","form.loading":"Loading form…","form.error":"The form could not be loaded. Refresh the page and try again.","footer.meta":"© Locatelli Brasil 2026. All rights reserved.","social.linkedin":"Open Locatelli Group on LinkedIn","social.instagram":"Open Locatelli Group on Instagram","social.facebook":"Open Locatelli Group on Facebook","gauge.aria":"Illustrative indicator of potential BackOffice efficiency","form.region":"Assessment scheduling form","nav.region":"Main navigation","trust.region":"Event information","band.region":"Assessment differentiators","social.region":"Social media","footer.brands":"Locatelli Group and PrimeGlobal","social.website":"Open the Locatelli Group website"}};
+  var currentLanguage = "pt";
+  var rdForms = {
+    pt: {
+      id: "portfolio-form-rog-e-pt",
+      statusId: "lglp-form-status-pt",
+      prepared: false,
+      started: false,
+      ready: false
+    },
+    en: {
+      id: "portfolio-form-rog-e-en",
+      statusId: "lglp-form-status-en",
+      prepared: false,
+      started: false,
+      ready: false
+    }
+  };
+
+  function readStoredLanguage() {
+    try {
+      var stored = window.localStorage.getItem("lglp-language");
+      return stored === "en" || stored === "pt" ? stored : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function requestedLanguage() {
+    try {
+      var queryLanguage = new URLSearchParams(window.location.search).get("lang");
+      if (queryLanguage === "en" || queryLanguage === "pt") return queryLanguage;
+    } catch (error) {
+      /* URLSearchParams can be unavailable in very old browsers. */
+    }
+    return readStoredLanguage() || "pt";
+  }
+
+  function translateElement(element, attribute, html) {
+    var key = element.getAttribute(attribute);
+    var value = copy[currentLanguage] && copy[currentLanguage][key];
+    if (typeof value !== "string") return;
+
+    if (attribute === "data-i18n-aria") {
+      element.setAttribute("aria-label", value);
+    } else if (html) {
+      element.innerHTML = value;
+    } else {
+      element.textContent = value;
+    }
+  }
+
+  function applyLanguage(language) {
+    currentLanguage = language === "en" ? "en" : "pt";
+    var languageTag = currentLanguage === "en" ? "en" : "pt-BR";
+
+    root.setAttribute("lang", languageTag);
+    root.dataset.language = currentLanguage;
+
+    root.querySelectorAll("[data-i18n]").forEach(function (element) {
+      translateElement(element, "data-i18n", false);
+    });
+    root.querySelectorAll("[data-i18n-html]").forEach(function (element) {
+      translateElement(element, "data-i18n-html", true);
+    });
+    root.querySelectorAll("[data-i18n-aria]").forEach(function (element) {
+      translateElement(element, "data-i18n-aria", false);
+    });
+
+    root.querySelectorAll("[data-lglp-lang]").forEach(function (button) {
+      button.setAttribute("aria-pressed", String(button.dataset.lglpLang === currentLanguage));
+    });
+
+    syncRDFormLanguage();
+
+    if (document.documentElement) document.documentElement.lang = languageTag;
+    if (copy[currentLanguage] && copy[currentLanguage]["meta.title"]) {
+      document.title = copy[currentLanguage]["meta.title"];
+    }
+
+    try {
+      window.localStorage.setItem("lglp-language", currentLanguage);
+    } catch (error) {
+      /* Storage may be blocked; language switching still works for this visit. */
+    }
+  }
+
+  root.querySelectorAll("[data-lglp-lang]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      applyLanguage(button.dataset.lglpLang);
+    });
+  });
+  applyLanguage(requestedLanguage());
+
+  function showAllRevealItems(items) {
+    items.forEach(function (item) {
+      item.classList.add("is-visible");
+    });
+  }
+
+  function setupReveal() {
+    var items = Array.prototype.slice.call(root.querySelectorAll(".lglp-reveal"));
+    if (!items.length) return;
+
+    var reducedMotion = window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reducedMotion || !("IntersectionObserver" in window)) {
+      showAllRevealItems(items);
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.08,
+      rootMargin: "0px 0px -4% 0px"
+    });
+
+    items.forEach(function (item) {
+      observer.observe(item);
+    });
+
+    window.setTimeout(function () {
+      showAllRevealItems(items);
+      observer.disconnect();
+    }, 2800);
+  }
+
+  function setupGauge() {
+    var card = root.querySelector(".lglp-diag-card");
+    var arc = root.querySelector("#lglp-arc-fill");
+    var needle = root.querySelector("#lglp-needle");
+    var value = root.querySelector("#lglp-gauge-value");
+
+    if (!card || !arc || !needle || !value) return;
+
+    var target = Math.floor(Math.random() * 27) + 35;
+    var circumference = 377;
+    var started = false;
+
+    function draw(score) {
+      var bounded = Math.max(0, Math.min(100, score));
+      arc.style.strokeDashoffset = String(circumference * (1 - bounded / 100));
+      needle.style.transform = "rotate(" + (-90 + bounded * 1.8) + "deg)";
+      value.textContent = String(Math.round(bounded));
+    }
+
+    function animate() {
+      if (started) return;
+      started = true;
+
+      var reducedMotion = window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (reducedMotion || !window.requestAnimationFrame) {
+        draw(target);
+        return;
+      }
+
+      var startedAt = null;
+      var duration = 1450;
+
+      function frame(timestamp) {
+        if (startedAt === null) startedAt = timestamp;
+        var progress = Math.min(1, (timestamp - startedAt) / duration);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        draw(target * eased);
+        if (progress < 1) window.requestAnimationFrame(frame);
+      }
+
+      window.requestAnimationFrame(frame);
+    }
+
+    draw(0);
+
+    if (!("IntersectionObserver" in window)) {
+      animate();
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      if (entries.some(function (entry) { return entry.isIntersecting; })) {
+        animate();
+        observer.disconnect();
+      }
+    }, { threshold: 0.25 });
+
+    observer.observe(card);
+    window.setTimeout(animate, 1800);
+  }
+
+  function prepareRDForm(config) {
+    if (!config || config.prepared) return Boolean(config && config.target && config.status);
+
+    config.slot = root.querySelector('[data-lglp-form-lang="' + (config === rdForms.en ? "en" : "pt") + '"]');
+    config.target = root.querySelector("#" + config.id);
+    config.status = root.querySelector("#" + config.statusId);
+
+    if (!config.slot || !config.target || !config.status) return false;
+
+    config.prepared = true;
+
+    config.hasRenderedForm = function () {
+      return Boolean(config.target.querySelector(
+        "form, iframe, input, select, textarea, .bricks-form, .rd-form, [class*='rdstation']"
+      ));
+    };
+
+    config.markReady = function () {
+      if (config.ready || !config.hasRenderedForm()) return;
+      config.ready = true;
+      config.status.hidden = true;
+      config.status.dataset.state = "ready";
+      if (config.observer) config.observer.disconnect();
+    };
+
+    config.markError = function () {
+      if (config.ready) return;
+      config.status.hidden = false;
+      config.status.dataset.state = "error";
+      config.status.setAttribute("data-i18n", "form.error");
+      translateElement(config.status, "data-i18n", false);
+    };
+
+    if ("MutationObserver" in window) {
+      config.observer = new MutationObserver(config.markReady);
+      config.observer.observe(config.target, { childList: true, subtree: true });
+    }
+
+    return true;
+  }
+
+  function loadRDLibrary(onReady, onError) {
+    if (typeof window.RDStationForms === "function") {
+      onReady();
+      return;
+    }
+
+    var selector = [
+      "script[data-lglp-rd-forms]",
+      "script[data-portfolio-form-library-disabled]"
+    ].join(", ");
+    var script = document.querySelector(selector);
+    var created = false;
+    var finished = false;
+    var attempts = 0;
+
+    function succeed() {
+      if (finished) return;
+      finished = true;
+      onReady();
+    }
+
+    function fail() {
+      if (finished) return;
+      finished = true;
+      onError();
+    }
+
+    function poll() {
+      if (finished) return;
+      if (typeof window.RDStationForms === "function") {
+        succeed();
+        return;
+      }
+      attempts += 1;
+      if (attempts >= 100) {
+        fail();
+        return;
+      }
+      window.setTimeout(poll, 100);
+    }
+
+    if (!script) {
+      script = document.createElement("script");
+      script.src = "about:blank";
+      script.async = true;
+      script.dataset.lglpRdForms = "true";
+      created = true;
+    }
+
+    script.addEventListener("load", poll, { once: true });
+    script.addEventListener("error", fail, { once: true });
+
+    if (created) document.head.appendChild(script);
+    poll();
+  }
+
+  function ensureRDForm(language) {
+    var config = rdForms[language === "en" ? "en" : "pt"];
+    if (!prepareRDForm(config) || config.ready || config.started) return;
+
+    config.started = true;
+    config.target.dataset.lglpFormStarted = "true";
+    config.status.hidden = false;
+    config.status.dataset.state = "loading";
+    config.status.setAttribute("data-i18n", "form.loading");
+    translateElement(config.status, "data-i18n", false);
+
+    loadRDLibrary(function () {
+      try {
+        new window.RDStationForms(
+          config.id,
+          "PORTFOLIO-DEMO"
+        ).createForm();
+
+        window.setTimeout(config.markReady, 100);
+        window.setTimeout(config.markReady, 800);
+        window.setTimeout(config.markReady, 2200);
+        window.setTimeout(function () {
+          config.markReady();
+          if (!config.ready) config.markError();
+        }, 15000);
+      } catch (error) {
+        config.markError();
+      }
+    }, config.markError);
+  }
+
+  function syncRDFormLanguage() {
+    Object.keys(rdForms).forEach(function (language) {
+      var config = rdForms[language];
+      if (!prepareRDForm(config)) return;
+
+      var active = language === currentLanguage;
+      config.slot.hidden = !active;
+      config.slot.setAttribute("aria-hidden", String(!active));
+    });
+
+    ensureRDForm(currentLanguage);
+  }
+
+  function setupRDForms() {
+    prepareRDForm(rdForms.pt);
+    prepareRDForm(rdForms.en);
+    syncRDFormLanguage();
+  }
+
+  try { setupReveal(); } catch (error) {
+    showAllRevealItems(Array.prototype.slice.call(root.querySelectorAll(".lglp-reveal")));
+  }
+  try { setupGauge(); } catch (error) {
+    var value = root.querySelector("#lglp-gauge-value");
+    if (value) value.textContent = "50";
+  }
+  try { /* formulários desativados na cópia pública */ } catch (error) {
+    var config = rdForms[currentLanguage] || rdForms.pt;
+    if (prepareRDForm(config) && config.status) {
+      config.status.dataset.state = "error";
+      config.status.setAttribute("data-i18n", "form.error");
+      translateElement(config.status, "data-i18n", false);
+    }
+  }
+}());
+</script></body></html>

@@ -1,35 +1,40 @@
 # Diogo Mussi
 
-Portfólio de Growth, UX e engenharia de produto. O site reúne estudos de caso com foco em
-estratégia digital, landing pages, experiências internas e implementação técnica.
+## Português
 
-## Projetos em destaque
+Portfólio de Growth, UX e engenharia de produto.
 
-- [Programa WIN](projects/programa-win/index.html): produto interno gamificado com mapa de
-  oportunidades, ranking, conquistas, perfil e painel administrativo.
-- [Ecossistema de Landing Pages Locatelli](projects/landing-pages/index.html): 12 projetos
-  verificados no manifesto, distribuídos entre oito páginas de produção, duas variantes de
-  teste A/B e duas demos. Um experimento suplementar é apresentado separadamente e não é
-  descrito como produção.
+- [Programa WIN](projects/programa-win/index.html): produto interno gamificado com mapa,
+  ranking, conquistas e painel administrativo.
+- [Landing Pages Locatelli](projects/landing-pages/index.html): cases de produção, testes A/B,
+  demos e experimentos identificados por status.
 
-## Executar localmente
+## English
 
-O portfólio é estático e não precisa de instalação:
+Growth, UX, and product engineering portfolio.
 
-1. Abra `index.html` diretamente no navegador; ou
-2. Execute `python -m http.server 8080` para testar as rotas como site.
+- [WIN Program](projects/programa-win/index.html): an internal gamified product featuring a
+  territory map, rankings, achievements, and an admin dashboard.
+- [Locatelli Landing Pages](projects/landing-pages/index.html): production case studies, A/B
+  tests, demos, and clearly labeled experiments.
 
-O comando opcional `node scripts/check-site.mjs` valida estrutura, links locais, IDs duplicados
-e padrões que não podem aparecer na versão pública.
+## Local
 
-## Publicação responsável
+PT: abra `index.html` no navegador ou execute:
 
-Os trabalhos da Locatelli Group são apresentados com autorização. Formulários, tracking,
-identificadores de integração, dados pessoais, palavras de campanha e documentação interna
-foram excluídos das demonstrações públicas.
+EN: open `index.html` in your browser or run:
 
-Cada landing page possui um case técnico próprio e uma cópia sanitizada. As fontes originais
-do pacote de handoff não foram modificadas. Resultados de conversão não são atribuídos sem
-evidência pública comparável.
+```bash
+python -m http.server 8080
+```
 
-Não há licença aberta para reutilização dos materiais de clientes. Consulte [NOTICE.md](NOTICE.md).
+Verificação opcional / Optional check: `node scripts/check-site.mjs`.
+
+## Uso / Usage
+
+PT: trabalhos autorizados e sanitizados, sem dados pessoais, tracking ou integrações ativas.
+
+EN: authorized, sanitized work without personal data, tracking, or active integrations.
+
+Materiais de clientes não possuem licença aberta / Client materials are not openly licensed.
+Consulte / See [NOTICE.md](NOTICE.md).

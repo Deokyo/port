@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Relatorios | Programa WIN</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=0.3.0">
+</head>
+<body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m21 16-9 5-9-5V8l9-5 9 5z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 4 3 5-7"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18"/><rect x="3" y="4" width="18" height="18" rx="2"/></symbol>
+    <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+  </svg>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegacao principal">
+      <div class="brand" aria-label="Locatelli Group - Programa WIN">
+        <img src="/assets/logo-locatelli-clara.png" alt="Locatelli Group">
+        <div><strong>Programa WIN</strong><small>Administracao</small></div>
+      </div>
+      <nav class="main-nav">
+        <a href="/"><svg><use href="#i-box"/></svg><span>WIN Board</span></a>
+        <a href="#visao-geral"><svg><use href="#i-grid"/></svg><span>Dashboard</span></a>
+        <a href="#gestao-participantes"><svg><use href="#i-users"/></svg><span>Participantes</span></a>
+        <a href="#territorios"><svg><use href="#i-box"/></svg><span>Catalogo</span></a>
+        <a href="#gestao-indicacoes"><svg><use href="#i-target"/></svg><span>Indicacoes</span></a>
+        <a class="active" href="#relatorios" aria-current="page"><svg><use href="#i-chart"/></svg><span>Relatorios</span></a>
+      </nav>
+      <div class="nav-section">
+        <p>ADMINISTRACAO</p>
+        <a href="#importacao"><svg><use href="#i-upload"/></svg><span>Importar dados</span></a>
+        <a href="#regras"><svg><use href="#i-settings"/></svg><span>Regras e decisoes</span></a>
+        <a href="#auditoria"><svg><use href="#i-chart"/></svg><span>Auditoria</span></a>
+      </div>
+      <div class="cycle-status">
+        <span>Ciclo atual</span>
+        <strong id="sidebarCycle" class="skeleton"></strong>
+        <div><i id="cycleProgress"></i></div>
+        <small id="cycleDays"></small>
+      </div>
+      <button class="collapse-button" id="collapseSidebar" type="button" aria-label="Recolher menu" title="Recolher menu">
+        <svg><use href="#i-chevron"/></svg>
+      </button>
+    </aside>
+
+    <main class="workspace" id="main-content">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="mobileMenu" type="button" aria-label="Abrir menu">
+          <svg><use href="#i-menu"/></svg>
+        </button>
+        <div class="page-title">
+          <span class="eyebrow">PROGRAMA WIN</span>
+          <h1>Relatorios de performance</h1>
+        </div>
+        <div class="top-actions">
+          <span class="sync-status"><i></i><span id="syncLabel">Fonte: banco da aplicacao</span></span>
+          <button class="profile-button" id="profileButton" type="button" aria-label="Perfil da sessao">
+            <span><strong id="sessionName" class="skeleton"></strong><small id="sessionRoles"></small></span><b id="sessionInitials"></b>
+          </button>
+          <button class="secondary-button" id="logoutButton" type="button">Sair</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="state-banner" id="stateBanner" role="status" aria-live="polite" hidden></div>
+
+        <section class="report-toolbar" id="relatorios" aria-labelledby="report-heading">
+          <div>
+            <h2 id="report-heading">Resultado do ciclo</h2>
+            <p id="periodDescription">Visao consolidada do periodo selecionado.</p>
+          </div>
+          <div class="toolbar-actions">
+            <div class="cycle-switcher" role="group" aria-label="Periodicidade do relatorio">
+              <button type="button" data-cycle="weekly">Semanal</button>
+              <button class="active" type="button" data-cycle="monthly">Mensal</button>
+              <button type="button" data-cycle="quarterly">Trimestral</button>
+            </div>
+            <label class="date-control">
+              <span class="sr-only">Data de referencia</span>
+              <svg><use href="#i-calendar"/></svg>
+              <input id="referenceDate" type="date">
+            </label>
+            <a class="secondary-button" id="exportReport" href="/api/v1/admin/export/referrals.csv">
+              <svg><use href="#i-download"/></svg><span>Exportar relatorio</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="kpi-grid" id="visao-geral" aria-label="Indicadores do ciclo">
+          <article class="kpi kpi-primary">
+            <div class="kpi-heading"><span>Indicacoes</span><svg><use href="#i-target"/></svg></div>
+            <strong id="kpiReferrals">—</strong><p><b id="kpiReferralsChange">—</b> vs. ciclo anterior</p>
+          </article>
+          <article class="kpi">
+            <div class="kpi-heading"><span>WIN Points</span><svg><use href="#i-chart"/></svg></div>
+            <strong id="kpiPoints">—</strong><p><b id="kpiPointsNote">regra pendente</b></p>
+          </article>
+          <article class="kpi">
+            <div class="kpi-heading"><span>Vendas</span><svg><use href="#i-box"/></svg></div>
+            <strong id="kpiWins">—</strong><p><b id="kpiWinsChange">—</b> vs. ciclo anterior</p>
+          </article>
+          <article class="kpi">
+            <div class="kpi-heading"><span>Taxa de conversao</span><svg><use href="#i-grid"/></svg></div>
+            <strong id="kpiConversion">—</strong><p><b id="kpiConversionChange">—</b> vs. ciclo anterior</p>
+          </article>
+        </section>
+
+        <section class="analysis-grid">
+          <article class="panel funnel-panel" id="indicacoes">
+            <div class="panel-heading">
+              <div><span class="section-label">JORNADA</span><h2>Avanco das oportunidades</h2></div>
+              <span class="muted" id="funnelTotal"></span>
+            </div>
+            <div id="funnelChart" class="funnel-chart"></div>
+          </article>
+
+          <article class="panel territory-panel" id="territorios">
+            <div class="panel-heading">
+              <div><span class="section-label">CATALOGO</span><h2>Distribuicao por territorio</h2></div>
+            </div>
+            <div class="donut-legend" id="territoryLegend"></div>
+          </article>
+
+          <article class="panel ranking-panel" id="participantes">
+            <div class="panel-heading">
+              <div><span class="section-label">LEADERBOARD</span><h2>Destaques do ciclo</h2></div>
+              <span class="muted">por pontos e indicacoes</span>
+            </div>
+            <ol class="ranking-list" id="rankingList"></ol>
+          </article>
+
+          <article class="panel" id="regras">
+            <div class="panel-heading">
+              <div><span class="section-label">GOVERNANCA</span><h2>Regras de negocio</h2></div>
+              <span class="muted">nenhuma regra e aplicada sem aprovacao</span>
+            </div>
+            <ul class="rule-list" id="ruleList"></ul>
+          </article>
+        </section>
+
+        <section class="import-panel" id="importacao" aria-labelledby="import-heading">
+          <div class="import-copy">
+            <span class="section-label">BASE DE DADOS</span>
+            <h2 id="import-heading">Importar planilha do ciclo</h2>
+            <p>Colunas obrigatorias: <strong>MATRICULA</strong>, <strong>EMPRESA</strong>,
+               <strong>PRODUTO</strong>, <strong>STATUS</strong> e <strong>DATA</strong>.
+               A coluna PONTOS, se existir, e ignorada: a pontuacao e derivada no servidor.</p>
+            <p class="muted">O arquivo e validado no servidor e fica em area de staging.
+               Nada e aplicado antes da sua confirmacao explicita.</p>
+            <a class="secondary-button template-download" href="/assets/BASE_IMPORTACAO_WIN.xlsx" download>
+              <svg><use href="#i-download"/></svg><span>Baixar modelo oficial XLSX</span>
+            </a>
+          </div>
+          <div class="drop-zone" id="dropZone">
+            <input id="fileInput" type="file" accept=".xlsx,.csv" aria-label="Selecionar planilha" aria-describedby="uploadHelp">
+            <div class="upload-icon"><svg><use href="#i-upload"/></svg></div>
+            <strong>Arraste a planilha para esta area</strong>
+            <span id="uploadHelp">ou selecione um arquivo .xlsx ou .csv de ate 10 MB</span>
+            <button class="primary-button" id="selectFile" type="button">Selecionar arquivo</button>
+          </div>
+          <div class="import-result" id="importResult" role="status" aria-live="polite" hidden></div>
+          <div id="previewArea" hidden>
+            <div class="preview-grid" id="previewGrid"></div>
+            <div id="previewErrors"></div>
+            <label class="attestation-check" for="attestConference">
+              <input id="attestConference" type="checkbox">
+              <span>Confirmo que as linhas validas foram conferidas manualmente.</span>
+            </label>
+            <label class="conference-note" for="conferenceNote">
+              <span>Referencia da conferencia (opcional)</span>
+              <input id="conferenceNote" type="text" maxlength="240" placeholder="Ex.: conferencia de 04/09/2026">
+            </label>
+            <div class="confirm-bar">
+              <button class="primary-button" id="confirmImport" type="button">Confirmar aplicacao</button>
+              <span class="muted" id="confirmHint"></span>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="history-panel" id="gestao-participantes" aria-labelledby="staff-heading">
+          <div class="panel-heading">
+            <div><span class="section-label">CADASTRO</span><h2 id="staff-heading">Participantes</h2></div>
+            <span class="muted">a matricula e a identidade estavel — o nome nunca e chave</span>
+          </div>
+          <div class="confirm-bar">
+            <label class="sr-only" for="staffCode">Matricula</label>
+            <input id="staffCode" type="text" placeholder="Matricula (ex.: WIN-0101)" maxlength="40">
+            <label class="sr-only" for="staffName">Nome</label>
+            <input id="staffName" type="text" placeholder="Nome do participante" maxlength="160">
+            <label class="sr-only" for="staffUnit">Area</label>
+            <input id="staffUnit" type="text" placeholder="Area (opcional)" maxlength="80">
+            <button class="primary-button" id="createStaff" type="button">Cadastrar</button>
+            <span class="muted" id="staffHint"></span>
+          </div>
+          <div class="confirm-bar">
+            <label class="sr-only" for="staffSearch">Buscar participante</label>
+            <input id="staffSearch" type="search" placeholder="Buscar por nome ou matricula">
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Matricula</th><th>Nome</th><th>Area</th><th>Indicacoes</th><th>Status</th><th>Acao</th></tr></thead>
+              <tbody id="staffBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="history-panel" id="gestao-indicacoes" aria-labelledby="referrals-heading">
+          <div class="panel-heading">
+            <div><span class="section-label">PIPELINE</span><h2 id="referrals-heading">Indicacoes</h2></div>
+            <span class="muted" id="referralsTotal"></span>
+          </div>
+          <div class="confirm-bar">
+            <label class="sr-only" for="referralStage">Filtrar por etapa</label>
+            <select id="referralStage">
+              <option value="">Todas as etapas</option>
+              <option value="identified">Oportunidade identificada</option>
+              <option value="meeting_scheduled">Reuniao agendada</option>
+              <option value="meeting_held">Reuniao realizada</option>
+              <option value="proposal_sent">Proposta enviada</option>
+              <option value="sale_won">Venda realizada</option>
+              <option value="lost">Perdida</option>
+            </select>
+            <label class="sr-only" for="referralSearch">Buscar indicacao</label>
+            <input id="referralSearch" type="search" placeholder="Participante, matricula ou referencia">
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Participante</th><th>Referencia</th><th>Servico</th><th>Territorio</th><th>Etapa</th><th>Data</th><th>Avancar</th></tr></thead>
+              <tbody id="referralBody"></tbody>
+            </table>
+          </div>
+          <p class="muted" id="transitionHint"></p>
+        </section>
+
+        <section class="history-panel" id="auditoria" aria-labelledby="history-heading">
+          <div class="panel-heading">
+            <div><span class="section-label">TRILHA</span><h2 id="history-heading">Importacoes e auditoria</h2></div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Arquivo</th><th>Linhas validas</th><th>Invalidas</th><th>Autor</th><th>Status</th></tr></thead>
+              <tbody id="historyBody"></tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Quando</th><th>Autor</th><th>Acao</th><th>Recurso</th><th>Resultado</th></tr></thead>
+              <tbody id="auditBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay" hidden></div>
+  <script src="/assets/admin.js?v=0.3.0"></script>
+</body>
+</html>

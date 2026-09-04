@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programa WIN | Locatelli Group</title>
+  <meta name="description" content="WIN Board do programa de indicacoes Locatelli Group.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="/assets/win.css?v=0.3.0">
+  <script src="/assets/win-boot.js?v=0.3.0" defer></script>
+</head>
+<body>
+  <section class="login-screen" id="authState" aria-labelledby="authTitle" aria-live="polite">
+    <div class="login-visual">
+      <svg class="login-map" viewBox="0 0 1000 560" aria-hidden="true">
+        <g class="globe-lines">
+          <ellipse cx="500" cy="280" rx="460" ry="220"/>
+          <ellipse cx="500" cy="280" rx="330" ry="220"/>
+          <ellipse cx="500" cy="280" rx="180" ry="220"/>
+          <path d="M40 200h920M20 280h960M40 360h920"/>
+        </g>
+        <g class="login-lands">
+          <path class="land-performance" d="M79 137l90-58 116 24 56 76-43 73-79 1-36 52-74-36-38-72z"/>
+          <path class="land-expansao" d="M238 302l77-20 74 45-12 75-58 102-43-42-14-87z"/>
+          <path class="land-governanca" d="M397 123l75-50 82 18 48 62-45 59-39-19-39 45-85-27z"/>
+          <path class="land-pessoas" d="M465 238l90-12 62 55-15 130-78 88-61-101-31-95z"/>
+        </g>
+        <path class="login-route" d="M188 211C357 104 572 125 731 203S862 388 862 388"/>
+        <g class="route-points"><circle cx="188" cy="211" r="7"/><circle cx="480" cy="156" r="7"/><circle cx="731" cy="203" r="7"/><circle cx="862" cy="388" r="7"/></g>
+      </svg>
+      <div class="login-copy">
+        <p class="eyebrow">Programa de indicacoes</p>
+        <h1 id="authTitle">Indique oportunidades.<br>Conquiste territorios.</h1>
+        <p>Uma jornada visual para acompanhar indicacoes e explorar as frentes de oportunidade da Locatelli.</p>
+      </div>
+    </div>
+    <div class="login-panel">
+      <div class="login-brand">
+        <img src="/assets/logo-locatelli-clara.png" alt="Locatelli Group">
+        <span id="loginEnvironment">Programa WIN</span>
+      </div>
+      <p class="eyebrow">Territorios Locatelli</p>
+      <h2>Bem-vindo ao WIN Board</h2>
+      <p id="authMessage">Verificando a disponibilidade do ambiente.</p>
+      <a class="primary-button" id="authAction" href="/auth/oidc/login" hidden>Entrar no Programa WIN <span aria-hidden="true">→</span></a>
+      <div class="login-note"><span aria-hidden="true">i</span><span id="loginNote">O acesso local utiliza somente dados sinteticos.</span></div>
+    </div>
+  </section>
+
+  <div class="app-shell" id="appShell" hidden>
+    <header class="topbar">
+      <a class="app-brand" href="#mapView" data-view="map" aria-label="Programa WIN, inicio">
+        <img src="/assets/logo-locatelli-clara.png" alt="Locatelli Group">
+        <span><strong>Territorios</strong><small>Programa WIN</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegacao principal">
+        <button class="nav-button active" type="button" data-view="map">Mapa</button>
+        <button class="nav-button" type="button" data-view="ranking">Ranking</button>
+        <button class="nav-button" type="button" data-view="achievements">Conquistas</button>
+        <button class="nav-button" type="button" data-view="profile">Perfil</button>
+      </nav>
+      <div class="top-actions">
+        <a class="admin-link" id="adminLink" href="/admin/" hidden>Administrar</a>
+        <button class="notification-button" id="notificationButton" type="button" aria-label="Abrir notificacoes" aria-expanded="false">
+          <span aria-hidden="true">●</span><b id="notificationBadge" hidden>0</b>
+        </button>
+        <button class="account-button" id="accountButton" type="button" data-view="profile" aria-label="Abrir perfil">
+          <span><strong id="sessionName"></strong><small id="sessionRoles"></small></span>
+          <b id="sessionInitials" aria-hidden="true"></b>
+        </button>
+      </div>
+      <aside class="notification-panel" id="notificationPanel" hidden>
+        <header><strong>Notificacoes</strong><button type="button" id="closeNotifications" aria-label="Fechar">×</button></header>
+        <div id="notificationList"></div>
+      </aside>
+    </header>
+
+    <main class="main-content">
+      <div class="data-line">
+        <span><i></i>Dados do banco local</span>
+        <span id="cycleLabel"></span>
+      </div>
+      <div class="global-state" id="globalState" role="status" hidden></div>
+
+      <section class="view" id="mapView" data-view-panel="map">
+        <div class="map-layout">
+          <section class="map-workspace" aria-labelledby="mapTitle">
+            <header class="map-toolbar">
+              <nav class="breadcrumbs" id="breadcrumbs" aria-label="Caminho territorial"></nav>
+              <div class="map-actions">
+                <button class="back-button" type="button" id="backMap" hidden><span aria-hidden="true">←</span> Voltar</button>
+                <label class="search-control">
+                  <span class="sr-only">Buscar territorio ou servico</span>
+                  <input id="mapSearch" type="search" list="mapSearchOptions" placeholder="Buscar territorio ou servico">
+                  <datalist id="mapSearchOptions"></datalist>
+                </label>
+                <button class="icon-button" type="button" id="mapHelp" aria-label="Ajuda do mapa" title="Ajuda do mapa">?</button>
+              </div>
+            </header>
+            <div class="map-stage" id="mapStage"></div>
+          </section>
+
+          <aside class="side-panel" aria-label="Resumo da jornada">
+            <section class="panel-section panel-grow">
+              <p class="panel-kicker" id="panelKicker">Visao global</p>
+              <h2 id="panelTitle">Territorios Locatelli</h2>
+              <p class="panel-text" id="panelText">Selecione um territorio para explorar seus servicos e as indicacoes vinculadas.</p>
+              <div class="metric-list" id="panelMetrics"></div>
+            </section>
+            <section class="panel-section rule-section">
+              <p class="panel-kicker">Estado da jornada</p>
+              <h2 id="ruleTitle">Consultando regras</h2>
+              <p class="panel-text" id="ruleText"></p>
+              <a class="secondary-button" id="boardAdminLink" href="/admin/" hidden>Gerenciar dados</a>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="rankingView" data-view-panel="ranking" hidden>
+        <header class="section-head">
+          <div><p class="panel-kicker">Placar do escritorio</p><h2>Ranking de indicacoes</h2><p id="rankingCycle"></p></div>
+        </header>
+        <div class="ranking-content" id="rankingContent"></div>
+      </section>
+
+      <section class="view" id="achievementsView" data-view-panel="achievements" hidden>
+        <header class="section-head">
+          <div><p class="panel-kicker">Marcos da jornada</p><h2>Conquistas</h2><p>Somente marcos concedidos por regra aprovada aparecem como conquista.</p></div>
+        </header>
+        <div class="achievement-content" id="achievementsGrid"></div>
+      </section>
+
+      <section class="view" id="profileView" data-view-panel="profile" hidden>
+        <header class="section-head">
+          <div><p class="panel-kicker">Seu espaco</p><h2 id="profileGreeting">Perfil no Programa WIN</h2><p>Resumo vinculado a identidade desta sessao.</p></div>
+        </header>
+        <div class="profile-layout" id="profileContent"></div>
+      </section>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Navegacao movel">
+      <button type="button" class="active" data-view="map">Mapa</button>
+      <button type="button" data-view="ranking">Ranking</button>
+      <button type="button" data-view="achievements">Conquistas</button>
+      <button type="button" data-view="profile">Perfil</button>
+    </nav>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden><strong id="toastTitle"></strong><span id="toastText"></span></div>
+  <dialog class="help-dialog" id="helpDialog" aria-labelledby="helpTitle">
+    <header><h2 id="helpTitle">Como explorar o mapa</h2><button class="icon-button" id="closeHelp" type="button" aria-label="Fechar">×</button></header>
+    <p>Selecione uma area do mapa para abrir o territorio. Depois escolha um servico para ver as indicacoes da sua sessao.</p>
+    <p>Os estados de conquista permanecem bloqueados enquanto a regra territorial nao estiver aprovada.</p>
+  </dialog>
+</body>
+</html>

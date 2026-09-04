@@ -10,6 +10,7 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="Programa WIN | Case de Diogo Mussi">
   <meta property="og:description" content="Produto interno gamificado com mapa de oportunidades, administração e arquitetura de dados.">
+  <meta property="og:url" content="https://deokyo.github.io/port/projects/programa-win/">
   <meta property="og:image" content="https://deokyo.github.io/port/assets/images/programa-win.webp">
   <link rel="stylesheet" href="../../assets/styles.css">
   <script src="../../assets/site.js" defer></script>
@@ -38,7 +39,7 @@
     <dl class="case-meta" aria-label="Resumo do projeto">
       <div><dt>Atuação</dt><dd>Produto, UX, frontend, backend e QA</dd></div>
       <div><dt>Stack</dt><dd>HTML, CSS, JavaScript, TypeScript, Fastify e PostgreSQL</dd></div>
-      <div><dt>Status</dt><dd>MVP local; identidade corporativa pendente</dd></div>
+      <div><dt>Status</dt><dd>MVP local 0.3.0; homologação pendente</dd></div>
     </dl>
 
     <section class="case-section" aria-labelledby="challenge-title">
@@ -63,7 +64,7 @@
         <h2 id="solution-title">Uma aplicação, duas experiências</h2>
       </div>
       <div class="case-content" data-reveal>
-        <p>O WIN Board e o painel administrativo foram integrados ao mesmo backend, reduzindo divergência entre o que o participante vê e o que a gestão acompanha.</p>
+        <p>O WIN Board e o painel administrativo foram integrados ao mesmo backend, reduzindo divergência entre o que o participante vê e o que a gestão acompanha. A experiência organiza a navegação em quatro territórios e permite avançar da visão geral até os serviços relacionados.</p>
         <pre class="architecture" aria-label="Arquitetura resumida">NAVEGADOR
     |
     +-- WIN Board
@@ -78,8 +79,9 @@ FASTIFY + TYPESCRIPT
     |
 POSTGRESQL / PGLITE</pre>
         <div class="gallery-image">
-          <img src="../../assets/images/programa-win.webp" width="1600" height="798" alt="Tela do WIN Board com quatro territórios, indicadores e objetivo atual">
+          <img src="../../assets/images/programa-win.webp" width="1600" height="798" alt="Tela demonstrativa do WIN Board com quatro territórios e indicadores sintéticos">
         </div>
+        <p>Imagem de demonstração com identidade do autor e dados sintéticos. Nenhum participante, cliente ou resultado real é exibido.</p>
       </div>
     </section>
 
@@ -93,13 +95,13 @@ POSTGRESQL / PGLITE</pre>
         <ul class="case-list">
           <li><strong>Dados</strong> Migrations versionadas, transações e PostgreSQL embarcado para desenvolvimento.</li>
           <li><strong>Segurança</strong> Sessão opaca, autorização por permissão, RLS e auditoria append-only.</li>
-          <li><strong>Qualidade</strong> Casos unitários, de integração e E2E cobrindo fluxos e controles.</li>
+          <li><strong>Qualidade</strong> Casos unitários, de integração e E2E mantidos como suíte da candidata; a execução integral no ambiente-alvo ainda é pendente.</li>
           <li><strong>Operação local</strong> Inicializador para Windows com banco e demonstração sintética.</li>
         </ul>
         <div class="evidence-grid" aria-label="Dimensão técnica do projeto">
-          <div><strong>10</strong><span>migrations versionadas</span></div>
-          <div><strong>92</strong><span>casos de teste mantidos</span></div>
-          <div><strong>2</strong><span>experiências na mesma aplicação</span></div>
+          <div><strong>15</strong><span>migrations versionadas</span></div>
+          <div><strong>169</strong><span>casos declarados na suíte</span></div>
+          <div><strong>4</strong><span>territórios na experiência</span></div>
         </div>
       </div>
     </section>
@@ -110,8 +112,19 @@ POSTGRESQL / PGLITE</pre>
         <h2 id="status-title">Próxima etapa</h2>
       </div>
       <div class="case-content" data-reveal>
-        <p>O MVP está preparado para homologação local. A evolução para um ambiente corporativo depende da configuração do provedor de identidade, da aprovação das regras finais de negócio e da repetição dos testes no ambiente-alvo.</p>
-        <p>O case demonstra o processo e a arquitetura. Código operacional, configurações e documentação interna não fazem parte desta publicação de portfólio.</p>
+        <p>A candidata 0.3.0 consolidou o visual interativo, a navegação por território e serviço e os fluxos administrativos do piloto local. A homologação continua pendente de execução integral dos testes no ambiente-alvo, identidade corporativa e decisões de negócio ainda abertas.</p>
+        <p>Este case não apresenta a candidata como produção ou release homologada.</p>
+      </div>
+    </section>
+
+    <section class="case-section" aria-labelledby="public-scope-title">
+      <div class="case-section-title" data-reveal>
+        <p class="eyebrow">05 / Publicação</p>
+        <h2 id="public-scope-title">Escopo público controlado</h2>
+      </div>
+      <div class="case-content" data-reveal>
+        <p>O portfólio apresenta somente contexto, decisões de produto, arquitetura em alto nível e uma imagem demonstrativa. Código operacional, credenciais, banco, dados pessoais, regras financeiras detalhadas, configurações e documentação interna permanecem fora desta publicação.</p>
+        <p>O material é exibido para fins de portfólio e não é oferecido sob licença aberta. Reprodução, redistribuição ou exploração comercial por terceiros não são autorizadas. Consulte o <a href="../../NOTICE.md">aviso de uso do repositório</a>.</p>
       </div>
     </section>
 

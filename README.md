@@ -2,13 +2,15 @@
 
 ## Português
 
-Portfólio de Growth, UX e engenharia de produto.
+Portfólio pessoal de Growth, UX e engenharia de produto. Trabalhos profissionais e estudos
+independentes possuem contextos identificados.
 
 - [Programa WIN](projects/programa-win/index.html): produto interno gamificado com mapa,
   ranking, conquistas e painel administrativo; baseline local 0.3.1, sem homologação comprovada.
 - [Landing Pages Locatelli](projects/landing-pages/index.html): cases de produção, testes A/B,
   demos e experimentos identificados por status.
-- [Prumo](projects/prumo/index.html): copiloto Android experimental 0.3.0 com análise de
+- [Prumo](projects/prumo/index.html): projeto pessoal de estudo, sem vínculo com a Locatelli Group;
+  copiloto Android experimental 0.3.0 com análise de
   ofertas, jornada e relatórios Excel; validação em aparelho pendente.
 - [Project Atlas](projects/project-atlas/index.html): protótipo visual v0.3 com dados
   sintéticos, sem conectores operacionais.
@@ -25,7 +27,8 @@ Growth, UX, and product engineering portfolio.
   without verified acceptance testing for that baseline.
 - [Locatelli Landing Pages](projects/landing-pages/index.html): production case studies, A/B
   tests, demos, and clearly labeled experiments.
-- [Prumo](projects/prumo/index.html): experimental Android copilot 0.3.0 with offer analysis,
+- [Prumo](projects/prumo/index.html): a personal study project with no affiliation with Locatelli Group;
+  experimental Android copilot 0.3.0 with offer analysis,
   work sessions, and Excel reports; device validation remains pending.
 - [Project Atlas](projects/project-atlas/index.html): visual prototype v0.3 using synthetic
   data, with no operational connectors.

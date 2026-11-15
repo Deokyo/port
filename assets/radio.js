@@ -3,7 +3,7 @@
   if (!root) return;
   const player = root.querySelector('.ds-player');
   const tracks = [{name:'Afterhours — Demo',duration:228},{name:'Neon rain — Demo',duration:196},{name:'Ghost signal — Demo',duration:242}];
-  const initial = {track:0,position:0,volume:35,playing:false,collapsed:false,neon:55,rotation:9};
+  const initial = {track:0,position:0,volume:35,playing:false,collapsed:true,neon:55,rotation:9};
   let state = {...initial};
   let last = performance.now();
   let onScreen = true;
@@ -48,6 +48,16 @@
   root.querySelector('.ds-fold').addEventListener('click',()=>{state.collapsed=!state.collapsed;render();});
   root.querySelector('.ds-seek').addEventListener('input',event=>{state.position=Number(event.target.value);last=performance.now();render();});
   root.querySelector('.ds-volume input').addEventListener('input',event=>{state.volume=Number(event.target.value);render();});
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !state.collapsed) {
+      state.collapsed = true; render(); root.querySelector('.ds-fold').focus();
+    }
+  });
+  document.addEventListener('click', event => {
+    if (!state.collapsed && !root.contains(event.target)) {
+      state.collapsed = true; render();
+    }
+  });
   root.hidden = false;
   render();
   const timer=setInterval(()=>{

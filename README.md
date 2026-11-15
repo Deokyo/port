@@ -152,3 +152,21 @@ emendas entre superfícies que se movem de forma independente.
 
 O circuito contínuo usa o arquivo `circuit-grid-seamless.svg`, com uma URL distinta
 do padrão anterior para impedir a reutilização do SVG antigo em cache.
+
+## Idiomas e navegação
+
+O seletor PT/EN traduz a página inicial, o diretório e os cases, incluindo metadados,
+textos alternativos e controles do player. Na primeira visita, usa o idioma do navegador
+(PT para português, EN para os demais); a escolha manual fica no localStorage e pode
+ser compartilhada com `?lang=pt` ou `?lang=en`. Não usa geolocalização, cookies ou
+serviços externos de tradução. As demos dos clientes mantêm os idiomas originais.
+
+A navegação entre as 18 páginas do portfólio preserva o cabeçalho e o mesmo elemento
+de áudio, trocando somente o conteúdo e o rodapé. Voltar/avançar usa o histórico do
+navegador; links de imagens e demos são resolvidos pelo endereço de cada case. As demos
+e avisos abrem em outra aba para preservar a música. Recarregar a página inteira ainda
+recria o player e segue as regras de autoplay do navegador. Sem JavaScript, as páginas
+em português e os links normais continuam disponíveis.
+
+Para manter o cabeçalho comum, alterações no cabeçalho devem ser replicadas nos HTMLs
+do portfólio. Demos de clientes não usam esse cabeçalho.

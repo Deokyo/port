@@ -1,5 +1,7 @@
 (() => {
   'use strict';
+  const assetBase = new URL('.', document.currentScript.src);
+  const t = text => window.portfolioI18n?.t(text) || text;
   const root = document.getElementById('deokyo-radio');
   if (!root) return;
   const player = root.querySelector('.ds-player');
@@ -68,18 +70,18 @@
     root.querySelector('.ds-total').textContent = clock(total);
     seek.max = String(total);
     seek.value = String(state.position);
-    seek.setAttribute('aria-valuetext', clock(state.position) + ' de ' + clock(total));
+    seek.setAttribute('aria-valuetext', clock(state.position) + ' ' + t('de') + ' ' + clock(total));
     volume.value = String(state.volume);
     root.querySelector('.ds-volume output').value = state.volume + '%';
     const status = root.querySelector('.ds-state');
     const text = state.error || (state.loading ? 'Carregando…' : playing ? 'Tocando' : state.position > 0 ? 'Pausado' : 'Parado');
-    if (status.textContent !== text) status.textContent = text;
+    if (status.textContent !== t(text)) status.textContent = t(text);
     root.querySelector('[data-action="play"]').setAttribute('aria-pressed', String(playing));
     root.querySelector('[data-action="pause"]').setAttribute('aria-pressed', String(!playing && state.position > 0));
     root.querySelector('[data-action="stop"]').setAttribute('aria-pressed', String(!playing && state.position === 0));
-    mini.setAttribute('aria-label', playing || wantsPlay ? 'Pausar música' : 'Reproduzir música');
+    mini.setAttribute('aria-label', t(playing || wantsPlay ? 'Pausar música' : 'Reproduzir música'));
     mini.querySelector('span').textContent = playing ? 'PAUSE' : 'PLAY';
-    fold.setAttribute('aria-label', state.collapsed ? 'Expandir player' : 'Recolher player');
+    fold.setAttribute('aria-label', t(state.collapsed ? 'Expandir player' : 'Recolher player'));
     fold.setAttribute('aria-expanded', String(!state.collapsed));
     fold.querySelector('.ds-fold-fallback').textContent = state.collapsed ? '⌃' : '⌄';
     fold.querySelector('svg').style.transform = state.collapsed ? 'rotate(180deg)' : 'none';
@@ -87,7 +89,7 @@
   function loadTrack() {
     if (loadedTrack === state.track && !audio.error) return;
     pendingSeek = state.position;
-    audio.src = 'assets/audio/' + tracks[state.track].file;
+    audio.src = new URL('audio/' + tracks[state.track].file, assetBase).href;
     loadedTrack = state.track;
     audio.load();
   }
@@ -187,6 +189,7 @@
   document.addEventListener('visibilitychange', () => {
     player.style.setProperty('--ds-animation', document.hidden ? 'paused' : 'running');
   });
+  document.addEventListener('portfolio:languagechange', render);
   root.hidden = false;
   render();
   play();

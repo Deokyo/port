@@ -59,15 +59,13 @@ Consulte / See [NOTICE.md](NOTICE.md).
 
 ## Identidade visual / Visual identity
 
-PT: direção retrô cyberpunk com a fonte Roguepunk fornecida pelo autor, carregada localmente
-somente em destaques. Diogo Mussi confirmou em 15/11/2026 possuir licença para uso da fonte
-no site. O aviso original que acompanha o arquivo foi preservado em `assets/fonts/`;
-a licença de uso do autor não é transferida a terceiros por este repositório.
+PT: direção retrô cyberpunk, com Roguepunk licenciada para uso no site e carregada
+localmente nos destaques. O arquivo e seu aviso original estão em `assets/fonts/`.
+A licença de uso não é transferida a terceiros pelo repositório.
 
-EN: retro cyberpunk art direction using the author-supplied Roguepunk font locally for
-selected display text. Diogo Mussi confirmed a license for site use on November 15, 2026.
-The original font notice is preserved in `assets/fonts/`; the author's license is not
-transferred to third parties through this repository.
+EN: retro cyberpunk direction with Roguepunk licensed for site use and loaded locally
+for display text. The font and original notice are in `assets/fonts/`.
+The usage license is not transferred to third parties through this repository.
 
 PT: a ilustração atmosférica `afterhours-city.webp` foi gerada com IA para a identidade do
 portfólio; não é apresentada como trabalho entregue a um cliente. As imagens dos cases e
@@ -80,13 +78,29 @@ Prévias desta direção / Art direction previews:
 [Desktop](docs/previews/retro-desktop.webp) · [Mobile](docs/previews/retro-mobile.webp) ·
 [Cena animada / Motion preview](docs/previews/retro-motion.webm).
 
-PT: a cena da abertura usa a imagem estática com movimento de câmera e camadas de chuva em
-CSS. O botão permite pausar/ativar; movimento reduzido começa pausado, com ativação somente
-por escolha explícita. Fora da tela ou com a aba oculta, a cena pausa. Sem JavaScript,
-a imagem continua visível e estática. “Como trabalho” descreve a abordagem; “Perfil
-profissional” concentra LinkedIn e GitHub.
+PT: `scene-background.webp` e `scene-cat.webp` são camadas geradas com IA a partir da
+ilustração original. A cena da abertura combina cenário e gato em camadas registradas. A cauda se move,
+os olhos piscam, a chuva tem duas profundidades e as lanternas traseiras ficam acesas.
+O controle pausa todas as animações; movimento reduzido começa parado e exige ativação
+explícita. Fora da tela ou com a aba oculta, a cena pausa. Sem JavaScript, a composição
+permanece estática e visível.
 
-EN: the hero animates the static image with a camera drift and CSS rain layers. A toggle
-pauses or enables motion; reduced-motion preference starts paused and requires explicit
-opt-in. The scene pauses offscreen and in hidden tabs. Without JavaScript the image remains
-visible and static. The approach and professional profile sections serve separate purposes.
+EN: `scene-background.webp` and `scene-cat.webp` are AI-generated layers derived from the
+original illustration. The hero uses registered background and cat layers. The tail sways, the eyes blink,
+rain has two depths, and rear lamps glow. The control pauses every animation. Reduced
+motion starts paused and requires explicit opt-in. The scene pauses offscreen or in hidden
+tabs; without JavaScript, the composition remains visible and static.
+
+## Organização / Organization
+
+PT: os trabalhos profissionais ficam em pastas por empresa. A pasta Locatelli Group reúne
+Marketing & aquisição (a coleção de landing pages, com atalhos para produção, A/B e demos)
+e Produtos internos (Programa WIN e Project Atlas). Os estudos pessoais permanecem separados.
+As pastas usam `details`/`summary`, funcionam por teclado e não dependem de JavaScript.
+Novas empresas podem seguir a mesma estrutura, sem criar categorias vazias na interface.
+
+EN: professional work is grouped by company. Locatelli Group contains Marketing & acquisition
+(the landing-page collection, with production, A/B, and demo shortcuts) and Internal products
+(Programa WIN and Project Atlas). Personal studies stay separate. Native `details`/`summary`
+folders support keyboard use and work without JavaScript. Additional companies can use the
+same structure without showing empty categories.

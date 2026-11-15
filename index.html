@@ -42,7 +42,28 @@
           <div class="hero-actions"><a class="button button-primary" href="#projetos">Explorar trabalhos <span class="arrow-icon" aria-hidden="true"></span></a><a class="hero-study-link" href="#estudos">Estudos pessoais</a></div>
         </div>
         <figure class="hero-art" id="hero-scene" data-motion="paused">
-          <img src="assets/images/afterhours-city.webp" width="1536" height="1024" alt="Ilustração em magenta e violeta de um gato espectral sobre um carro, diante de uma cidade noturna e uma lua cheia" fetchpriority="high">
+          <svg class="scene-composition scene-part" viewBox="0 0 1536 1024" preserveAspectRatio="xMaxYMid slice" role="img" aria-labelledby="scene-title">
+            <title id="scene-title">Ilustração em magenta e violeta de um gato espectral sobre um carro com lanternas acesas, diante de uma cidade noturna sob chuva</title>
+            <defs>
+              <path id="tail-region" d="M1158 588V562L1170 548V512L1200 484L1173 446L1244 380L1254 510L1220 555L1180 600Z"/>
+              <clipPath id="cat-tail-clip"><use href="#tail-region"/></clipPath>
+              <clipPath id="cat-body-clip"><path clip-rule="evenodd" d="M0 0H1536V1024H0Z M1158 588V562L1170 548V512L1200 484L1173 446L1244 380L1254 510L1220 555L1180 600Z"/></clipPath>
+              <filter id="lamp-halo" x="-60%" y="-150%" width="220%" height="400%"><feGaussianBlur stdDeviation="18"/></filter>
+              <filter id="lamp-soft" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="2"/></filter>
+              <linearGradient id="lamp-reflection" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff5c96" stop-opacity=".48"/><stop offset="1" stop-color="#ff2c9c" stop-opacity="0"/></linearGradient>
+            </defs>
+            <image href="assets/images/scene-background.webp" width="1536" height="1024"/>
+            <g class="scene-lamps scene-part" aria-hidden="true">
+              <rect x="1128" y="802" width="274" height="84" rx="16" fill="#ff286b" filter="url(#lamp-halo)" opacity=".9"/>
+              <rect x="1424" y="808" width="152" height="68" rx="10" fill="#ff286b" filter="url(#lamp-halo)" opacity=".7"/>
+              <path d="M1146 816H1220V840H1146ZM1230 816H1310V840H1230ZM1320 816H1384V840H1320ZM1146 849H1220V873H1146ZM1230 849H1310V873H1230ZM1320 849H1384V873H1320Z" fill="#ffb3b6" opacity=".78" filter="url(#lamp-soft)"/>
+              <path d="M1428 819H1536V840H1428ZM1428 849H1536V869H1428Z" fill="#ff9bb4" opacity=".68" filter="url(#lamp-soft)"/>
+              <path d="M1145 898H1395L1490 1024H1050Z" fill="url(#lamp-reflection)" opacity=".6"/>
+            </g>
+            <g class="cat-tail scene-part" aria-hidden="true"><image href="assets/images/scene-cat.webp" width="1536" height="1024" clip-path="url(#cat-tail-clip)"/></g>
+            <image href="assets/images/scene-cat.webp" width="1536" height="1024" clip-path="url(#cat-body-clip)"/>
+            <g class="cat-eyelids scene-part" fill="#000" aria-hidden="true"><path d="M1039 417L1059 433L1046 436L1040 428Z"/><path d="M1063 434L1073 417L1090 416L1080 432Z"/></g>
+          </svg>
           <div class="scene-weather" aria-hidden="true"><span class="scene-rain scene-rain-far"></span><span class="scene-rain scene-rain-near"></span></div>
           <button class="scene-motion-toggle" type="button" aria-controls="hero-scene" aria-pressed="false" hidden>Ativar animação</button>
           <figcaption><span>Universo visual / Deokyo</span><span aria-hidden="true">01—∞</span></figcaption>
@@ -53,38 +74,60 @@
 
     <section class="section work-section" id="projetos" aria-labelledby="projects-title">
       <div class="section-heading">
-        <div><p class="eyebrow">01 / Prática profissional</p><h2 id="projects-title">Trabalhos<br><em>selecionados.</em></h2></div>
-        <p>Projetos desenvolvidos no contexto da Locatelli Group, apresentados com seus estágios e limites.</p>
+        <div><p class="eyebrow">01 / Portfólio organizado</p><h2 id="projects-title">Projetos por<br><em>contexto.</em></h2></div>
+        <p>Entre pela empresa e escolha a área. Marketing, páginas de conversão e produtos internos ficam em seus próprios espaços.</p>
       </div>
-      <div class="work-grid">
-        <article class="work-card">
-          <a class="work-cover" href="projects/programa-win/index.html" aria-label="Explorar o case do Programa WIN">
-            <img src="assets/images/programa-win.webp" width="1600" height="798" alt="Demonstração do WIN Board com mapa de territórios e indicadores sintéticos" loading="lazy">
-            <span class="cover-arrow" aria-hidden="true">↗</span>
-          </a>
-          <div class="work-card-meta"><span>Locatelli Group · Produto interno</span><span>01</span></div>
-          <h3><a href="projects/programa-win/index.html">Programa WIN</a></h3>
-          <p>Indicações entre áreas em uma experiência gamificada, com operação administrativa e dados auditáveis.</p>
-          <p class="work-status">Baseline local 0.3.1 · Homologação pendente</p>
-          <ul class="tag-list" aria-label="Competências aplicadas"><li>Produto</li><li>UX</li><li>Frontend</li><li>Backend</li><li>QA</li></ul>
-        </article>
-        <article class="work-card">
+      <details class="company-folder" id="locatelli" data-company="locatelli" open>
+        <summary><span class="folder-icon" aria-hidden="true"></span><span class="folder-label"><strong>Projetos para Locatelli Group</strong><small>Marketing e produtos internos</small></span><span class="folder-count">3 frentes</span></summary>
+        <div class="folder-body">
+          <details class="project-category" id="locatelli-marketing" data-category="marketing" open>
+            <summary><span class="category-mark" aria-hidden="true">01</span><span class="folder-label"><strong>Marketing &amp; aquisição</strong><small>Landing pages, conversão e experimentos</small></span><span class="folder-count">1 coleção</span></summary>
+            <div class="category-body">
+        <article class="work-card collection-card">
           <a class="work-cover work-cover-light" href="projects/landing-pages/index.html" aria-label="Explorar os cases de Landing Pages">
             <img src="assets/images/landing-pages-system.webp" width="1400" height="851" alt="Sistema visual das landing pages desenvolvidas para a Locatelli Group" loading="lazy">
             <span class="cover-arrow" aria-hidden="true">↗</span>
           </a>
-          <div class="work-card-meta"><span>Locatelli Group · Aquisição digital</span><span>02</span></div>
+          <div class="collection-copy">
+          <div class="work-card-meta"><span>Locatelli Group · Aquisição digital</span></div>
           <h3><a href="projects/landing-pages/index.html">Ecossistema de Landing Pages</a></h3>
           <p>Doze projetos verificados no manifesto, entre produção, testes A/B e demos, com um experimento suplementar identificado à parte.</p>
           <p class="work-status">Produção, testes e demos · Status por case</p>
           <ul class="tag-list" aria-label="Competências aplicadas"><li>Growth</li><li>SEO</li><li>CRO</li><li>HTML</li></ul>
+            <nav class="category-shortcuts" aria-label="Tipos de landing page">
+              <a href="projects/landing-pages/index.html#production-title">Produção</a>
+              <a href="projects/landing-pages/index.html#ab-title">Testes A/B</a>
+              <a href="projects/landing-pages/index.html#demo-title">Demos</a>
+            </nav>
+          </div>
         </article>
-      </div>
+            </div>
+          </details>
+          <details class="project-category" id="locatelli-products" data-category="products" open>
+            <summary><span class="category-mark" aria-hidden="true">02</span><span class="folder-label"><strong>Produtos internos</strong><small>Experiências, operação e visualização de projetos</small></span><span class="folder-count">2 projetos</span></summary>
+            <div class="category-body">
+        <article class="work-card collection-card">
+          <a class="work-cover" href="projects/programa-win/index.html" aria-label="Explorar o case do Programa WIN">
+            <img src="assets/images/programa-win.webp" width="1600" height="798" alt="Demonstração do WIN Board com mapa de territórios e indicadores sintéticos" loading="lazy">
+            <span class="cover-arrow" aria-hidden="true">↗</span>
+          </a>
+          <div class="collection-copy">
+          <div class="work-card-meta"><span>Locatelli Group · Produto interno</span></div>
+          <h3><a href="projects/programa-win/index.html">Programa WIN</a></h3>
+          <p>Indicações entre áreas em uma experiência gamificada, com operação administrativa e dados auditáveis.</p>
+          <p class="work-status">Baseline local 0.3.1 · Homologação pendente</p>
+          <ul class="tag-list" aria-label="Competências aplicadas"><li>Produto</li><li>UX</li><li>Frontend</li><li>Backend</li><li>QA</li></ul>
+          </div>
+        </article>
       <article class="atlas-row">
         <div class="atlas-number" aria-hidden="true">03</div>
         <div><p class="eyebrow">Locatelli Group / Protótipo v0.3</p><h3><a href="projects/project-atlas/index.html">Project Atlas</a></h3><p>Projetos técnicos em uma experiência visual para o Marketing. Dados sintéticos; conectores operacionais ainda não implementados.</p></div>
         <a class="text-link" href="projects/project-atlas/index.html">Conhecer o protótipo</a>
       </article>
+            </div>
+          </details>
+        </div>
+      </details>
     </section>
 
     <section class="section study-section" id="estudos" aria-labelledby="study-title">

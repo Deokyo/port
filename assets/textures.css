@@ -5,12 +5,7 @@ body {
   background-size:100% 100%,640px 960px;
   background-repeat:no-repeat,repeat;
 }
-.site-header {
-  background-color:#0c0812;
-  background-image:linear-gradient(90deg,#09070df5,#09070d9c,#09070df5),url("images/textures/circuits.svg");
-  background-size:auto,640px 960px;
-  background-position:center,center 42%;
-}
+.site-header { background-color:#0c0812; }
 .home-hero { background:var(--paper); }
 .hero-inner {
   background-color:#0d0914;
@@ -27,11 +22,6 @@ body {
 .hero-topline,.hero-bottomline,.site-footer {
   background-color:#0d0914;
   background-image:repeating-linear-gradient(0deg,transparent 0 3px,#aa76ec09 3px 4px);
-}
-.company-folder > summary {
-  background-image:linear-gradient(90deg,var(--panel) 35%,#130e1c3b),url("images/textures/circuits.svg");
-  background-size:auto,640px 960px;
-  background-position:center,right 55%;
 }
 .study-identity {
   background-color:#1d102e;

@@ -104,3 +104,12 @@ EN: professional work is grouped by company. Locatelli Group contains Marketing 
 (Programa WIN and Project Atlas). Personal studies stay separate. Native `details`/`summary`
 folders support keyboard use and work without JavaScript. Additional companies can use the
 same structure without showing empty categories.
+
+## Sound bar
+
+Player visual cyberpunk na página inicial, com disco ilustrado, controles analógicos,
+modo recolhido e navegação entre três faixas demonstrativas. A interface identifica
+“DEMO · SEM ÁUDIO”: não há arquivo de música, streaming ou reprodução automática.
+O disco anima apenas após interação; movimento reduzido mantém o disco estático.
+Fora da tela ou com a aba oculta, a demonstração pausa. Sem JavaScript, o player fica oculto.
+Os ícones SVG e a ilustração são servidos pelo próprio repositório, sem dependências externas.

@@ -139,3 +139,13 @@ painéis de abertura e retícula estática em áreas de destaque. Os SVGs locais
 `assets/images/textures/` e `assets/textures.css` não adicionam scripts, animações ou
 serviços externos. O modo de cores forçadas remove as texturas. As demos de clientes
 preservam seus estilos próprios.
+
+## Ícones retrô e continuidade do fundo
+
+Ícones SVG locais de disco, globo, computador, celular e órbita identificam os contextos
+da página inicial. São decorativos, com os nomes dos projetos e destinos preservados
+em texto. As setas dos links usam um desenho em pixels.
+
+O padrão de circuitos conecta as bordas opostas do tile nas mesmas coordenadas e
+direções. O cabeçalho e os resumos das pastas não reiniciam esse padrão, evitando
+emendas entre superfícies que se movem de forma independente.

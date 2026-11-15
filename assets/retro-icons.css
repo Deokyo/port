@@ -1,0 +1,18 @@
+/* Local illustrations inspired by optical media, early computers and handheld devices. */
+.retro-icon { display:block; width:48px; height:48px; flex-shrink:0; object-fit:contain; image-rendering:pixelated; }
+.company-icon { width:52px; height:52px; }
+.category-icon { width:40px; height:40px; }
+.atlas-icon { width:52px; height:52px; }
+.study-device { width:152px; height:182px; object-fit:contain; image-rendering:pixelated; filter:drop-shadow(4px 6px 0 #0b061677); }
+.profile-identity { display:flex; align-items:center; gap:14px; margin-bottom:10px; }
+.profile-identity .profile-name { margin:0; }
+.profile-identity .retro-icon { width:48px; height:48px; }
+.arrow-icon,.text-link::after,.cover-arrow::after,.external-icon { mask-image:url("images/icons/pixel-arrow.svg"); }
+@media(max-width:620px) {
+  .company-icon { width:44px; height:44px; }
+  .category-icon { width:34px; height:34px; }
+  .study-identity { align-items:center; }
+  .study-device { width:96px; height:116px; }
+  .profile-identity .retro-icon { width:40px; height:40px; }
+}
+@media(forced-colors:active) { .retro-icon,.study-device { forced-color-adjust:none; } }

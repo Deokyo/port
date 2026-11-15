@@ -4,22 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prumo | Case de Diogo Mussi</title>
-  <meta name="description" content="Projeto pessoal de estudo de Diogo Mussi: copiloto Android experimental, sem vínculo com a Locatelli Group.">
+  <meta name="description" content="Um app Android que estou desenvolvendo para ajudar motoristas a comparar ofertas e acompanhar a jornada.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://deokyo.github.io/port/projects/prumo/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Prumo | Case de Diogo Mussi">
-  <meta property="og:description" content="Projeto pessoal de estudo de Diogo Mussi: copiloto Android experimental, sem vínculo com a Locatelli Group.">
+  <meta property="og:description" content="Um app Android que estou desenvolvendo para ajudar motoristas a comparar ofertas e acompanhar a jornada.">
   <meta property="og:url" content="https://deokyo.github.io/port/projects/prumo/">
   <link rel="stylesheet" href="../../assets/styles.css">
   <link rel="stylesheet" href="../../assets/textures.css?v=3">
   <link rel="stylesheet" href="../../assets/retro-icons.css?v=2">
   <link rel="stylesheet" href="../../assets/radio.css?v=language-6">
   <link rel="stylesheet" href="../../assets/language.css?v=1">
-  <script src="../../assets/language.js?v=language-1" defer></script>
+  <script src="../../assets/language.js?v=voice-1" defer></script>
   <script src="../../assets/site.js?v=language-1" defer></script>
   <script src="../../assets/radio.js?v=language-1" defer></script>
-  <script src="../../assets/navigation.js?v=language-1" defer></script>
+  <script src="../../assets/navigation.js?v=voice-1" defer></script>
 </head>
 <body class="portfolio-home">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -74,46 +74,14 @@
       <div class="lp-case-hero-inner">
         <p class="eyebrow hero-enter">Projeto pessoal de estudo / Android</p>
         <h1 id="case-title" class="hero-enter">Prumo</h1>
-        <p class="case-lead hero-enter">Um estudo independente de desenvolvimento Android: custos, análise de ofertas e histórico em um copiloto com processamento local.</p>
-        <p class="project-context">Projeto pessoal de Diogo Mussi, desenvolvido para estudo, sem vínculo com a Locatelli Group.</p>
+        <p class="case-lead hero-enter">Um app Android que estou desenvolvendo para ajudar motoristas a comparar ofertas e acompanhar a jornada.</p>
+
       </div>
     </section>
-    <dl class="case-meta" aria-label="Resumo do projeto">
-      <div><dt>Foco</dt><dd>Análise de ofertas, jornada e relatórios</dd></div>
-      <div><dt>Stack</dt><dd>Kotlin e Jetpack Compose</dd></div>
-      <div><dt>Status</dt><dd>0.3.0 experimental</dd></div>
-    </dl>
-    <section class="case-section" aria-labelledby="section-1">
-      <div class="case-section-title" data-reveal>
-        <p class="eyebrow">01 / Contexto</p>
-        <h2 id="section-1">O produto</h2>
-      </div>
-      <div class="case-content" data-reveal><p>O Prumo organiza custos, ofertas e registros da jornada em um aplicativo Android. A interface apresenta estimativas e motivos para apoiar a decisão do motorista, a partir dos campos disponíveis e dos custos cadastrados.</p><p>O aplicativo não exige conta ou servidor e não possui permissão de Internet. A decisão de aceitar ou recusar continua manual; simulações não comprovam compatibilidade com telas reais das plataformas.</p></div>
-    </section>
-    <section class="case-section" aria-labelledby="section-2">
-      <div class="case-section-title" data-reveal>
-        <p class="eyebrow">02 / Evolução</p>
-        <h2 id="section-2">Avanços da versão 0.3.0</h2>
-      </div>
-      <div class="case-content" data-reveal><p>A exportação Excel amplia o acompanhamento do histórico: permite selecionar um dia ou período, aplicar filtros e compartilhar um relatório com sete abas visíveis.</p><ul class="case-list"><li><strong>Decisão</strong> Score configurável, comparação de ofertas e resumo por voz.</li><li><strong>Jornada</strong> Meta, cronômetro manual, custos e registro dos resultados concluídos.</li><li><strong>Relatórios</strong> Resumo, corridas, resumo diário, plataformas, regiões, horários e custos.</li><li><strong>Privacidade</strong> Endereços, nota do passageiro, observações e regiões ficam fora da exportação por padrão. Receita realizada exige recebimento confirmado.</li></ul></div>
-    </section>
-    <section class="case-section" aria-labelledby="section-3">
-      <div class="case-section-title" data-reveal>
-        <p class="eyebrow">03 / Estado atual</p>
-        <h2 id="section-3">Validação e próximos passos</h2>
-      </div>
-      <div class="case-content" data-reveal><p>A documentação da versão 0.3.0 registra 90 testes JVM do núcleo e seis testes Android locais com Robolectric. Esses resultados são evidências do projeto de origem, não testes reexecutados durante a atualização deste portfólio.</p><p>A validação em aparelho continua pendente. Os testes instrumentados foram compilados, mas não executados em dispositivo. Parsers, permissões, sobreposição, câmera, voz e compartilhamento ainda precisam de teste de campo; resultados sintéticos não comprovam compatibilidade com aplicativos de terceiros.</p></div>
-    </section>
-    <section class="case-section" aria-labelledby="scope-title">
-      <div class="case-section-title" data-reveal>
-        <p class="eyebrow">04 / Portfólio</p>
-        <h2 id="scope-title">Escopo desta apresentação</h2>
-      </div>
-      <div class="case-content" data-reveal>
-        <p>Esta apresentação resume o produto e sua evolução em alto nível. Código operacional, dados pessoais, credenciais, configurações e documentação interna não integram o case.</p>
-        <p>Fontes do projeto revisadas em <time datetime="2026-11-12">12 de novembro de 2026</time>. A revisão documental não equivale à homologação do produto. Consulte o <a href="../../NOTICE.md" target="_blank" rel="noopener noreferrer">aviso de uso</a>.</p>
-      </div>
-    </section>
+    <dl class="case-meta" aria-label="Resumo do projeto"><div><dt>Minha atuação</dt><dd>Conceito, UX e desenvolvimento Android</dd></div><div><dt>Foco</dt><dd>Ofertas, custos e histórico de trabalho</dd></div><div><dt>Projeto</dt><dd>Estudo pessoal em desenvolvimento</dd></div></dl>
+    <section class="case-section" aria-labelledby="story-1"><div class="case-section-title" data-reveal><p class="eyebrow">01 / Contexto</p><h2 id="story-1">O valor por trás de uma oferta</h2></div><div class="case-content" data-reveal><p>Uma oferta precisa ser avaliada junto com os custos de quem dirige. No Prumo, estou explorando como apresentar essas informações de um jeito que ajude na comparação e deixe o raciocínio visível.</p><p>É um projeto pessoal de estudo, independente dos meus trabalhos para a Locatelli Group.</p></div></section>
+    <section class="case-section" aria-labelledby="story-2"><div class="case-section-title" data-reveal><p class="eyebrow">02 / Experiência</p><h2 id="story-2">Da oferta ao fim da jornada</h2></div><div class="case-content" data-reveal><p>Organizei o aplicativo em torno da comparação de ofertas, do acompanhamento da jornada e da consulta ao histórico. A análise considera os custos cadastrados, e a decisão de aceitar uma oferta continua com o motorista.</p><p>O acompanhamento reúne meta, tempo e registros de trabalho. Para olhar os dados com mais calma, incluí filtros por período e exportação para Excel.</p></div></section>
+    <section class="case-section" aria-labelledby="story-3"><div class="case-section-title" data-reveal><p class="eyebrow">03 / Entrega</p><h2 id="story-3">Aprender construindo</h2></div><div class="case-content" data-reveal><p>Estou desenvolvendo o Prumo em Kotlin e Jetpack Compose, com processamento local e sem exigir conta. É uma forma de trabalhar produto e interface enquanto aprofundo meu conhecimento em Android.</p><p>O app ainda é experimental e precisa ser testado em aparelho e no uso real.</p></div></section>
     <a class="case-next" href="../../index.html#projetos">
       <span>Continuar explorando</span>
       <strong>Todos os projetos</strong>

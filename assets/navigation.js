@@ -26,7 +26,7 @@
         } else if (destination.origin === base.origin && (/\/demo\//.test(destination.pathname) || /\.(md|txt)$/.test(destination.pathname))) {
           node.target = '_blank';
           node.rel = 'noopener noreferrer';
-          if (/\/demo\//.test(destination.pathname)) node.setAttribute('aria-label', i18n.t('Abrir demo sanitizado (abre em nova aba)'));
+          if (/\/demo\//.test(destination.pathname)) node.setAttribute('aria-label', i18n.t('Explorar a página (abre em nova aba)'));
         }
       }
     });
@@ -90,7 +90,7 @@
       let next = cache.get(key);
       if (!next) {
         const sourceURL = new URL(key, base);
-        sourceURL.searchParams.set('v', 'language-1');
+        sourceURL.searchParams.set('v', 'voice-1');
         const response = await fetch(sourceURL, {signal: controller.signal});
         if (!response.ok) throw new Error('Page unavailable');
         const doc = new DOMParser().parseFromString(await response.text(), 'text/html');

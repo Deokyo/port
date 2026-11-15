@@ -92,28 +92,51 @@
 
 /* Compact header player; expanded controls sit below the navigation. */
 .portfolio-home .header-identity { display:flex; align-items:center; gap:24px; flex:1; min-width:0; }
-#deokyo-radio { position:relative; flex:0 0 300px; width:300px; height:58px; padding:0; }
+#deokyo-radio { position:relative; flex:0 0 236px; width:236px; height:48px; padding:0; }
 #deokyo-radio .ds-player { width:100%; margin:0; }
-#deokyo-radio .ds-player[data-collapsed="true"] { padding:6px 8px; }
-#deokyo-radio .ds-player[data-collapsed="true"] .ds-grid { grid-template-columns:42px minmax(0,1fr) 44px; gap:8px; padding-right:42px; }
-#deokyo-radio .ds-player[data-collapsed="true"] .ds-topline { top:6px; right:6px; }
+#deokyo-radio .ds-player[data-collapsed="true"] { padding:2px 5px; }
+#deokyo-radio .ds-player[data-collapsed="true"] .ds-grid { grid-template-columns:32px minmax(0,1fr) 40px; gap:6px; padding-right:38px; }
+#deokyo-radio .ds-player[data-collapsed="true"] .ds-topline { top:2px; right:3px; }
 #deokyo-radio .ds-player[data-collapsed="true"] .ds-fold { width:38px; min-height:44px; }
 #deokyo-radio .ds-player[data-collapsed="true"] .ds-track { font-size:11px; }
 #deokyo-radio .ds-player[data-collapsed="true"] .ds-state { font-size:10px; }
-#deokyo-radio .ds-player[data-collapsed="false"] { position:absolute; top:calc(100% + 12px); left:0; width:min(736px,calc(100vw - 48px)); max-width:none; box-shadow:0 12px 40px #000c; }
+#deokyo-radio .ds-player[data-collapsed="false"] { position:absolute; top:calc(100% + 16px); left:0; width:min(384px,calc(100vw - 32px)); max-width:none; box-shadow:0 12px 40px #000c; }
 @media(max-width:1050px) {
   .portfolio-home { --header-height:120px; scroll-padding-top:144px; }
   .portfolio-home .site-header { flex-wrap:wrap; gap:0; padding:8px 16px 0; }
   .portfolio-home .header-identity { flex-basis:100%; justify-content:space-between; gap:12px; }
   .portfolio-home .site-nav { width:100%; justify-content:space-between; gap:12px; }
-  #deokyo-radio .ds-player[data-collapsed="false"] { top:calc(100% + 56px); left:auto; right:0; width:min(736px,calc(100vw - 32px)); }
+  #deokyo-radio .ds-player[data-collapsed="false"] { top:calc(100% + 68px); left:auto; right:0; width:min(384px,calc(100vw - 32px)); }
 }
 @media(max-width:620px) {
   .portfolio-home .header-identity .site-mark { font-size:30px; }
-  #deokyo-radio { width:134px; flex-basis:134px; }
+  #deokyo-radio { width:126px; flex-basis:126px; }
   #deokyo-radio .ds-player[data-collapsed="true"] .ds-grid { grid-template-columns:30px 36px; gap:8px; padding-right:38px; }
   #deokyo-radio .ds-player[data-collapsed="true"] .ds-screen { display:none; }
   #deokyo-radio .ds-player[data-collapsed="true"] .ds-mini-play { min-width:36px; }
   #deokyo-radio .ds-player[data-collapsed="true"] .ds-mini-play span { font-size:9px; }
   #deokyo-radio .ds-player[data-collapsed="true"] .ds-fold { width:34px; }
+}
+
+#deokyo-radio .ds-player[data-collapsed="false"] { padding:8px 10px 12px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-topline { min-height:32px; margin-bottom:8px; gap:8px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-brand,
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-demo { font-size:10px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-grid { grid-template-columns:64px minmax(0,1fr); gap:10px 12px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-disc-window { grid-row:1; padding:4px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-screen { padding:8px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-track { font-size:11px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-trackline { display:flex; gap:6px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-clock { display:none; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-seek-label { margin-top:4px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-screen-foot { margin-top:0; font-size:10px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-transport { grid-column:1 / -1; gap:8px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-keys { width:auto; flex:1; justify-content:space-between; gap:4px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-key { min-width:40px; min-height:44px; padding:5px 4px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-key span:not(.ds-led) { font-size:9px; }
+#deokyo-radio .ds-player[data-collapsed="false"] .ds-volume { flex-basis:100%; }
+#deokyo-radio .ds-player[data-collapsed="true"] .ds-mini-play { min-width:36px; min-height:44px; padding:4px; }
+#deokyo-radio .ds-player[data-collapsed="true"] .ds-mini-play span { display:none; }
+@media(max-width:620px) {
+  #deokyo-radio .ds-player[data-collapsed="true"] .ds-grid { grid-template-columns:28px 36px; gap:4px; padding-right:36px; }
 }

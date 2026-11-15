@@ -142,7 +142,7 @@ preservam seus estilos próprios.
 
 ## Ícones retrô e continuidade do fundo
 
-Ícones SVG locais de prédio, globo, computador e órbita identificam os contextos
+Ícones SVG locais de prédio, globo, computador, constelação e órbita identificam os contextos
 da página inicial. São decorativos, com os nomes dos projetos e destinos preservados
 em texto. O Prumo mantém o “P.” original. As setas dos links usam um desenho em pixels.
 

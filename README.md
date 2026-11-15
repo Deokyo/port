@@ -111,8 +111,12 @@ Player de áudio na página inicial com quatro faixas locais, disco animado e co
 play, pausa, parada, volume, posição e troca de faixa. Começa recolhido ao lado do logo;
 o painel abre abaixo da navegação e fecha com Escape ou clique fora.
 
-Não há autoplay ou dependência do Spotify. Nenhum arquivo de áudio é solicitado antes
-do primeiro play; a próxima faixa toca ao terminar a atual. Pausar ou parar interrompe
+O player tenta iniciar ao abrir a página, com volume de 5%, sem depender do Spotify.
+Navegadores que bloqueiam autoplay com som exibem “Toque no play”, sem forçar a reprodução.
+A faixa inicial segue um sorteio das quatro músicas, sem repetições até completar o ciclo
+e sem repetir a última abertura ao começar o próximo. A fila é guardada apenas no
+`localStorage` deste navegador; se o armazenamento estiver indisponível, o sorteio continua
+sem histórico entre visitas. A próxima faixa toca ao terminar a atual. Pausar ou parar interrompe
 a reprodução real e a animação. A música continua durante a navegação pela página e
 com a aba em segundo plano, conforme as restrições do navegador. Movimento reduzido
 mantém o disco estático. Sem JavaScript, o player fica oculto.

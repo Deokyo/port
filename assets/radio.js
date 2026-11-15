@@ -9,11 +9,34 @@
     {name: "You Can't Run From Me — Rico Nasty", file: 'you-cant-run-from-me.mp3', duration: 235.86},
     {name: 'I Really Want to Stay at Your House — Rosa Walton', file: 'i-really-want-to-stay-at-your-house.mp3', duration: 246.78}
   ];
+  function openingTrack() {
+    const key = 'deokyo-radio-opening-v1';
+    const files = tracks.map(track => track.file);
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(key)) || {}; } catch (_) {}
+    let remaining = Array.isArray(saved.remaining)
+      ? [...new Set(saved.remaining.filter(file => files.includes(file) && file !== saved.last))]
+      : [];
+    if (!remaining.length) {
+      remaining = [...files];
+      for (let i = remaining.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [remaining[i], remaining[j]] = [remaining[j], remaining[i]];
+      }
+      if (remaining[0] === saved.last) {
+        const j = 1 + Math.floor(Math.random() * (remaining.length - 1));
+        [remaining[0], remaining[j]] = [remaining[j], remaining[0]];
+      }
+    }
+    const first = remaining.shift();
+    try { localStorage.setItem(key, JSON.stringify({last: first, remaining})); } catch (_) {}
+    return files.indexOf(first);
+  }
   const audio = document.createElement('audio');
   audio.preload = 'none';
   audio.hidden = true;
   root.append(audio);
-  const state = {track: 0, position: 0, volume: 35, collapsed: true, loading: false, error: ''};
+  const state = {track: openingTrack(), position: 0, volume: 5, collapsed: true, loading: false, error: ''};
   let loadedTrack = -1;
   let request = 0;
   let wantsPlay = false;
@@ -79,7 +102,8 @@
       if (current !== request) return;
       wantsPlay = false;
       state.loading = false;
-      if (error.name !== 'AbortError') state.error = 'Não foi possível tocar. Tente novamente.';
+      if (error.name === 'NotAllowedError') state.error = 'Toque no play';
+      else if (error.name !== 'AbortError') state.error = 'Não foi possível tocar. Tente novamente.';
       render();
     });
   }
@@ -165,4 +189,5 @@
   });
   root.hidden = false;
   render();
+  play();
 })();

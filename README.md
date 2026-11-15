@@ -142,10 +142,13 @@ preservam seus estilos próprios.
 
 ## Ícones retrô e continuidade do fundo
 
-Ícones SVG locais de disco, globo, computador, celular e órbita identificam os contextos
+Ícones SVG locais de disco, globo, computador e órbita identificam os contextos
 da página inicial. São decorativos, com os nomes dos projetos e destinos preservados
-em texto. As setas dos links usam um desenho em pixels.
+em texto. O Prumo mantém o “P.” original. As setas dos links usam um desenho em pixels.
 
 O padrão de circuitos conecta as bordas opostas do tile nas mesmas coordenadas e
 direções. O cabeçalho e os resumos das pastas não reiniciam esse padrão, evitando
 emendas entre superfícies que se movem de forma independente.
+
+O circuito contínuo usa o arquivo `circuit-grid-seamless.svg`, com uma URL distinta
+do padrão anterior para impedir a reutilização do SVG antigo em cache.

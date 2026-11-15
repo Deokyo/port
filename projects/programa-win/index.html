@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Programa WIN | Case de Diogo Mussi</title>
-  <meta name="description" content="Case do Programa WIN: produto interno gamificado com frontend, backend, dados e painel administrativo.">
+  <meta name="description" content="Uma forma mais visual de explorar serviços e acompanhar indicações entre áreas da Locatelli Group.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://deokyo.github.io/port/projects/programa-win/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Programa WIN | Case de Diogo Mussi">
-  <meta property="og:description" content="Produto interno gamificado com mapa de oportunidades, administração e arquitetura de dados.">
+  <meta property="og:description" content="Uma forma mais visual de explorar serviços e acompanhar indicações entre áreas da Locatelli Group.">
   <meta property="og:url" content="https://deokyo.github.io/port/projects/programa-win/">
   <meta property="og:image" content="https://deokyo.github.io/port/assets/images/programa-win.webp">
   <link rel="stylesheet" href="../../assets/styles.css">
@@ -17,10 +17,10 @@
   <link rel="stylesheet" href="../../assets/retro-icons.css?v=2">
   <link rel="stylesheet" href="../../assets/radio.css?v=language-6">
   <link rel="stylesheet" href="../../assets/language.css?v=1">
-  <script src="../../assets/language.js?v=language-1" defer></script>
+  <script src="../../assets/language.js?v=voice-1" defer></script>
   <script src="../../assets/site.js?v=language-1" defer></script>
   <script src="../../assets/radio.js?v=language-1" defer></script>
-  <script src="../../assets/navigation.js?v=language-1" defer></script>
+  <script src="../../assets/navigation.js?v=voice-1" defer></script>
 </head>
 <body class="portfolio-home">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -76,104 +76,14 @@
       <div class="case-hero-inner">
         <p class="eyebrow hero-enter">Produto interno / Em andamento</p>
         <h1 id="case-title" class="hero-enter">Programa WIN</h1>
-        <p class="case-lead hero-enter">Gamificação aplicada à descoberta de oportunidades entre áreas, com experiência de participante e operação administrativa na mesma base.</p>
+        <p class="case-lead hero-enter">Uma forma mais visual de explorar serviços e acompanhar indicações entre áreas da Locatelli Group.</p>
       </div>
     </section>
 
-    <dl class="case-meta" aria-label="Resumo do projeto">
-      <div><dt>Atuação</dt><dd>Produto, UX, frontend, backend e QA</dd></div>
-      <div><dt>Stack</dt><dd>HTML, CSS, JavaScript, TypeScript, Fastify e PostgreSQL</dd></div>
-      <div><dt>Status</dt><dd>Baseline local 0.3.1; homologação pendente</dd></div>
-    </dl>
-
-    <section class="case-section" aria-labelledby="challenge-title">
-      <div class="case-section-title" data-reveal>
-        <p class="eyebrow">01 / Contexto</p>
-        <h2 id="challenge-title">O desafio</h2>
-      </div>
-      <div class="case-content" data-reveal>
-        <p>Transformar um conceito de indicação interna em um produto capaz de orientar participantes, mostrar progresso e dar governança à operação.</p>
-        <p>O projeto precisava conciliar uma linguagem visual inspirada em territórios com regras ainda em definição, dados auditáveis, níveis distintos de acesso e uma área administrativa para acompanhar resultados.</p>
-        <ul class="case-list">
-          <li><strong>Participante</strong> Mapa, ranking, conquistas, perfil e notificações.</li>
-          <li><strong>Administração</strong> Relatórios, participantes, indicações, importações, regras e auditoria.</li>
-          <li><strong>Governança</strong> Permissões no servidor, histórico imutável e regras versionadas.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="case-section" aria-labelledby="solution-title">
-      <div class="case-section-title" data-reveal>
-        <p class="eyebrow">02 / Solução</p>
-        <h2 id="solution-title">Uma aplicação, duas experiências</h2>
-      </div>
-      <div class="case-content" data-reveal>
-        <p>O WIN Board e o painel administrativo foram integrados ao mesmo backend, reduzindo divergência entre o que o participante vê e o que a gestão acompanha. A experiência organiza a navegação em quatro territórios e permite avançar da visão geral até os serviços relacionados.</p>
-        <pre class="architecture" aria-label="Arquitetura resumida">NAVEGADOR
-    |
-    +-- WIN Board
-    +-- Painel administrativo
-    |
-FASTIFY + TYPESCRIPT
-    |
-    +-- Autenticação e RBAC
-    +-- APIs versionadas
-    +-- Importação validada
-    +-- Auditoria e ledger
-    |
-POSTGRESQL / PGLITE</pre>
-        <div class="gallery-image">
-          <img src="../../assets/images/programa-win.webp" width="1600" height="798" alt="Tela demonstrativa do WIN Board com quatro territórios e indicadores sintéticos">
-        </div>
-        <p>Imagem de demonstração com identidade do autor e dados sintéticos. Nenhum participante, cliente ou resultado real é exibido.</p>
-      </div>
-    </section>
-
-    <section class="case-section" aria-labelledby="process-title">
-      <div class="case-section-title" data-reveal>
-        <p class="eyebrow">03 / Implementação</p>
-        <h2 id="process-title">Decisões que sustentam o produto</h2>
-      </div>
-      <div class="case-content" data-reveal>
-        <p>A interface foi mantida expressiva, enquanto regras e controles críticos ficaram no servidor. Funcionalidades dependentes de decisões de negócio permanecem desativadas até aprovação, sem simular comportamento definitivo.</p>
-        <ul class="case-list">
-          <li><strong>Dados</strong> Migrations versionadas, transações e PostgreSQL embarcado para desenvolvimento.</li>
-          <li><strong>Segurança</strong> Sessão opaca, autorização por permissão, RLS e auditoria append-only.</li>
-          <li><strong>Qualidade</strong> Casos unitários, de integração e E2E mantidos como suíte da candidata; a execução integral no ambiente-alvo ainda é pendente.</li>
-          <li><strong>Operação local</strong> Inicializador para Windows com banco e demonstração sintética.</li>
-        </ul>
-        <div class="evidence-grid" aria-label="Dimensão técnica do projeto">
-          <div><strong>15</strong><span>migrations versionadas</span></div>
-          <div><strong>QA</strong><span>regressão integral pendente</span></div>
-          <div><strong>4</strong><span>territórios na experiência</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="case-section" aria-labelledby="status-title">
-      <div class="case-section-title" data-reveal>
-        <p class="eyebrow">04 / Estado atual</p>
-        <h2 id="status-title">Próxima etapa</h2>
-      </div>
-      <div class="case-content" data-reveal>
-        <p>A baseline 0.3.1 registra a aplicação local com WIN Board e painel administrativo na mesma API, importação de planilhas com validação e prévia, auditoria e banco persistente para avaliação com dados sintéticos.</p>
-        <p>O acesso local apresenta uma tela de entrada antes de criar a sessão de teste, e o inicializador seleciona uma porta disponível. Essa sessão é limitada ao próprio computador e não substitui a identidade corporativa.</p>
-        <p>A evidência de testes disponível ainda se refere à candidata 0.3.0 e registra bloqueio de homologação. Ela não comprova a validação da baseline 0.3.1. Permanecem pendentes a regressão integral do artefato atual, identidade corporativa, decisões de negócio e controles operacionais de produção.</p>
-        <p>Revisão das fontes em <time datetime="2026-11-12">12 de novembro de 2026</time>. Este case não apresenta a baseline como produção ou release homologada.</p>
-      </div>
-    </section>
-
-    <section class="case-section" aria-labelledby="public-scope-title">
-      <div class="case-section-title" data-reveal>
-        <p class="eyebrow">05 / Publicação</p>
-        <h2 id="public-scope-title">Escopo público controlado</h2>
-      </div>
-      <div class="case-content" data-reveal>
-        <p>O portfólio apresenta somente contexto, decisões de produto, arquitetura em alto nível e uma imagem demonstrativa. Código operacional, credenciais, banco, dados pessoais, regras financeiras detalhadas, configurações e documentação interna permanecem fora desta publicação.</p>
-        <p>O material é exibido para fins de portfólio e não é oferecido sob licença aberta. Reprodução, redistribuição ou exploração comercial por terceiros não são autorizadas. Consulte o <a href="../../NOTICE.md" target="_blank" rel="noopener noreferrer">aviso de uso do repositório</a>.</p>
-      </div>
-    </section>
-
+    <dl class="case-meta" aria-label="Resumo do projeto"><div><dt>Minha atuação</dt><dd>Produto, experiência e desenvolvimento</dd></div><div><dt>Foco</dt><dd>Indicações internas e engajamento</dd></div><div><dt>Projeto</dt><dd>Aplicação em desenvolvimento</dd></div></dl>
+    <section class="case-section" aria-labelledby="story-1"><div class="case-section-title" data-reveal><p class="eyebrow">01 / Contexto</p><h2 id="story-1">Oportunidades entre áreas</h2></div><div class="case-content" data-reveal><p>O WIN parte de uma ideia simples: ajudar as pessoas a conhecer os serviços de outras áreas e identificar oportunidades de indicação dentro do grupo.</p><p>Meu trabalho foi transformar essa proposta em uma experiência de produto, do mapa de navegação ao painel de gestão.</p><div class="gallery-image"><img src="../../assets/images/programa-win.webp" width="1600" height="798" alt="Demonstração do WIN Board com quatro territórios"></div><p>Prévia da interface com dados de exemplo.</p></div></section>
+    <section class="case-section" aria-labelledby="story-2"><div class="case-section-title" data-reveal><p class="eyebrow">02 / Experiência</p><h2 id="story-2">Um mapa para explorar</h2></div><div class="case-content" data-reveal><p>Organizei a experiência em quatro territórios. O participante começa pela visão geral e pode explorar os serviços de cada área, além de acompanhar seu perfil, ranking e conquistas.</p><p>A linguagem de jogo dá forma à navegação. A proposta é tornar a descoberta dos serviços mais convidativa e dar contexto ao progresso de quem participa.</p></div></section>
+    <section class="case-section" aria-labelledby="story-3"><div class="case-section-title" data-reveal><p class="eyebrow">03 / Entrega</p><h2 id="story-3">Do participante à gestão</h2></div><div class="case-content" data-reveal><p>Desenvolvi também a área administrativa, com participantes, indicações, relatórios e importação de planilhas. Ela reúne o acompanhamento do programa em uma experiência própria para a gestão.</p><p>O projeto está em desenvolvimento. A prévia mostra a estrutura e as interações com dados de exemplo.</p></div></section>
     <a class="case-next" href="../landing-pages/index.html">
       <span>Próximo case</span>
       <strong>Ecossistema de Landing Pages</strong>

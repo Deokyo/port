@@ -15,8 +15,8 @@ independentes possuem contextos identificados.
 - [Project Atlas](projects/project-atlas/index.html): protótipo visual v0.3 com dados
   sintéticos, sem conectores operacionais.
 
-Fontes dos projetos revisadas em 12 de novembro de 2026. Versões e limites são apresentados
-nos cases; esta revisão não equivale à homologação dos produtos.
+Fontes dos projetos revisadas em 12 de novembro de 2026. Os cases públicos apresentam contexto, atuação e entregas. Os registros de versão e
+validação são documentação do projeto; esta revisão não equivale à homologação dos produtos.
 
 ## English
 
@@ -33,8 +33,8 @@ Growth, UX, and product engineering portfolio.
 - [Project Atlas](projects/project-atlas/index.html): visual prototype v0.3 using synthetic
   data, with no operational connectors.
 
-Project sources reviewed on November 12, 2026. Versions and limitations are documented in
-each case; this review does not certify product readiness.
+Project sources reviewed on November 12, 2026. Public case studies present context, contribution and deliverables. Version and validation
+records are project documentation; this review does not certify product readiness.
 
 ## Local
 
@@ -170,3 +170,21 @@ em português e os links normais continuam disponíveis.
 
 Para manter o cabeçalho comum, alterações no cabeçalho devem ser replicadas nos HTMLs
 do portfólio. Demos de clientes não usam esse cabeçalho.
+
+## Textos dos cases / Case study copy
+
+A apresentação pública usa primeira pessoa e prioriza problema, atuação, escolhas e entrega.
+Versões, auditoria técnica e próximos passos internos ficam na documentação. Resultados de
+negócio só entram com dados que possam ser publicados; a revisão atual não atribui ganhos
+de conversão, receita, adoção ou tempo economizado.
+
+Nas LPs, `projects/landing-pages/projects.json` preserva os registros de origem e contém
+`presentation` com pares PT/EN. `node scripts/build-lp-cases.mjs` atualiza o conteúdo dentro
+do shell existente, preservando player, idioma e navegação. As traduções dos textos novos
+devem acompanhar a edição em `assets/language.js`. As demos mantêm o conteúdo dos projetos.
+
+Public copy uses first person and focuses on the problem, contribution, choices and
+deliverable. Internal technical records stay in documentation. No business outcome is
+claimed without shareable evidence. Landing page presentation copy is stored as PT/EN
+pairs in `projects.json`; the builder preserves the current shared shell. Update the
+language dictionary alongside edits. Demos keep the original project content.

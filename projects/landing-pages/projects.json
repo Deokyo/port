@@ -11,10 +11,43 @@
     "summary": "LP guarda-chuva para apresentar a terceirização de processos e conectar frentes especializadas de BPO.",
     "context": "A página precisava explicar um serviço amplo sem diluir as diferentes áreas que compõem a oferta.",
     "objective": "Ajudar empresas a reconhecer gargalos operacionais, entender as frentes de BPO e avançar para uma conversa comercial.",
-    "contribution": ["Arquitetura de conteúdo e jornada de conversão", "HTML semântico, CSS escopado e JavaScript vanilla", "SEO on-page e links internos para páginas especializadas", "Integração do formulário RD Station na versão de produção"],
-    "ui": ["Hero baseado em processos, estrutura e pontos conectados", "Cards de benefícios com revelação em cortina", "Alternativa por toque e teclado para conteúdo antes dependente de hover", "CTA e formulário contextualizados ao diagnóstico da operação"],
-    "technical": ["Um H1 e um main semântico", "FAQ nativo com details e summary", "IntersectionObserver e preferência por movimento reduzido", "Inicialização protegida do formulário e estilos isolados do RD"],
-    "confidentiality": "A cópia pública mantém o layout e remove o formulário ativo, o identificador de analytics e o ID de produção."
+    "contribution": [
+      "Arquitetura de conteúdo e jornada de conversão",
+      "HTML semântico, CSS escopado e JavaScript vanilla",
+      "SEO on-page e links internos para páginas especializadas",
+      "Integração do formulário RD Station na versão de produção"
+    ],
+    "ui": [
+      "Hero baseado em processos, estrutura e pontos conectados",
+      "Cards de benefícios com revelação em cortina",
+      "Alternativa por toque e teclado para conteúdo antes dependente de hover",
+      "CTA e formulário contextualizados ao diagnóstico da operação"
+    ],
+    "technical": [
+      "Um H1 e um main semântico",
+      "FAQ nativo com details e summary",
+      "IntersectionObserver e preferência por movimento reduzido",
+      "Inicialização protegida do formulário e estilos isolados do RD"
+    ],
+    "confidentiality": "A cópia pública mantém o layout e remove o formulário ativo, o identificador de analytics e o ID de produção.",
+    "presentation": {
+      "lead": [
+        "Uma página para apresentar as frentes de BPO e ajudar a encontrar o serviço certo.",
+        "A page presenting the BPO services and helping visitors find the right one."
+      ],
+      "context": [
+        "O BPO reúne serviços diferentes. O desafio era explicar essa oferta sem transformar a página em uma lista extensa e difícil de percorrer.",
+        "BPO brings together different services. The challenge was to explain the offer without turning the page into a long list that was hard to browse."
+      ],
+      "work": [
+        "Organizei a mensagem, a navegação entre os serviços e os pontos de contato. Também desenvolvi a página e a integração com o formulário do RD Station.",
+        "I organized the message, navigation between services and contact points. I also developed the page and its RD Station form integration."
+      ],
+      "choices": [
+        "Usei os benefícios como entrada para a oferta e conectei a página às frentes especializadas de BPO. Assim, quem precisa de mais detalhe tem um caminho para continuar a leitura.",
+        "I used benefits as the entry point to the offer and linked the page to specialized BPO services. This gives visitors who need more detail a way to keep exploring."
+      ]
+    }
   },
   {
     "slug": "gestao-contabil",
@@ -28,10 +61,43 @@
     "summary": "LP de serviço para posicionar a gestão contábil como fonte de informação confiável para decisão.",
     "context": "O conteúdo precisava ir além da obrigação contábil e tornar visível o valor operacional e gerencial da estruturação.",
     "objective": "Apresentar a operação contábil de ponta a ponta e qualificar uma conversa sobre eficiência, fechamento e informação gerencial.",
-    "contribution": ["Estrutura de mensagem, serviços, benefícios e objeções", "Implementação responsiva em HTML, CSS e JavaScript", "Metadados SEO e FAQ semântico", "Integração RD Station no ambiente publicado"],
-    "ui": ["Hero com anéis, barras e linha de evolução", "Metáfora de números convertidos em informação", "Benefícios com cortina e microinterações controladas", "Ritmo visual compartilhado com a família de serviços"],
-    "technical": ["Componentes escopados para convivência com o editor RD", "Estados de foco e links definidos", "Reveal progressivo sem bloquear conteúdo", "Fallback para redução de movimento"],
-    "confidentiality": "O demo de portfólio substitui integrações ativas por uma mensagem não interativa."
+    "contribution": [
+      "Estrutura de mensagem, serviços, benefícios e objeções",
+      "Implementação responsiva em HTML, CSS e JavaScript",
+      "Metadados SEO e FAQ semântico",
+      "Integração RD Station no ambiente publicado"
+    ],
+    "ui": [
+      "Hero com anéis, barras e linha de evolução",
+      "Metáfora de números convertidos em informação",
+      "Benefícios com cortina e microinterações controladas",
+      "Ritmo visual compartilhado com a família de serviços"
+    ],
+    "technical": [
+      "Componentes escopados para convivência com o editor RD",
+      "Estados de foco e links definidos",
+      "Reveal progressivo sem bloquear conteúdo",
+      "Fallback para redução de movimento"
+    ],
+    "confidentiality": "O demo de portfólio substitui integrações ativas por uma mensagem não interativa.",
+    "presentation": {
+      "lead": [
+        "Uma página sobre o papel da gestão contábil nas decisões da empresa.",
+        "A page about the role of accounting management in business decisions."
+      ],
+      "context": [
+        "A proposta era apresentar a contabilidade pelo valor da informação que ela entrega, além das rotinas e obrigações do serviço.",
+        "The aim was to present accounting through the value of the information it provides, alongside its everyday tasks and obligations."
+      ],
+      "work": [
+        "Estruturei a mensagem, os serviços e as principais dúvidas, e desenvolvi a página responsiva com formulário no RD Station.",
+        "I structured the message, services and key questions, and developed the responsive page with an RD Station form."
+      ],
+      "choices": [
+        "Trabalhei a ideia visual de números que se transformam em informação. A sequência de serviços e benefícios conduz a leitura até o contato comercial.",
+        "I worked with the visual idea of numbers becoming information. The sequence of services and benefits leads readers toward contacting the sales team."
+      ]
+    }
   },
   {
     "slug": "contas-a-receber",
@@ -45,10 +111,43 @@
     "summary": "LP de serviço orientada a controle de recebimentos, inadimplência e previsibilidade de caixa.",
     "context": "A jornada precisava conectar rotinas financeiras dispersas a um problema reconhecível de visibilidade e acompanhamento.",
     "objective": "Mostrar como uma operação estruturada de contas a receber apoia controle, eficiência e previsibilidade.",
-    "contribution": ["Arquitetura da jornada e copy de interface", "Desenvolvimento frontend responsivo", "SEO técnico e hierarquia semântica", "Montagem do formulário RD de produção"],
-    "ui": ["Hero com painéis sobrepostos e fluxo financeiro", "Cards diretos para benefícios e frentes operacionais", "Seções alternadas entre navy e grafite", "CTA intermediário conectado ao diagnóstico"],
-    "technical": ["CSS escopado e container full-bleed", "FAQ com controles nativos", "JavaScript progressivo para reveal", "Formulário isolado de resets globais"],
-    "confidentiality": "O formulário e seus identificadores não aparecem na cópia pública."
+    "contribution": [
+      "Arquitetura da jornada e copy de interface",
+      "Desenvolvimento frontend responsivo",
+      "SEO técnico e hierarquia semântica",
+      "Montagem do formulário RD de produção"
+    ],
+    "ui": [
+      "Hero com painéis sobrepostos e fluxo financeiro",
+      "Cards diretos para benefícios e frentes operacionais",
+      "Seções alternadas entre navy e grafite",
+      "CTA intermediário conectado ao diagnóstico"
+    ],
+    "technical": [
+      "CSS escopado e container full-bleed",
+      "FAQ com controles nativos",
+      "JavaScript progressivo para reveal",
+      "Formulário isolado de resets globais"
+    ],
+    "confidentiality": "O formulário e seus identificadores não aparecem na cópia pública.",
+    "presentation": {
+      "lead": [
+        "Uma página de serviço sobre recebimentos, inadimplência e previsibilidade de caixa.",
+        "A service page about receivables, overdue payments and cash flow predictability."
+      ],
+      "context": [
+        "O desafio era conectar as rotinas de contas a receber a preocupações concretas de quem cuida do financeiro: acompanhar pagamentos, enxergar pendências e planejar o caixa.",
+        "The challenge was to connect receivables tasks to practical finance concerns: tracking payments, seeing what is overdue and planning cash flow."
+      ],
+      "work": [
+        "Organizei o conteúdo e os pontos de conversão, escrevi os textos de interface e desenvolvi a página para publicação no RD Station.",
+        "I organized the content and conversion points, wrote the interface copy and developed the page for publication in RD Station."
+      ],
+      "choices": [
+        "Usei painéis e fluxos no visual para representar o acompanhamento financeiro. Os blocos de benefícios e serviços ajudam a explicar a oferta antes do formulário.",
+        "I used panels and flows to represent financial tracking. Benefit and service sections help explain the offer before the form."
+      ]
+    }
   },
   {
     "slug": "bpo-folha",
@@ -62,10 +161,43 @@
     "summary": "LP de serviço para uma operação de folha mais segura, eficiente e previsível.",
     "context": "O escopo reúne admissão, processamento, encargos, férias, desligamentos, benefícios e homologações em uma única narrativa.",
     "objective": "Explicar a abrangência do BPO de Folha e reduzir dúvidas sobre controle, tecnologia e proximidade do RH.",
-    "contribution": ["Organização de conteúdo extenso sem perder a ação principal", "Implementação HTML, CSS e JavaScript", "SEO on-page e FAQ", "Integração RD Station e link correto para o hub BPO"],
-    "ui": ["Hero com documento, check, nós e órbitas", "Cards de serviço e benefício sem depender de cortina", "Contraste entre rigor operacional e proximidade com pessoas", "Formulário em duas colunas no desktop"],
-    "technical": ["Responsividade em breakpoints estruturais", "Links internos reais e rastreáveis", "Motion contextual com modo reduzido", "Mount RD protegido contra duplicidade"],
-    "confidentiality": "A demonstração preserva o front-end e remove a captura de leads."
+    "contribution": [
+      "Organização de conteúdo extenso sem perder a ação principal",
+      "Implementação HTML, CSS e JavaScript",
+      "SEO on-page e FAQ",
+      "Integração RD Station e link correto para o hub BPO"
+    ],
+    "ui": [
+      "Hero com documento, check, nós e órbitas",
+      "Cards de serviço e benefício sem depender de cortina",
+      "Contraste entre rigor operacional e proximidade com pessoas",
+      "Formulário em duas colunas no desktop"
+    ],
+    "technical": [
+      "Responsividade em breakpoints estruturais",
+      "Links internos reais e rastreáveis",
+      "Motion contextual com modo reduzido",
+      "Mount RD protegido contra duplicidade"
+    ],
+    "confidentiality": "A demonstração preserva o front-end e remove a captura de leads.",
+    "presentation": {
+      "lead": [
+        "Uma página para explicar o BPO de Folha, da admissão ao desligamento.",
+        "A page explaining payroll outsourcing, from hiring to offboarding."
+      ],
+      "context": [
+        "A oferta cobre muitas etapas da rotina de RH. O trabalho era apresentar essa abrangência com uma leitura clara e manter o contato comercial fácil de encontrar.",
+        "The offer covers many stages of HR work. The task was to explain that scope clearly and keep the contact action easy to find."
+      ],
+      "work": [
+        "Organizei serviços, benefícios e dúvidas frequentes. Desenvolvi a interface responsiva e a integração do formulário com o RD Station.",
+        "I organized services, benefits and frequently asked questions. I developed the responsive interface and RD Station form integration."
+      ],
+      "choices": [
+        "Separei os serviços em blocos diretos e mantive a identidade da família de BPO. A composição combina referências à organização dos processos e ao trabalho com pessoas.",
+        "I divided the services into clear blocks and kept the BPO family’s visual identity. The composition combines references to organized processes and working with people."
+      ]
+    }
   },
   {
     "slug": "auditoria",
@@ -79,10 +211,43 @@
     "summary": "LP de serviço focada em risco, confiabilidade da informação e governança.",
     "context": "A página precisava tornar uma oferta técnica compreensível sem reduzir a percepção de independência e rigor.",
     "objective": "Apresentar diferentes frentes de auditoria e conduzir o visitante a uma conversa sobre riscos e controles.",
-    "contribution": ["Arquitetura de informação e conversão", "Desenvolvimento responsivo em stack nativa", "SEO, semântica e FAQ", "Integração do formulário no RD Station"],
-    "ui": ["Hero com radar, sweep, alvo e pulso", "Benefícios com abertura em cortina", "Vocabulário visual de detecção e análise", "Hierarquia que separa soluções, abordagem e diferenciais"],
-    "technical": ["Interação por clique além do hover", "Foco visível e conteúdo semântico", "Reveal com IntersectionObserver", "Estilos do formulário limitados ao wrapper da página"],
-    "confidentiality": "O código público omite formulário, analytics e IDs ativos."
+    "contribution": [
+      "Arquitetura de informação e conversão",
+      "Desenvolvimento responsivo em stack nativa",
+      "SEO, semântica e FAQ",
+      "Integração do formulário no RD Station"
+    ],
+    "ui": [
+      "Hero com radar, sweep, alvo e pulso",
+      "Benefícios com abertura em cortina",
+      "Vocabulário visual de detecção e análise",
+      "Hierarquia que separa soluções, abordagem e diferenciais"
+    ],
+    "technical": [
+      "Interação por clique além do hover",
+      "Foco visível e conteúdo semântico",
+      "Reveal com IntersectionObserver",
+      "Estilos do formulário limitados ao wrapper da página"
+    ],
+    "confidentiality": "O código público omite formulário, analytics e IDs ativos.",
+    "presentation": {
+      "lead": [
+        "Uma página para apresentar as frentes de auditoria e abrir uma conversa sobre riscos e controles.",
+        "A page presenting audit services and opening a conversation about risks and controls."
+      ],
+      "context": [
+        "A auditoria tem uma oferta técnica. O desafio era torná-la compreensível para quem está avaliando o serviço e precisa entender onde ele se aplica.",
+        "Auditing is a technical service. The challenge was to make it understandable for people evaluating the offer and trying to see where it applies."
+      ],
+      "work": [
+        "Estruturei a informação, os benefícios e as dúvidas frequentes. Também desenvolvi a interface e o formulário da versão publicada no RD Station.",
+        "I structured the information, benefits and frequently asked questions. I also developed the interface and form for the version published in RD Station."
+      ],
+      "choices": [
+        "Usei o radar como referência visual para análise e identificação de riscos. A hierarquia separa as soluções, a abordagem e os diferenciais para facilitar a consulta.",
+        "I used radar as a visual reference for analysis and risk detection. The hierarchy separates solutions, approach and differentiators to make the page easier to browse."
+      ]
+    }
   },
   {
     "slug": "principal-cwb",
@@ -96,10 +261,43 @@
     "summary": "Hub generalista para orientar empresas entre diferentes soluções da Locatelli Group.",
     "context": "A página precisava funcionar como ponto de entrada sem competir com as LPs específicas de cada serviço.",
     "objective": "Apresentar o portfólio de soluções, ajudar na identificação da necessidade e encaminhar para a página ou contato adequado.",
-    "contribution": ["Arquitetura do hub e interligação entre páginas", "Implementação editorial em HTML, CSS e JavaScript", "SEO e navegação por links reais", "Integração do formulário de orientação"],
-    "ui": ["Hero com núcleo Locatelli e categorias orbitais", "Mapa de soluções como elemento de orientação", "Seção laranja para ruptura e decisão", "Header reduzido com uma ação principal"],
-    "technical": ["Links cruzados para LPs específicas", "Layout adaptativo para o mapa de soluções", "Motion progressivo e reduced-motion", "Form shell isolado para RD Station"],
-    "confidentiality": "A versão demonstrativa não envia dados nem carrega o formulário de produção."
+    "contribution": [
+      "Arquitetura do hub e interligação entre páginas",
+      "Implementação editorial em HTML, CSS e JavaScript",
+      "SEO e navegação por links reais",
+      "Integração do formulário de orientação"
+    ],
+    "ui": [
+      "Hero com núcleo Locatelli e categorias orbitais",
+      "Mapa de soluções como elemento de orientação",
+      "Seção laranja para ruptura e decisão",
+      "Header reduzido com uma ação principal"
+    ],
+    "technical": [
+      "Links cruzados para LPs específicas",
+      "Layout adaptativo para o mapa de soluções",
+      "Motion progressivo e reduced-motion",
+      "Form shell isolado para RD Station"
+    ],
+    "confidentiality": "A versão demonstrativa não envia dados nem carrega o formulário de produção.",
+    "presentation": {
+      "lead": [
+        "Um ponto de entrada para conhecer as soluções da Locatelli e escolher por onde seguir.",
+        "An entry point for discovering Locatelli’s solutions and choosing where to go next."
+      ],
+      "context": [
+        "Quem chega a uma página geral pode ainda não saber qual serviço procura. O hub precisava apresentar as opções e encaminhar para as páginas específicas.",
+        "Visitors arriving on a general page may not yet know which service they need. The hub needed to present the options and guide them to the relevant pages."
+      ],
+      "work": [
+        "Desenhei a organização do hub, as conexões entre as páginas e a interface. Desenvolvi também a versão responsiva e o formulário de orientação.",
+        "I designed the hub’s structure, links between pages and interface. I also developed its responsive version and enquiry form."
+      ],
+      "choices": [
+        "Organizei um mapa de soluções para apoiar a escolha do visitante. Cada frente tem seu espaço, com links para aprofundar o assunto sem concentrar todo o conteúdo na mesma página.",
+        "I organized a solution map to support visitors’ choices. Each area has its own space, with links for exploring further without putting all the content on a single page."
+      ]
+    }
   },
   {
     "slug": "rog-e",
@@ -113,10 +311,43 @@
     "summary": "Experiência setorial bilíngue para diagnóstico de backoffice no contexto de Óleo & Gás.",
     "context": "A página combina uma narrativa setorial, troca de idioma e dois fluxos de formulário dentro das restrições do RD Station.",
     "objective": "Ajudar empresas do setor a reconhecer desafios de backoffice e agendar uma avaliação com conteúdo em português ou inglês.",
-    "contribution": ["Arquitetura da experiência bilíngue", "HTML, CSS e JavaScript vanilla com tradução no cliente", "Metadados dinâmicos por idioma na implementação atual", "Orquestração de formulários separados por idioma"],
-    "ui": ["Hero técnico com gauge e diagnóstico", "Seletor PT/EN com estado acessível", "Fluxo visual entre desafios e áreas avaliadas", "Interface setorial sem abandonar as foundations da marca"],
-    "technical": ["Dicionário de conteúdo PT/EN", "Sincronização de idioma e formulário", "Carregamento controlado da biblioteca RD com timeout", "Reveal e animação do gauge com fallback"],
-    "confidentiality": "A cópia pública mantém a troca de idioma e desativa os dois formulários e seus identificadores."
+    "contribution": [
+      "Arquitetura da experiência bilíngue",
+      "HTML, CSS e JavaScript vanilla com tradução no cliente",
+      "Metadados dinâmicos por idioma na implementação atual",
+      "Orquestração de formulários separados por idioma"
+    ],
+    "ui": [
+      "Hero técnico com gauge e diagnóstico",
+      "Seletor PT/EN com estado acessível",
+      "Fluxo visual entre desafios e áreas avaliadas",
+      "Interface setorial sem abandonar as foundations da marca"
+    ],
+    "technical": [
+      "Dicionário de conteúdo PT/EN",
+      "Sincronização de idioma e formulário",
+      "Carregamento controlado da biblioteca RD com timeout",
+      "Reveal e animação do gauge com fallback"
+    ],
+    "confidentiality": "A cópia pública mantém a troca de idioma e desativa os dois formulários e seus identificadores.",
+    "presentation": {
+      "lead": [
+        "Uma experiência em português e inglês para apresentar soluções de backoffice ao setor de Óleo & Gás.",
+        "A Portuguese and English experience presenting back-office solutions to the oil and gas sector."
+      ],
+      "context": [
+        "A página precisava falar com um público setorial em dois idiomas, mantendo a mesma jornada até o agendamento de uma avaliação.",
+        "The page needed to address a sector-specific audience in two languages, keeping a consistent path toward scheduling an assessment."
+      ],
+      "work": [
+        "Estruturei a experiência bilíngue, desenvolvi a interface e conectei a escolha de idioma aos formulários correspondentes no RD Station.",
+        "I structured the bilingual experience, developed the interface and connected the language choice to the corresponding RD Station forms."
+      ],
+      "choices": [
+        "A leitura parte dos desafios de backoffice e apresenta as áreas que podem ser avaliadas. O seletor PT/EN acompanha essa experiência sem exigir que a pessoa saia da página.",
+        "The page starts with back-office challenges and presents the areas that can be assessed. The PT/EN selector supports that experience without requiring visitors to leave the page."
+      ]
+    }
   },
   {
     "slug": "agradecimento",
@@ -130,10 +361,43 @@
     "summary": "Página curta de confirmação e orientação pós-conversão.",
     "context": "O estado pós-envio precisava confirmar a ação, explicar o próximo passo e evitar uma segunda conversão concorrente.",
     "objective": "Dar segurança ao visitante depois do contato e oferecer uma rota institucional simples.",
-    "contribution": ["Definição da hierarquia de confirmação", "Implementação HTML e CSS sem dependência de JavaScript", "Tratamento SEO apropriado para thank-you", "Continuidade visual com as LPs de aquisição"],
-    "ui": ["Hero minimalista com check de confirmação", "Fluxo visual de dados enviados, análise e contato", "CTA institucional secundário", "Densidade reduzida e leitura imediata"],
-    "technical": ["robots noindex,follow", "Ausência intencional de formulário", "Sem scripts de interação", "Responsive design e movimento reduzido"],
-    "confidentiality": "O pacote não informa URL pública para esta página; o case não inventa uma."
+    "contribution": [
+      "Definição da hierarquia de confirmação",
+      "Implementação HTML e CSS sem dependência de JavaScript",
+      "Tratamento SEO apropriado para thank-you",
+      "Continuidade visual com as LPs de aquisição"
+    ],
+    "ui": [
+      "Hero minimalista com check de confirmação",
+      "Fluxo visual de dados enviados, análise e contato",
+      "CTA institucional secundário",
+      "Densidade reduzida e leitura imediata"
+    ],
+    "technical": [
+      "robots noindex,follow",
+      "Ausência intencional de formulário",
+      "Sem scripts de interação",
+      "Responsive design e movimento reduzido"
+    ],
+    "confidentiality": "O pacote não informa URL pública para esta página; o case não inventa uma.",
+    "presentation": {
+      "lead": [
+        "Uma confirmação simples para quem acabou de entrar em contato.",
+        "A simple confirmation for someone who has just made contact."
+      ],
+      "context": [
+        "Depois de enviar um formulário, a pessoa precisa saber se deu certo e o que acontece em seguida. Essa página cuida desse momento.",
+        "After submitting a form, people need to know it worked and what happens next. This page addresses that moment."
+      ],
+      "work": [
+        "Defini a ordem da mensagem de confirmação e desenvolvi a página, mantendo a identidade das landing pages de aquisição.",
+        "I defined the order of the confirmation message and developed the page, keeping the acquisition landing pages’ visual identity."
+      ],
+      "choices": [
+        "Mantive a leitura curta, com confirmação em destaque, orientação sobre a continuidade do contato e um link institucional. Não há uma nova solicitação de dados.",
+        "I kept it short, with a prominent confirmation, guidance on the follow-up and an institutional link. There is no further request for information."
+      ]
+    }
   },
   {
     "slug": "workshop-a",
@@ -147,10 +411,43 @@
     "summary": "Variante experimental de uma LP de evento com inscrição posicionada após conteúdo, especialistas e logística.",
     "context": "O teste compara a posição do formulário sem alterar oferta, mensagem, conteúdo do evento ou integração.",
     "objective": "Avaliar uma jornada em que o visitante recebe contexto completo antes de encontrar o formulário de inscrição.",
-    "contribution": ["Estrutura da hipótese A/B", "Implementação das duas variantes com diferença isolada", "Interface responsiva para evento", "Integração compartilhada do formulário no ambiente de campanha"],
-    "ui": ["Hero com arquitetura tributária, scan e sinais", "Blocos de conteúdo, especialistas, público e logística antes da inscrição", "Fotos e link externo de localização", "CTA final retorna ao formulário"],
-    "technical": ["Mesmo HTML, CSS e JavaScript fora da mudança de ordem", "Formulário movido como bloco completo", "Motion reduzido e links externos seguros", "Variação rastreável por diff estrutural"],
-    "confidentiality": "É uma variante experimental. A URL da campanha não comprova que esta versão específica foi publicada nem apresenta resultado de teste."
+    "contribution": [
+      "Estrutura da hipótese A/B",
+      "Implementação das duas variantes com diferença isolada",
+      "Interface responsiva para evento",
+      "Integração compartilhada do formulário no ambiente de campanha"
+    ],
+    "ui": [
+      "Hero com arquitetura tributária, scan e sinais",
+      "Blocos de conteúdo, especialistas, público e logística antes da inscrição",
+      "Fotos e link externo de localização",
+      "CTA final retorna ao formulário"
+    ],
+    "technical": [
+      "Mesmo HTML, CSS e JavaScript fora da mudança de ordem",
+      "Formulário movido como bloco completo",
+      "Motion reduzido e links externos seguros",
+      "Variação rastreável por diff estrutural"
+    ],
+    "confidentiality": "É uma variante experimental. A URL da campanha não comprova que esta versão específica foi publicada nem apresenta resultado de teste.",
+    "presentation": {
+      "lead": [
+        "Uma das duas versões que desenvolvi para explorar a posição do formulário de inscrição.",
+        "One of two versions I built to explore the position of the registration form."
+      ],
+      "context": [
+        "Para a página do workshop sobre Reforma Tributária, a hipótese era comparar dois caminhos: apresentar o evento antes da inscrição ou trazer o formulário logo no início.",
+        "For the tax reform workshop page, the hypothesis was to compare two paths: present the event before registration, or bring the form closer to the top."
+      ],
+      "work": [
+        "Estruturei a hipótese e desenvolvi as duas variantes. Nesta versão, o formulário aparece depois do conteúdo, dos especialistas e das informações do evento.",
+        "I structured the hypothesis and developed both variants. In this version, the form appears after the content, speakers and event details."
+      ],
+      "choices": [
+        "Mantive a oferta e os demais elementos iguais entre as versões para isolar a posição do formulário. O material disponível não traz resultados do teste.",
+        "I kept the offer and other elements the same between versions to isolate form position. The available material does not include test results."
+      ]
+    }
   },
   {
     "slug": "workshop-b",
@@ -164,10 +461,43 @@
     "summary": "Variante experimental da LP de evento com o formulário apresentado imediatamente após o hero.",
     "context": "A única mudança relevante em relação à Variante A é a antecipação do bloco completo de inscrição.",
     "objective": "Avaliar uma jornada mais curta entre a promessa do hero e a solicitação de participação.",
-    "contribution": ["Isolamento da variável de teste", "Reposicionamento íntegro do form shell", "Preservação de conteúdo, visual e scripts", "Documentação do contraste com a Variante A"],
-    "ui": ["Hero e arquitetura visual idênticos à Variante A", "Formulário como primeira seção após o hero", "Conteúdo aprofundado permanece disponível abaixo", "CTA final mantém retorno para inscrição"],
-    "technical": ["Diff limitado à ordem do bloco de formulário", "Mesmo ID e comportamento no ativo original", "HTML semântico e responsivo", "Nenhuma métrica atribuída sem evidência"],
-    "confidentiality": "É uma hipótese A/B, não uma versão comprovadamente vencedora ou publicada."
+    "contribution": [
+      "Isolamento da variável de teste",
+      "Reposicionamento íntegro do form shell",
+      "Preservação de conteúdo, visual e scripts",
+      "Documentação do contraste com a Variante A"
+    ],
+    "ui": [
+      "Hero e arquitetura visual idênticos à Variante A",
+      "Formulário como primeira seção após o hero",
+      "Conteúdo aprofundado permanece disponível abaixo",
+      "CTA final mantém retorno para inscrição"
+    ],
+    "technical": [
+      "Diff limitado à ordem do bloco de formulário",
+      "Mesmo ID e comportamento no ativo original",
+      "HTML semântico e responsivo",
+      "Nenhuma métrica atribuída sem evidência"
+    ],
+    "confidentiality": "É uma hipótese A/B, não uma versão comprovadamente vencedora ou publicada.",
+    "presentation": {
+      "lead": [
+        "Uma versão da página do workshop com a inscrição logo depois da abertura.",
+        "A version of the workshop page with registration just after the opening section."
+      ],
+      "context": [
+        "Esta variante explora um caminho mais curto entre a apresentação do workshop e o formulário. Ela faz parte da mesma proposta de teste da Variante A.",
+        "This variant explores a shorter path from the workshop introduction to the form. It is part of the same test proposal as Variant A."
+      ],
+      "work": [
+        "Reposicionei o bloco de inscrição sem alterar a oferta, os textos ou o visual do restante da página. As informações detalhadas do evento continuam disponíveis abaixo.",
+        "I moved the registration block without changing the offer, copy or visual design of the rest of the page. Detailed event information remains available below."
+      ],
+      "choices": [
+        "A comparação foi construída em torno de uma única mudança de ordem. Sem resultados disponíveis, as duas versões são apresentadas como hipóteses de teste.",
+        "The comparison was built around one change in order. With no results available, both versions are presented as test hypotheses."
+      ]
+    }
   },
   {
     "slug": "demo-conformidade",
@@ -181,10 +511,43 @@
     "summary": "Conceito de LP para uma palestra sobre conformidade, riscos, controles e pontos de atenção.",
     "context": "O arquivo explora uma possível experiência de evento sem briefing final de data, local ou integração.",
     "objective": "Demonstrar como um tema técnico pode ser organizado em uma jornada clara de entendimento, identificação e estruturação.",
-    "contribution": ["Conceito de jornada e composição visual", "Protótipo frontend responsivo", "Tratamento explícito de dados ainda pendentes", "Estrutura noindex para não competir com páginas reais"],
-    "ui": ["Visual de conformidade com scan e pontos de atenção", "Fluxo em três etapas", "Seção de público e inscrição demonstrativa", "Hero técnico dentro do sistema de marca"],
-    "technical": ["HTML, CSS e JavaScript vanilla", "IntersectionObserver para reveal", "robots noindex,nofollow", "Nenhum formulário ou endpoint real"],
-    "confidentiality": "Demo não publicada. Textos pendentes permanecem identificados como pendência, não como fatos."
+    "contribution": [
+      "Conceito de jornada e composição visual",
+      "Protótipo frontend responsivo",
+      "Tratamento explícito de dados ainda pendentes",
+      "Estrutura noindex para não competir com páginas reais"
+    ],
+    "ui": [
+      "Visual de conformidade com scan e pontos de atenção",
+      "Fluxo em três etapas",
+      "Seção de público e inscrição demonstrativa",
+      "Hero técnico dentro do sistema de marca"
+    ],
+    "technical": [
+      "HTML, CSS e JavaScript vanilla",
+      "IntersectionObserver para reveal",
+      "robots noindex,nofollow",
+      "Nenhum formulário ou endpoint real"
+    ],
+    "confidentiality": "Demo não publicada. Textos pendentes permanecem identificados como pendência, não como fatos.",
+    "presentation": {
+      "lead": [
+        "Um estudo de landing page para uma palestra sobre conformidade, riscos e controles.",
+        "A landing page study for a talk on compliance, risks and controls."
+      ],
+      "context": [
+        "Usei o tema de conformidade para explorar como apresentar um assunto técnico em uma página de evento. O estudo foi desenvolvido sem data ou local definidos.",
+        "I used compliance as a theme to explore presenting a technical topic on an event page. The study was developed without a set date or venue."
+      ],
+      "work": [
+        "Criei a proposta de conteúdo, a composição visual e um protótipo responsivo, dentro da identidade das páginas da Locatelli.",
+        "I created the content concept, visual composition and a responsive prototype within Locatelli’s page identity."
+      ],
+      "choices": [
+        "Organizei a leitura em três etapas, com referências visuais a análise e pontos de atenção. É um estudo de interface, com inscrição demonstrativa.",
+        "I organized the content into three stages, with visual references to analysis and points requiring attention. This is an interface study with a demo registration section."
+      ]
+    }
   },
   {
     "slug": "demo-satisfacao",
@@ -198,10 +561,43 @@
     "summary": "Protótipo de pesquisa pós-evento com progresso, avaliação e confirmação no navegador.",
     "context": "A experiência demonstra uma coleta de feedback sem backend, CRM ou envio real de respostas.",
     "objective": "Explorar uma jornada curta de satisfação que seja clara, responsiva e rápida de preencher.",
-    "contribution": ["Modelagem da interação de pesquisa", "Implementação de estados no cliente", "Layout responsivo e feedback de progresso", "Separação explícita entre demonstração e coleta real"],
-    "ui": ["Hero compacto orientado ao tempo de preenchimento", "Escala de avaliação e campos organizados por tarefa", "Indicador visual de progresso", "Estado final de agradecimento"],
-    "technical": ["JavaScript para input, change e submit interceptado", "Nenhuma persistência ou requisição externa", "robots noindex,nofollow", "Formulário demonstrativo com resposta local"],
-    "confidentiality": "Demo não publicada e sem captura de dados. Nenhuma resposta é armazenada ou enviada."
+    "contribution": [
+      "Modelagem da interação de pesquisa",
+      "Implementação de estados no cliente",
+      "Layout responsivo e feedback de progresso",
+      "Separação explícita entre demonstração e coleta real"
+    ],
+    "ui": [
+      "Hero compacto orientado ao tempo de preenchimento",
+      "Escala de avaliação e campos organizados por tarefa",
+      "Indicador visual de progresso",
+      "Estado final de agradecimento"
+    ],
+    "technical": [
+      "JavaScript para input, change e submit interceptado",
+      "Nenhuma persistência ou requisição externa",
+      "robots noindex,nofollow",
+      "Formulário demonstrativo com resposta local"
+    ],
+    "confidentiality": "Demo não publicada e sem captura de dados. Nenhuma resposta é armazenada ou enviada.",
+    "presentation": {
+      "lead": [
+        "Um protótipo de pesquisa pós-evento, da avaliação à confirmação.",
+        "A post-event survey prototype, from rating to confirmation."
+      ],
+      "context": [
+        "A proposta era explorar uma pesquisa curta, com perguntas organizadas e sinais claros de quanto falta para terminar.",
+        "The aim was to explore a short survey with organized questions and clear indications of how much remains to complete."
+      ],
+      "work": [
+        "Desenhei a interação e desenvolvi os estados da pesquisa: preenchimento, progresso e agradecimento.",
+        "I designed the interaction and developed the survey states: completion, progress and thank-you."
+      ],
+      "choices": [
+        "O indicador de progresso acompanha o preenchimento e a confirmação encerra o fluxo. A demonstração funciona no navegador e não armazena nem envia respostas.",
+        "The progress indicator follows completion and the confirmation closes the flow. The demo runs in the browser and does not store or send responses."
+      ]
+    }
   },
   {
     "slug": "agradecimento-rog-experimental",
@@ -215,10 +611,42 @@
     "summary": "Experimento bilíngue de confirmação pós-envio para a jornada ROG-e.",
     "context": "O material aparece no PROJECT_INDEX, mas não integra a lista principal de projetos do manifest e não foi validado como produção.",
     "objective": "Explorar continuidade visual e troca de idioma no estado de agradecimento da experiência setorial.",
-    "contribution": ["Adaptação do sistema visual para um estado pós-conversão", "Conteúdo PT/EN no cliente", "Componente de confirmação e CTA institucional", "Registro explícito do caráter experimental"],
-    "ui": ["Confirmação central com check", "Seletor de idioma consistente com a ROG-e", "Hero curto e CTA institucional", "Footer bilíngue"],
-    "technical": ["Fragmento HTML, CSS e JavaScript", "Dicionário de tradução no cliente", "Preferência de idioma em armazenamento local", "Sem formulário ou integração RD"],
-    "confidentiality": "Experimento não validado, não publicado e não apresentado como versão final. O código é exibido apenas como referência técnica."
+    "contribution": [
+      "Adaptação do sistema visual para um estado pós-conversão",
+      "Conteúdo PT/EN no cliente",
+      "Componente de confirmação e CTA institucional",
+      "Registro explícito do caráter experimental"
+    ],
+    "ui": [
+      "Confirmação central com check",
+      "Seletor de idioma consistente com a ROG-e",
+      "Hero curto e CTA institucional",
+      "Footer bilíngue"
+    ],
+    "technical": [
+      "Fragmento HTML, CSS e JavaScript",
+      "Dicionário de tradução no cliente",
+      "Preferência de idioma em armazenamento local",
+      "Sem formulário ou integração RD"
+    ],
+    "confidentiality": "Experimento não validado, não publicado e não apresentado como versão final. O código é exibido apenas como referência técnica.",
+    "presentation": {
+      "lead": [
+        "Um estudo de confirmação em PT/EN para dar continuidade à experiência ROG-e.",
+        "A PT/EN confirmation study to continue the ROG-e experience."
+      ],
+      "context": [
+        "A proposta era manter o idioma e a identidade visual da página de origem depois do envio do formulário.",
+        "The aim was to keep the language and visual identity of the original page after form submission."
+      ],
+      "work": [
+        "Adaptei a interface para uma mensagem de confirmação com conteúdo em português e inglês e um link institucional.",
+        "I adapted the interface for a confirmation message with Portuguese and English content and an institutional link."
+      ],
+      "choices": [
+        "Mantive a confirmação como foco da página e incluí a troca de idioma. É um experimento de interface, sem publicação em produção.",
+        "I kept confirmation as the page’s focus and included a language switch. This is an interface experiment with no production release."
+      ]
+    }
   }
 ]
-

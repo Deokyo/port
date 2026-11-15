@@ -61,7 +61,7 @@ function buildHtml(project, nextProject) {
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
   <header class="site-header site-header-solid">
-    <a class="site-mark" href="${base}index.html" aria-label="Voltar ao portfólio">diogo<span aria-hidden="true">.</span></a>
+    <a class="site-mark" href="${base}index.html" aria-label="Voltar ao portfólio">deokyo<span aria-hidden="true">.</span></a>
     <nav class="site-nav" aria-label="Navegação do case">
       <a href="../../index.html">Todos os cases</a>
       <a href="https://github.com/Deokyo" target="_blank" rel="noopener noreferrer">GitHub</a>

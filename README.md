@@ -56,3 +56,37 @@ EN: authorized, sanitized work without personal data, tracking, or active integr
 
 Materiais de clientes não possuem licença aberta / Client materials are not openly licensed.
 Consulte / See [NOTICE.md](NOTICE.md).
+
+## Identidade visual / Visual identity
+
+PT: direção retrô cyberpunk com a fonte Roguepunk fornecida pelo autor, carregada localmente
+somente em destaques. Diogo Mussi confirmou em 15/11/2026 possuir licença para uso da fonte
+no site. O aviso original que acompanha o arquivo foi preservado em `assets/fonts/`;
+a licença de uso do autor não é transferida a terceiros por este repositório.
+
+EN: retro cyberpunk art direction using the author-supplied Roguepunk font locally for
+selected display text. Diogo Mussi confirmed a license for site use on November 15, 2026.
+The original font notice is preserved in `assets/fonts/`; the author's license is not
+transferred to third parties through this repository.
+
+PT: a ilustração atmosférica `afterhours-city.webp` foi gerada com IA para a identidade do
+portfólio; não é apresentada como trabalho entregue a um cliente. As imagens dos cases e
+as demos dos clientes preservam suas identidades originais.
+
+EN: `afterhours-city.webp` is an AI-generated atmospheric illustration for the portfolio's
+identity, not a client deliverable. Case images and client demos retain their original identities.
+
+Prévias desta direção / Art direction previews:
+[Desktop](docs/previews/retro-desktop.webp) · [Mobile](docs/previews/retro-mobile.webp) ·
+[Cena animada / Motion preview](docs/previews/retro-motion.webm).
+
+PT: a cena da abertura usa a imagem estática com movimento de câmera e camadas de chuva em
+CSS. O botão permite pausar/ativar; movimento reduzido começa pausado, com ativação somente
+por escolha explícita. Fora da tela ou com a aba oculta, a cena pausa. Sem JavaScript,
+a imagem continua visível e estática. “Como trabalho” descreve a abordagem; “Perfil
+profissional” concentra LinkedIn e GitHub.
+
+EN: the hero animates the static image with a camera drift and CSS rain layers. A toggle
+pauses or enables motion; reduced-motion preference starts paused and requires explicit
+opt-in. The scene pauses offscreen and in hidden tabs. Without JavaScript the image remains
+visible and static. The approach and professional profile sections serve separate purposes.

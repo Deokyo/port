@@ -107,10 +107,23 @@ same structure without showing empty categories.
 
 ## Sound bar
 
-Player visual cyberpunk ao lado do logo no cabeçalho, com disco ilustrado, controles analógicos,
-modo recolhido inicial e navegação entre três faixas demonstrativas. O painel expandido
-abre abaixo do cabeçalho; Escape ou um clique fora recolhe os controles. A interface identifica
-“DEMO · SEM ÁUDIO”: não há arquivo de música, streaming ou reprodução automática.
-O disco anima apenas após interação; movimento reduzido mantém o disco estático.
-Fora da tela ou com a aba oculta, a demonstração pausa. Sem JavaScript, o player fica oculto.
-Os ícones SVG e a ilustração são servidos pelo próprio repositório, sem dependências externas.
+Player de áudio na página inicial com quatro faixas locais, disco animado e controles de
+play, pausa, parada, volume, posição e troca de faixa. Começa recolhido ao lado do logo;
+o painel abre abaixo da navegação e fecha com Escape ou clique fora.
+
+Não há autoplay ou dependência do Spotify. Nenhum arquivo de áudio é solicitado antes
+do primeiro play; a próxima faixa toca ao terminar a atual. Pausar ou parar interrompe
+a reprodução real e a animação. A música continua durante a navegação pela página e
+com a aba em segundo plano, conforme as restrições do navegador. Movimento reduzido
+mantém o disco estático. Sem JavaScript, o player fica oculto.
+
+Ordem das faixas fornecidas:
+
+1. Blood Magic — Daniel Deluxe
+2. Shattered Memories — Navjaxx, VXLLAIN
+3. You Can't Run From Me — Rico Nasty
+4. I Really Want to Stay at Your House — Rosa Walton
+
+Os MP3s são cópias sem alterações dos arquivos fornecidos. Shattered Memories foi
+remuxada do contêiner MP4 para M4A com cópia do fluxo AAC, sem recodificação.
+Os arquivos em `assets/audio/` não recebem licença aberta por este repositório.

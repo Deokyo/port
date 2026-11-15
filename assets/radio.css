@@ -45,7 +45,7 @@
 #deokyo-radio input[type="range"]::-moz-range-progress { height:4px; background:var(--ds-pink); }
 #deokyo-radio input[type="range"]::-webkit-slider-thumb { -webkit-appearance:none; width:12px; height:14px; margin-top:-5px; border:1px solid #d8b8df; border-radius:1px; background:linear-gradient(135deg,#e9c4e655,#6c3c77cc 42%,#c7a7cd99); box-shadow:inset 1px 1px 0 #fce0f58f,1px 1px 2px #000; }
 #deokyo-radio input[type="range"]::-moz-range-thumb { width:12px; height:14px; border:1px solid #d8b8df; border-radius:1px; background:#8a5c95; }
-#deokyo-radio .ds-volume input[type="range"]::-webkit-slider-runnable-track { background:linear-gradient(90deg,var(--ds-pink) 0 var(--ds-volume,35%),#5b3c62 var(--ds-volume,35%) 100%); }
+#deokyo-radio .ds-volume input[type="range"]::-webkit-slider-runnable-track { background:linear-gradient(90deg,var(--ds-pink) 0 var(--ds-volume,5%),#5b3c62 var(--ds-volume,5%) 100%); }
 #deokyo-radio .ds-mini-play { display:none; }
 #deokyo-radio .ds-mini-pause { display:none; }
 #deokyo-radio .ds-player[data-playing="true"] .ds-mini-start { display:none; }

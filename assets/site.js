@@ -32,9 +32,11 @@
     targets.forEach(function (target) { observer.observe(target); });
   }
 
+  var initializedScenes = new WeakSet();
   function setupSceneMotion() {
     var scene = document.getElementById("hero-scene");
-    if (!scene) return;
+    if (!scene || initializedScenes.has(scene)) return;
+    initializedScenes.add(scene);
     var toggle = scene.querySelector(".scene-motion-toggle");
     if (!toggle) return;
     var preference = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -44,9 +46,11 @@
     function render() {
       scene.dataset.motion = playing && onScreen && !document.hidden ? "running" : "paused";
       toggle.setAttribute("aria-pressed", String(playing));
-      toggle.textContent = playing ? "Pausar animação" : "Ativar animação";
+      var text = playing ? "Pausar animação" : "Ativar animação";
+      toggle.textContent = window.portfolioI18n ? window.portfolioI18n.t(text) : text;
     }
 
+    document.addEventListener("portfolio:languagechange", render);
     toggle.hidden = false;
     toggle.addEventListener("click", function () {
       playing = !playing;
@@ -76,9 +80,12 @@
 
   window.addEventListener("scroll", updateProgress, { passive: true });
   window.addEventListener("resize", updateProgress);
-  setupSceneMotion();
-  revealSections();
-  updateProgress();
+  window.portfolioSetupPage = function () {
+    setupSceneMotion();
+    revealSections();
+    updateProgress();
+  };
+  window.portfolioSetupPage();
   window.requestAnimationFrame(setReady);
 }());
 

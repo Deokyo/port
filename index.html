@@ -16,9 +16,12 @@
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="assets/textures.css?v=3">
   <link rel="stylesheet" href="assets/retro-icons.css?v=2">
-  <script src="assets/site.js" defer></script>
-  <link rel="stylesheet" href="assets/radio.css?v=autoplay-5">
-  <script src="assets/radio.js?v=autoplay-5" defer></script>
+  <link rel="stylesheet" href="assets/radio.css?v=language-6">
+  <link rel="stylesheet" href="assets/language.css?v=1">
+  <script src="assets/language.js?v=language-1" defer></script>
+  <script src="assets/site.js?v=language-1" defer></script>
+  <script src="assets/radio.js?v=language-1" defer></script>
+  <script src="assets/navigation.js?v=language-1" defer></script>
 </head>
 <body class="portfolio-home">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -56,12 +59,18 @@
   </div>
 </div>
     </div>
+    <div class="header-tools">
     <nav class="site-nav" aria-label="Navegação principal">
       <a href="#projetos">Trabalhos</a>
       <a href="#estudos">Estudos pessoais</a>
       <a href="#sobre">Sobre</a>
       <a href="#perfil">Perfil</a>
     </nav>
+      <div class="language-switch" role="group" aria-label="Idioma / Language" hidden>
+        <button type="button" data-language="pt" lang="pt-BR" aria-label="Português" aria-pressed="true">PT</button>
+        <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </header>
 
   <main id="conteudo" tabindex="-1">
@@ -194,7 +203,7 @@
       <div class="profile-grid">
         <div>
           <p class="eyebrow">04 / Conexões profissionais</p>
-          <h2 id="profile-title">Perfil<br><em>profissional.</em></h2>
+          <h2 id="profile-title"><span data-en="Professional">Perfil</span><br><em data-en="profile.">profissional.</em></h2>
         </div>
         <div class="profile-card">
           <div class="profile-identity"><img class="retro-icon " src="assets/images/icons/pixel-orbit.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy"><p class="profile-name">Diogo Mussi</p></div>

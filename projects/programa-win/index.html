@@ -15,18 +15,60 @@
   <link rel="stylesheet" href="../../assets/styles.css">
   <link rel="stylesheet" href="../../assets/textures.css?v=3">
   <link rel="stylesheet" href="../../assets/retro-icons.css?v=2">
-  <script src="../../assets/site.js" defer></script>
+  <link rel="stylesheet" href="../../assets/radio.css?v=language-6">
+  <link rel="stylesheet" href="../../assets/language.css?v=1">
+  <script src="../../assets/language.js?v=language-1" defer></script>
+  <script src="../../assets/site.js?v=language-1" defer></script>
+  <script src="../../assets/radio.js?v=language-1" defer></script>
+  <script src="../../assets/navigation.js?v=language-1" defer></script>
 </head>
-<body>
+<body class="portfolio-home">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
-  <header class="site-header site-header-solid">
-    <a class="site-mark" href="../../index.html" aria-label="Voltar ao portfólio">deokyo<span aria-hidden="true">.</span></a>
-    <nav class="site-nav" aria-label="Navegação do case">
-      <a href="../../index.html#projetos">Projetos</a>
-      <a href="../landing-pages/index.html">Próximo case</a>
-      <a href="https://github.com/Deokyo" target="_blank" rel="noopener noreferrer">GitHub</a>
+  <header class="site-header">
+    <div class="header-identity">
+      <a class="site-mark" href="../../index.html" aria-label="Página inicial de Diogo Mussi">deokyo<span aria-hidden="true">.</span></a>
+      <div id="deokyo-radio" aria-label="Sound bar Deokyo" hidden>
+  <div class="ds-player" data-collapsed="true" aria-label="Sound bar Deokyo">
+    <div class="ds-topline">
+      <span class="ds-brand">DEOKYO / RADIO</span>
+      <span class="ds-demo">01 / 04</span>
+      <button type="button" class="ds-fold" aria-label="Expandir player" aria-expanded="false"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><span class="ds-fold-fallback" aria-hidden="true">⌄</span></button>
+    </div>
+    <div class="ds-grid">
+      <div class="ds-disc-window" aria-hidden="true"><div class="ds-disc"><div class="ds-hub"></div></div><span class="ds-corner ds-corner-a"></span><span class="ds-corner ds-corner-b"></span></div>
+      <div class="ds-screen">
+        <div class="ds-trackline"><span class="ds-track" title="Blood Magic — Daniel Deluxe">Blood Magic — Daniel Deluxe</span><span class="ds-clock">00:00</span></div>
+        <label class="ds-seek-label"><span class="ds-sr">Posição da música</span><input class="ds-seek" type="range" min="0" max="214.94" value="0" step="1" aria-label="Posição da música"></label>
+        <div class="ds-screen-foot"><span class="ds-state" aria-live="polite">Parado</span><span class="ds-total">03:34</span></div>
+      </div>
+      <div class="ds-transport">
+        <div class="ds-keys" aria-label="Controles de reprodução">
+          <button type="button" class="ds-key" data-action="previous" aria-label="Faixa anterior"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 20 9 12l10-8v16ZM5 19V5"/></svg><span>PREV</span></button>
+          <button type="button" class="ds-key ds-play" data-action="play" aria-label="Reproduzir música" aria-pressed="false"><span class="ds-led" aria-hidden="true"></span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 14 9-14 9V3Z"/></svg><span>PLAY</span></button>
+          <button type="button" class="ds-key" data-action="pause" aria-label="Pausar música" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg><span>PAUSE</span></button>
+          <button type="button" class="ds-key" data-action="stop" aria-label="Parar música" aria-pressed="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1"/></svg><span>STOP</span></button>
+          <button type="button" class="ds-key" data-action="next" aria-label="Próxima faixa"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 4 10 8-10 8V4ZM19 5v14"/></svg><span>NEXT</span></button>
+        </div>
+        <label class="ds-volume"><span>VOL</span><input type="range" class="cursor-interaction" min="0" max="100" step="1" value="5" aria-label="Volume"><output>5%</output></label>
+      </div>
+      <button type="button" class="ds-mini-play ds-key" aria-label="Reproduzir música"><svg class="ds-mini-start" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 14 9-14 9V3Z"/></svg><svg class="ds-mini-pause" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg><span>PLAY</span></button>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="header-tools">
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="../../index.html#projetos">Trabalhos</a>
+      <a href="../../index.html#estudos">Estudos pessoais</a>
+      <a href="../../index.html#sobre">Sobre</a>
+      <a href="../../index.html#perfil">Perfil</a>
     </nav>
+      <div class="language-switch" role="group" aria-label="Idioma / Language" hidden>
+        <button type="button" data-language="pt" lang="pt-BR" aria-label="Português" aria-pressed="true">PT</button>
+        <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </header>
 
   <main id="conteudo" tabindex="-1">
@@ -128,7 +170,7 @@ POSTGRESQL / PGLITE</pre>
       </div>
       <div class="case-content" data-reveal>
         <p>O portfólio apresenta somente contexto, decisões de produto, arquitetura em alto nível e uma imagem demonstrativa. Código operacional, credenciais, banco, dados pessoais, regras financeiras detalhadas, configurações e documentação interna permanecem fora desta publicação.</p>
-        <p>O material é exibido para fins de portfólio e não é oferecido sob licença aberta. Reprodução, redistribuição ou exploração comercial por terceiros não são autorizadas. Consulte o <a href="../../NOTICE.md">aviso de uso do repositório</a>.</p>
+        <p>O material é exibido para fins de portfólio e não é oferecido sob licença aberta. Reprodução, redistribuição ou exploração comercial por terceiros não são autorizadas. Consulte o <a href="../../NOTICE.md" target="_blank" rel="noopener noreferrer">aviso de uso do repositório</a>.</p>
       </div>
     </section>
 

@@ -135,6 +135,24 @@ p { margin-top: 0; }
 .site-footer { display: flex; justify-content: space-between; gap: 24px; padding: 24px max(24px, calc((100vw - 1280px) / 2)); border-top: 1px solid var(--line); color: var(--muted); font: 11px/1.7 var(--mono); }
 .site-footer p { margin: 0; }
 
+/* Professional profile is a direct link; no external embed or third-party script. */
+.profile-section { border-top: 1px solid var(--line); }
+.profile-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: start; }
+.profile-section h2 { text-transform: uppercase; }
+.profile-card { padding: 32px; border: 1px solid var(--line); background: var(--panel); min-width: 0; }
+.profile-name { margin-bottom: 6px; color: var(--ink); font-size: 27px; font-weight: 700; line-height: 1.2; }
+.profile-role { color: var(--mint); font-size: 13px; }
+.profile-card > p:last-of-type { color: var(--muted); font-size: 14px; }
+.profile-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 24px; margin-top: 24px; }
+.external-icon { display: inline-block; width: 18px; height: 18px; background: currentColor; mask: url("images/arrow-up-right.svg") center / contain no-repeat; }
+@media (max-width: 760px) {
+  .profile-grid { grid-template-columns: 1fr; gap: 20px; }
+  .profile-card { padding: 24px; }
+}
+@media (max-width: 380px) {
+  .profile-actions .button { width: 100%; padding-inline: 14px; gap: 10px; font-size: 12px; }
+}
+
 /* The shared case shell: restrained backgrounds and comfortable long-form reading. */
 .case-hero, .lp-case-hero { position: relative; background: var(--panel); border-bottom: 1px solid var(--line); }
 .case-hero::after, .lp-case-hero::after { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--accent); }

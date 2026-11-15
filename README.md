@@ -131,3 +131,11 @@ Ordem das faixas fornecidas:
 Os MP3s são cópias sem alterações dos arquivos fornecidos. Shattered Memories foi
 remuxada do contêiner MP4 para M4A com cópia do fluxo AAC, sem recodificação.
 Os arquivos em `assets/audio/` não recebem licença aberta por este repositório.
+
+## Texturas
+
+O portfólio e os cases usam circuitos vetoriais nas margens, curvas topográficas nos
+painéis de abertura e retícula estática em áreas de destaque. Os SVGs locais em
+`assets/images/textures/` e `assets/textures.css` não adicionam scripts, animações ou
+serviços externos. O modo de cores forçadas remove as texturas. As demos de clientes
+preservam seus estilos próprios.

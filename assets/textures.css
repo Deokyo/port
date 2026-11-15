@@ -1,0 +1,59 @@
+/* Static local artwork: circuitry in the margins, contours and printed dots on panels. */
+body {
+  background-color:var(--paper);
+  background-image:linear-gradient(90deg,#09070d14,#09070dc9 27%,#09070dc9 73%,#09070d14),url("images/textures/circuits.svg");
+  background-size:100% 100%,640px 960px;
+  background-repeat:no-repeat,repeat;
+}
+.site-header {
+  background-color:#0c0812;
+  background-image:linear-gradient(90deg,#09070df5,#09070d9c,#09070df5),url("images/textures/circuits.svg");
+  background-size:auto,640px 960px;
+  background-position:center,center 42%;
+}
+.home-hero { background:var(--paper); }
+.hero-inner {
+  background-color:#0d0914;
+  background-image:linear-gradient(90deg,#0d0914d9,#0d091435),url("images/textures/contours.svg");
+  background-size:auto,780px 780px;
+  background-position:center,right top;
+}
+.hero-inner::before {
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:radial-gradient(circle,#b286ed55 .75px,transparent 1px);
+  background-size:4px 4px;
+  mask-image:linear-gradient(135deg,#0009,transparent 52%);
+}
+.hero-topline,.hero-bottomline,.site-footer {
+  background-color:#0d0914;
+  background-image:repeating-linear-gradient(0deg,transparent 0 3px,#aa76ec09 3px 4px);
+}
+.company-folder > summary {
+  background-image:linear-gradient(90deg,var(--panel) 35%,#130e1c3b),url("images/textures/circuits.svg");
+  background-size:auto,640px 960px;
+  background-position:center,right 55%;
+}
+.study-identity {
+  background-color:#1d102e;
+  background-image:radial-gradient(circle,#c09ae26b .8px,transparent 1.1px),radial-gradient(ellipse at 20% 70%,#7834a88a,transparent 70%),url("images/textures/contours.svg");
+  background-size:4px 4px,auto,640px 640px;
+  background-position:center,center,center;
+}
+.profile-card {
+  background-image:linear-gradient(110deg,var(--panel) 38%,#130e1c96),radial-gradient(circle,#a76ce85c .7px,transparent 1px),radial-gradient(ellipse at right top,#58247a,transparent 70%);
+  background-size:auto,4px 4px,auto;
+}
+.case-hero,.lp-case-hero {
+  background-image:linear-gradient(90deg,var(--panel) 20%,#130e1cb8 65%,#130e1c40),url("images/textures/contours.svg");
+  background-size:auto,960px 960px;
+  background-position:center,right center;
+}
+@media(max-width:620px) {
+  body { background-size:100% 100%,480px 720px; }
+  .hero-inner { background-size:auto,560px 560px; }
+}
+@media(forced-colors:active) {
+  body,.site-header,.hero-inner,.hero-topline,.hero-bottomline,.site-footer,
+  .company-folder > summary,.study-identity,.profile-card,.case-hero,.lp-case-hero { background-image:none; }
+  .hero-inner::before { display:none; }
+}

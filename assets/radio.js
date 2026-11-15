@@ -1,72 +1,168 @@
 (() => {
+  'use strict';
   const root = document.getElementById('deokyo-radio');
   if (!root) return;
   const player = root.querySelector('.ds-player');
-  const tracks = [{name:'Afterhours — Demo',duration:228},{name:'Neon rain — Demo',duration:196},{name:'Ghost signal — Demo',duration:242}];
-  const initial = {track:0,position:0,volume:35,playing:false,collapsed:true,neon:55,rotation:9};
-  let state = {...initial};
-  let last = performance.now();
-  let onScreen = true;
-  if ("IntersectionObserver" in window) {
-    new IntersectionObserver(entries => {
-      onScreen = entries[0].isIntersecting;
-      player.style.setProperty("--ds-animation", onScreen && !document.hidden ? "running" : "paused");
-    }).observe(root);
+  const tracks = [
+    {name: 'Blood Magic — Daniel Deluxe', file: 'blood-magic.mp3', duration: 214.94},
+    {name: 'Shattered Memories — Navjaxx, VXLLAIN', file: 'shattered-memories.m4a', duration: 183.79},
+    {name: "You Can't Run From Me — Rico Nasty", file: 'you-cant-run-from-me.mp3', duration: 235.86},
+    {name: 'I Really Want to Stay at Your House — Rosa Walton', file: 'i-really-want-to-stay-at-your-house.mp3', duration: 246.78}
+  ];
+  const audio = document.createElement('audio');
+  audio.preload = 'none';
+  audio.hidden = true;
+  root.append(audio);
+  const state = {track: 0, position: 0, volume: 35, collapsed: true, loading: false, error: ''};
+  let loadedTrack = -1;
+  let request = 0;
+  let wantsPlay = false;
+  let pendingSeek = null;
+  audio.volume = state.volume / 100;
+  const seek = root.querySelector('.ds-seek');
+  const volume = root.querySelector('.ds-volume input');
+  const fold = root.querySelector('.ds-fold');
+  const mini = root.querySelector('.ds-mini-play');
+  function clock(seconds) {
+    const n = Math.floor(Math.max(0, seconds || 0));
+    return String(Math.floor(n / 60)).padStart(2, '0') + ':' + String(n % 60).padStart(2, '0');
   }
-  document.addEventListener("visibilitychange", () => {
-    last = performance.now();
-    player.style.setProperty("--ds-animation", onScreen && !document.hidden ? "running" : "paused");
-  });
-  function clock(seconds) { const n=Math.floor(seconds); return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0'); }
+  function duration() {
+    return loadedTrack === state.track && Number.isFinite(audio.duration) ? audio.duration : tracks[state.track].duration;
+  }
   function render() {
-    const track=tracks[state.track];
-    player.dataset.playing=String(state.playing); player.dataset.collapsed=String(state.collapsed);
-    player.style.setProperty('--ds-glow',String(state.neon/100)); player.style.setProperty('--ds-spin',state.rotation+'s');
-    player.style.setProperty('--ds-progress',(state.position/track.duration*100)+'%');player.style.setProperty('--ds-volume',state.volume+'%');
-    const label=root.querySelector('.ds-track'); label.textContent=track.name; label.setAttribute('title',track.name);
-    root.querySelector('.ds-clock').textContent=clock(state.position);
-    root.querySelector('.ds-total').textContent=clock(track.duration);
-    const seek=root.querySelector('.ds-seek'); seek.max=String(track.duration); seek.value=String(state.position); seek.setAttribute('aria-valuetext',clock(state.position)+' de '+clock(track.duration));
-    root.querySelector('.ds-volume input').value=String(state.volume); root.querySelector('.ds-volume output').value=state.volume+'%';
-    const status=root.querySelector('.ds-state'),statusText=state.playing?'Reproduzindo prévia':state.position>0?'Pausado':'Parado'; if(status.textContent!==statusText)status.textContent=statusText;
-    root.querySelector('[data-action="play"]').setAttribute('aria-pressed',String(state.playing));
-    root.querySelector('[data-action="pause"]').setAttribute('aria-pressed',String(!state.playing && state.position>0));
-    root.querySelector('[data-action="stop"]').setAttribute('aria-pressed',String(!state.playing && state.position===0));
-    const mini=root.querySelector('.ds-mini-play'); mini.setAttribute('aria-label',state.playing?'Pausar prévia':'Reproduzir prévia'); mini.querySelector('span').textContent=state.playing?'PAUSE':'PLAY';
-    const fold=root.querySelector('.ds-fold'); fold.setAttribute('aria-label',state.collapsed?'Expandir player':'Recolher player'); fold.setAttribute('aria-expanded',String(!state.collapsed)); fold.querySelector('.ds-fold-fallback').textContent=state.collapsed?'⌃':'⌄';
-    const icon=fold.querySelector('svg'); if(icon) icon.style.transform=state.collapsed?'rotate(180deg)':'none';
+    const playing = !audio.paused && !audio.ended;
+    const total = duration();
+    player.dataset.playing = String(playing);
+    player.dataset.collapsed = String(state.collapsed);
+    player.style.setProperty('--ds-progress', (state.position / total * 100) + '%');
+    player.style.setProperty('--ds-volume', state.volume + '%');
+    const label = root.querySelector('.ds-track');
+    label.textContent = tracks[state.track].name;
+    label.title = tracks[state.track].name;
+    root.querySelector('.ds-demo').textContent = String(state.track + 1).padStart(2, '0') + ' / 04';
+    root.querySelector('.ds-clock').textContent = clock(state.position);
+    root.querySelector('.ds-total').textContent = clock(total);
+    seek.max = String(total);
+    seek.value = String(state.position);
+    seek.setAttribute('aria-valuetext', clock(state.position) + ' de ' + clock(total));
+    volume.value = String(state.volume);
+    root.querySelector('.ds-volume output').value = state.volume + '%';
+    const status = root.querySelector('.ds-state');
+    const text = state.error || (state.loading ? 'Carregando…' : playing ? 'Tocando' : state.position > 0 ? 'Pausado' : 'Parado');
+    if (status.textContent !== text) status.textContent = text;
+    root.querySelector('[data-action="play"]').setAttribute('aria-pressed', String(playing));
+    root.querySelector('[data-action="pause"]').setAttribute('aria-pressed', String(!playing && state.position > 0));
+    root.querySelector('[data-action="stop"]').setAttribute('aria-pressed', String(!playing && state.position === 0));
+    mini.setAttribute('aria-label', playing || wantsPlay ? 'Pausar música' : 'Reproduzir música');
+    mini.querySelector('span').textContent = playing ? 'PAUSE' : 'PLAY';
+    fold.setAttribute('aria-label', state.collapsed ? 'Expandir player' : 'Recolher player');
+    fold.setAttribute('aria-expanded', String(!state.collapsed));
+    fold.querySelector('.ds-fold-fallback').textContent = state.collapsed ? '⌃' : '⌄';
+    fold.querySelector('svg').style.transform = state.collapsed ? 'rotate(180deg)' : 'none';
+  }
+  function loadTrack() {
+    if (loadedTrack === state.track && !audio.error) return;
+    pendingSeek = state.position;
+    audio.src = 'assets/audio/' + tracks[state.track].file;
+    loadedTrack = state.track;
+    audio.load();
+  }
+  function play() {
+    const current = ++request;
+    wantsPlay = true;
+    state.error = '';
+    state.loading = true;
+    loadTrack();
+    render();
+    audio.play().catch(error => {
+      if (current !== request) return;
+      wantsPlay = false;
+      state.loading = false;
+      if (error.name !== 'AbortError') state.error = 'Não foi possível tocar. Tente novamente.';
+      render();
+    });
+  }
+  function pause() {
+    request++;
+    wantsPlay = false;
+    state.loading = false;
+    audio.pause();
+    render();
+  }
+  function selectTrack(offset, resume = wantsPlay || !audio.paused) {
+    pause();
+    state.track = (state.track + offset + tracks.length) % tracks.length;
+    state.position = 0;
+    pendingSeek = null;
+    state.error = '';
+    // Changing a stopped track does not download it until Play is pressed.
+    audio.removeAttribute('src');
+    audio.load();
+    loadedTrack = -1;
+    render();
+    if (resume) play();
   }
   function act(action) {
-    if(action==='play') state.playing=true;
-    if(action==='pause') state.playing=false;
-    if(action==='stop') {state.playing=false;state.position=0;}
-    if(action==='next'||action==='previous') {state.track=(state.track+(action==='next'?1:2))%tracks.length;state.position=0;}
-    last=performance.now();render();
+    if (action === 'play') play();
+    if (action === 'pause') pause();
+    if (action === 'stop') {
+      pause();
+      state.position = 0;
+      pendingSeek = null;
+      state.error = '';
+      if (audio.readyState > 0) audio.currentTime = 0;
+      render();
+    }
+    if (action === 'next' || action === 'previous') selectTrack(action === 'next' ? 1 : -1);
   }
-  root.querySelectorAll('[data-action]').forEach(button=>button.addEventListener('click',()=>act(button.dataset.action)));
-  root.querySelector('.ds-mini-play').addEventListener('click',()=>act(state.playing?'pause':'play'));
-  root.querySelector('.ds-fold').addEventListener('click',()=>{state.collapsed=!state.collapsed;render();});
-  root.querySelector('.ds-seek').addEventListener('input',event=>{state.position=Number(event.target.value);last=performance.now();render();});
-  root.querySelector('.ds-volume input').addEventListener('input',event=>{state.volume=Number(event.target.value);render();});
+  root.querySelectorAll('[data-action]').forEach(button => button.addEventListener('click', () => act(button.dataset.action)));
+  mini.addEventListener('click', () => act(wantsPlay || !audio.paused ? 'pause' : 'play'));
+  fold.addEventListener('click', () => {state.collapsed = !state.collapsed; render();});
+  seek.addEventListener('input', event => {
+    state.position = Number(event.target.value);
+    if (audio.readyState > 0) audio.currentTime = state.position;
+    else pendingSeek = state.position;
+    render();
+  });
+  volume.addEventListener('input', event => {
+    state.volume = Number(event.target.value);
+    audio.volume = state.volume / 100;
+    render();
+  });
+  audio.addEventListener('loadedmetadata', () => {
+    if (pendingSeek !== null) {
+      audio.currentTime = Math.min(pendingSeek, duration());
+      state.position = audio.currentTime;
+      pendingSeek = null;
+    }
+    render();
+  });
+  audio.addEventListener('timeupdate', () => {
+    if (audio.readyState > 0 && pendingSeek === null) state.position = audio.currentTime;
+    render();
+  });
+  audio.addEventListener('playing', () => {state.loading = false; state.error = ''; render();});
+  audio.addEventListener('waiting', () => {state.loading = wantsPlay; render();});
+  audio.addEventListener('pause', render);
+  audio.addEventListener('ended', () => selectTrack(1, true));
+  audio.addEventListener('error', () => {
+    wantsPlay = false;
+    state.loading = false;
+    state.error = 'Não foi possível carregar. Tente novamente.';
+    render();
+  });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !state.collapsed) {
-      state.collapsed = true; render(); root.querySelector('.ds-fold').focus();
+      state.collapsed = true; render(); fold.focus();
     }
   });
   document.addEventListener('click', event => {
-    if (!state.collapsed && !root.contains(event.target)) {
-      state.collapsed = true; render();
-    }
+    if (!state.collapsed && !root.contains(event.target)) {state.collapsed = true; render();}
+  });
+  document.addEventListener('visibilitychange', () => {
+    player.style.setProperty('--ds-animation', document.hidden ? 'paused' : 'running');
   });
   root.hidden = false;
   render();
-  const timer=setInterval(()=>{
-    if(!root.isConnected){clearInterval(timer);return;}
-    const now=performance.now(),delta=Math.min(1,(now-last)/1000);last=now;
-    if(!state.playing||document.hidden||!onScreen)return;
-    state.position+=delta;
-    if(state.position>=tracks[state.track].duration){state.track=(state.track+1)%tracks.length;state.position=0;}
-    render();
-  },250);
-
 })();

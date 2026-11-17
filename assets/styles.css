@@ -386,12 +386,11 @@ p { margin-top: 0; }
 .lp-results-intro > p:first-child { color: var(--muted); font-size: 17px; line-height: 1.65; margin-bottom: 18px; max-width: 44ch; }
 .lp-results-kicker { margin: 0; color: var(--mint); font: 10px/1.6 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
 .lp-results-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-.lp-result-card { display: grid; grid-template-rows: auto auto 1fr auto; padding: clamp(24px, 3vw, 36px); border: 1px solid var(--line); background: var(--panel); }
-.lp-result-value { grid-row: 1; margin: 0 0 14px; color: var(--accent); font-size: clamp(60px, 6.4vw, 84px); font-weight: 800; line-height: 1; letter-spacing: -.055em; font-variant-numeric: lining-nums tabular-nums; }
+.lp-result-card { display: flex; flex-direction: column; padding: clamp(24px, 3vw, 32px); border: 1px solid var(--line); background: var(--panel); }
+.lp-result-value { margin: 0 0 14px; color: var(--accent); font-size: clamp(60px, 6.4vw, 84px); font-weight: 800; line-height: 1; letter-spacing: -.055em; font-variant-numeric: lining-nums tabular-nums; }
 .lp-result-card-interest .lp-result-value { color: var(--violet); }
-.lp-result-card h3 { grid-row: 2; margin: 0; font-size: clamp(21px, 1.8vw, 25px); line-height: 1.2; }
-.lp-result-description { grid-row: 3; color: var(--muted); margin: 14px 0 0; font-size: 14px; line-height: 1.65; max-width: 46ch; }
-.lp-result-caption { grid-row: 4; align-self: end; margin: 24px 0 0; color: var(--muted); font: 10px/1.6 var(--mono); letter-spacing: .065em; text-transform: uppercase; }
+.lp-result-card h3 { margin: 0; font-size: clamp(21px, 1.8vw, 25px); line-height: 1.2; }
+.lp-result-caption { margin: 16px 0 0; color: var(--muted); font: 10px/1.6 var(--mono); letter-spacing: .065em; text-transform: uppercase; }
 .lp-results-changes { margin-top: 40px; }
 .lp-results-change-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .lp-results-change-grid > div + div { padding-left: 28px; border-left: 1px solid var(--line); }

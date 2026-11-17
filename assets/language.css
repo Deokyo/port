@@ -27,7 +27,6 @@
 }
 
 /* Five navigation links keep a predictable two-column layout on small screens. */
-.portfolio-home .site-nav .nav-results { color:var(--mint); }
 @media(max-width:1180px) {
   html { scroll-padding-top:144px; }
 }

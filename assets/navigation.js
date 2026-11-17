@@ -90,7 +90,7 @@
       let next = cache.get(key);
       if (!next) {
         const sourceURL = new URL(key, base);
-        sourceURL.searchParams.set('v', 'voice-1');
+        sourceURL.searchParams.set('v', 'results-1');
         const response = await fetch(sourceURL, {signal: controller.signal});
         if (!response.ok) throw new Error('Page unavailable');
         const doc = new DOMParser().parseFromString(await response.text(), 'text/html');

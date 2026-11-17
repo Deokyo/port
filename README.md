@@ -188,3 +188,16 @@ deliverable. Internal technical records stay in documentation. No business outco
 claimed without shareable evidence. Landing page presentation copy is stored as PT/EN
 pairs in `projects.json`; the builder preserves the current shared shell. Update the
 language dictionary alongside edits. Demos keep the original project content.
+
+## Resultados das LPs / Landing page results
+
+A seção `projects/landing-pages/index.html#resultados` apresenta os agregados aprovados
+para o recorte de seis LPs de serviços: +18,6% na média diária de envios e 76% dos envios
+posteriores com uma frente de serviço indicada. O bloco nativo `details` contém períodos,
+fórmulas, regras de composição e limitações, incluindo a razão de envios por visitante.
+Eventos ficam fora desse comparativo. Fontes com dados pessoais e volumes absolutos
+não integram o repositório. A seção e os atalhos possuem traduções PT/EN e funcionam
+na navegação persistente do player; sem JavaScript, o conteúdo e a expansão continuam acessíveis.
+
+The results section presents aggregate service-page metrics, with scope and calculations
+in a native disclosure. Source exports and personal data are not included in this repository.

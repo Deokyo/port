@@ -49,7 +49,7 @@ for (const file of htmlFiles) {
 
 const forbidden = [
   [/UA-\d+/i, "identificador legado de analytics"],
-  [/GTM-[A-Z0-9]+/i, "identificador de tag manager"],
+  [/GTM-(?!MFTMHZTJ\b)[A-Z0-9]+/i, "identificador de tag manager não autorizado"],
   [/rdstation[-]forms/i, "biblioteca de formulário ativa"],
   [/(?:api[_-]?key|client[_-]?secret|private[_-]?key)\s*[:=]/i, "possível segredo"],
 ];

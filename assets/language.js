@@ -659,6 +659,10 @@
   "Estruturei a experiência bilíngue, desenvolvi a interface e conectei a escolha de idioma aos formulários correspondentes.": "I structured the bilingual experience, developed the interface and connected the language choice to the corresponding forms.",
   "Trabalhei o conteúdo e a interface juntos: o que a pessoa precisa entender, em que ordem e qual ação faz sentido a partir dali. Desenvolvi as páginas para desktop e celular, com formulários de contato nas versões publicadas.": "I worked on content and interface together: what visitors need to understand, in what order and which action makes sense from there. I developed the pages for desktop and mobile, with contact forms in the published versions."
 });
+  Object.assign(english, {
+  "Refiz a copy, o hero e a apresentação dos serviços para deixar mais claro para quem era a oferta. Também deixei o formulário mais criterioso, pedindo informações sobre a necessidade da empresa. O foco foi reduzir preenchimentos por curiosidade ou fora do público-alvo.": "I revised the copy, hero and service presentation to clarify who the offer was for. I also made the form more selective by asking about the company’s needs. The aim was to reduce submissions made out of curiosity or from people outside the intended audience.",
+  "Uma jornada com mais filtros pode ter menos preenchimentos por visitante. Neste comparativo, a proporção passou de 0,45% para 0,16%, uma queda de 64,4%, apesar do aumento da média diária de envios.": "A journey with more filtering can have fewer submissions per visitor. In this comparison, the ratio went from 0.45% to 0.16%, a decline of 64.4%, despite the increase in average daily submissions."
+});
   const sourceText = new WeakMap();
   const sourceAttributes = new WeakMap();
   const key = 'deokyo-portfolio-language';

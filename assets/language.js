@@ -619,7 +619,6 @@
   "na média diária de envios": "in average daily submissions",
   "Evolução observada no período": "Observed change over the period",
   "indicaram uma frente de interesse": "indicated a service of interest",
-  "Parcela dos envios após a reformulação com um serviço indicado no formulário.": "Share of submissions after the redesign that indicated a service in the form.",
   "Contexto para a abordagem comercial": "Context for the sales conversation",
   "O que mudou": "What changed",
   "Reorganizei a mensagem para explicar a oferta e para quem o serviço faz sentido.": "I reorganized the message to explain the offer and who the service is for.",
@@ -630,20 +629,35 @@
   "Como os resultados foram calculados": "How the results were calculated",
   "Períodos, critérios e taxas por visitante": "Periods, criteria and submissions per visitor",
   "Recorte e períodos": "Scope and periods",
-  "O comparativo reúne seis LPs de serviços: Auditoria, BPO Folha, Contas a Receber, Gestão Contábil, BPO Principal e CWB. Compara janeiro a julho com agosto a 17 de novembro de 2026, ainda parcial. As páginas de eventos são analisadas separadamente.": "The comparison covers six service landing pages: Audit, Payroll BPO, Accounts Receivable, Accounting Management, Main BPO and CWB. It compares January–July with August–November 17, 2026, with November still partial. Event pages are analyzed separately.",
-  "Os acessos vêm dos painéis das LPs, e os envios, dos exports do RD Station. Desde agosto, a captação usa formulários externos acessados pelas páginas. O formulário geral compartilhado por BPO Principal e CWB foi contado uma única vez.": "Visits come from the landing page dashboards and submissions from RD Station exports. Since August, submissions use external forms reached through the pages. The general form shared by Main BPO and CWB was counted once.",
   "O que os indicadores medem": "What the indicators measure",
-  "O crescimento de 18,6% compara a média diária de envios nos dois períodos: envios divididos pelos dias observados. A variação relativa é a média posterior dividida pela anterior, menos um.": "The 18.6% growth compares average daily submissions in the two periods: submissions divided by observed days. The relative change is the later average divided by the earlier average, minus one.",
-  "Os 76% representam envios posteriores que selecionaram uma frente de serviço. Respostas de pesquisa, avaliação ou “outro” não entram nessa parcela. O denominador mantém todos os envios de serviços, inclusive preenchimentos abusivos.": "The 76% represents later submissions that selected a service area. Browsing, evaluating or “other” responses are not included in that share. The denominator retains all service submissions, including abusive entries.",
   "Envios por visitante": "Submissions per visitor",
-  "A razão agregada de envios por visitante reportado passou de 0,45% para 0,16%, uma variação relativa de −64,4%. As taxas exibidas estão arredondadas. Visitantes de páginas diferentes não foram deduplicados entre si.": "The aggregate ratio of submissions to reported visitors went from 0.45% to 0.16%, a relative change of −64.4%. The displayed rates are rounded. Visitors across different pages were not deduplicated.",
-  "BPO Folha não tem visitas registradas no período anterior. Sua entrada muda a composição do conjunto; esse agregado descreve o pacote, não um teste controlado entre versões.": "Payroll BPO has no recorded visits in the earlier period. Its inclusion changes the mix; this aggregate describes the package rather than a controlled test between versions.",
   "Como interpretar": "How to interpret the results",
-  "Na leitura das mensagens de julho, 39,0% dos envios declaravam interesse em trabalho e 12,2% tratavam de assuntos alheios aos serviços. Textos ambíguos não foram classificados automaticamente como spam. Essa leitura usa os campos disponíveis no export, sem histórico de alteração das mensagens.": "In the July message review, 39.0% of submissions expressed interest in employment and 12.2% concerned topics unrelated to the services. Ambiguous text was not automatically classified as spam. This review uses the fields available in the export, without a history of message changes.",
-  "A nova captação registra escolhas de serviço; a antiga traz texto livre. Isso permite avaliar o contexto coletado, mas não calcular um aumento equivalente de qualificação. Os percentuais medem envios, não pessoas únicas, oportunidades validadas ou vendas.": "The new capture records service selections; the earlier capture contains free text. This supports assessing the context collected, but not calculating an equivalent increase in qualification. The percentages measure submissions, not unique people, validated opportunities or sales.",
-  "Tráfego, sazonalidade e mudanças no formulário também influenciam os resultados. A comparação mostra o desempenho observado após a reformulação, sem isolar o efeito do redesign ou atribuir a queda nos preenchimentos apenas aos filtros.": "Traffic, seasonality and form changes also influence the results. The comparison shows observed performance after the redesign, without isolating its effect or attributing the lower submission ratio solely to filtering.",
   "Ver resultados": "View results",
   "Resultados": "Results"
+});
+  Object.assign(english, {
+  "Nos envios após a reformulação": "In submissions after the redesign",
+  "Como fiz a comparação": "How I made the comparison",
+  "Comparei os resultados das seis páginas de serviços antes e depois da reformulação de agosto: janeiro a julho e agosto a 17 de novembro de 2026. As páginas de eventos têm objetivos próprios e ficam fora dessa comparação.": "I compared results from the six service pages before and after the August redesign: January–July and August–November 17, 2026. Event pages have their own goals and are outside this comparison.",
+  "O que está nos números": "What the numbers show",
+  "Para comparar períodos de durações diferentes, usei a média de formulários enviados por dia. Depois da reformulação, essa média ficou 18,6% maior.": "To compare periods of different lengths, I used the average number of forms submitted per day. After the redesign, that average was 18.6% higher.",
+  "Já os 76% mostram quantos dos envios posteriores indicaram uma frente de serviço. Quem marcou que ainda estava avaliando, apenas pesquisando ou escolheu “outro” não entra nessa parcela.": "The 76% shows the share of later submissions that indicated a service area. Those who said they were still evaluating, just browsing or chose “other” are outside that share.",
+  "Envios por visitante": "Submissions per visitor",
+  "Olhando para os acessos, a proporção de envios passou de 0,45% para 0,16%, uma queda de 64,4%. Assim, houve mais envios por dia, mas uma parcela menor dos visitantes chegou a preencher o formulário.": "Looking at visits, the submission ratio went from 0.45% to 0.16%, a decline of 64.4%. There were more submissions per day, but a smaller share of visitors completed the form.",
+  "Essas taxas somam os acessos das páginas e estão arredondadas. A mesma pessoa pode visitar mais de uma LP.": "These rates add together visits across the pages and are rounded. The same person may visit more than one landing page.",
+  "O foco da mudança": "The focus of the changes",
+  "Nas mensagens antigas, parte dos contatos procurava emprego ou tratava de assuntos fora da oferta. Meu foco foi deixar mais claro para quem eram os serviços e pedir informações que ajudassem o comercial a começar a conversa.": "Some earlier messages were about employment or topics outside the offer. My focus was to clarify who the services were for and ask for information that would help the sales team start the conversation.",
+  "A indicação de um serviço dá contexto, mas a avaliação do contato continua com o comercial. Tráfego, época do ano e o conjunto de páginas também mudaram; por isso, esses números mostram o resultado do período, sem atribuir toda a variação ao redesign.": "A service selection gives context, but the sales team still assesses the contact. Traffic, time of year and the mix of pages also changed, so these numbers describe the period’s results without attributing the entire change to the redesign."
+});
+  Object.assign(english, {
+  "HTML5, CSS3 e JavaScript": "HTML5, CSS3 and JavaScript",
+  "Organizei a mensagem, a navegação entre os serviços e os pontos de contato. Também desenvolvi a página e a integração com o formulário de contato.": "I organized the message, navigation between services and contact points. I also developed the page and its contact form integration.",
+  "Estruturei a mensagem, os serviços e as principais dúvidas, e desenvolvi a página responsiva com formulário de contato.": "I structured the message, services and key questions, and developed the responsive page with a contact form.",
+  "Estruturei a informação, os benefícios e as dúvidas frequentes. Também desenvolvi a interface e o formulário da página publicada.": "I structured the information, benefits and frequently asked questions. I also developed the interface and form for the published page.",
+  "Organizei o conteúdo e os pontos de conversão, escrevi os textos de interface e desenvolvi a página com formulário de contato.": "I organized the content and conversion points, wrote the interface copy and developed the page with a contact form.",
+  "Organizei serviços, benefícios e dúvidas frequentes. Desenvolvi a interface responsiva e a integração do formulário de contato.": "I organized services, benefits and frequently asked questions. I developed the responsive interface and contact form integration.",
+  "Estruturei a experiência bilíngue, desenvolvi a interface e conectei a escolha de idioma aos formulários correspondentes.": "I structured the bilingual experience, developed the interface and connected the language choice to the corresponding forms.",
+  "Trabalhei o conteúdo e a interface juntos: o que a pessoa precisa entender, em que ordem e qual ação faz sentido a partir dali. Desenvolvi as páginas para desktop e celular, com formulários de contato nas versões publicadas.": "I worked on content and interface together: what visitors need to understand, in what order and which action makes sense from there. I developed the pages for desktop and mobile, with contact forms in the published versions."
 });
   const sourceText = new WeakMap();
   const sourceAttributes = new WeakMap();

@@ -25,3 +25,15 @@
   .portfolio-home { --header-height:136px; scroll-padding-top:160px; }
   #deokyo-radio .ds-player[data-collapsed="false"] { top:calc(100% + 74px); }
 }
+
+/* Five navigation links keep a predictable two-column layout on small screens. */
+.portfolio-home .site-nav .nav-results { color:var(--mint); }
+@media(max-width:1180px) {
+  html { scroll-padding-top:144px; }
+}
+@media(max-width:620px) {
+  html { scroll-padding-top:200px; }
+  .portfolio-home { --header-height:176px; scroll-padding-top:200px; }
+  .portfolio-home .site-nav { display:grid; grid-template-columns:max-content max-content; column-gap:16px; row-gap:0; }
+  #deokyo-radio .ds-player[data-collapsed="false"] { top:calc(100% + 112px); }
+}

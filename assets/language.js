@@ -610,6 +610,41 @@
   "Formulário logo depois da abertura da página.": "Form immediately after the page’s opening section.",
   "Explorar a página (abre em nova aba)": "Explore the page (opens in a new tab)"
 };
+  Object.assign(english, {
+  "04 / Resultados": "04 / Results",
+  "Mais contexto": "More context",
+  "para o comercial.": "for the sales team.",
+  "Revisei a copy, o hero e o caminho até o formulário para orientar melhor quem procura os serviços.": "I revised the copy, hero and path to the form to better guide people looking for the services.",
+  "+18,6%": "+18.6%",
+  "na média diária de envios": "in average daily submissions",
+  "Evolução observada no período": "Observed change over the period",
+  "indicaram uma frente de interesse": "indicated a service of interest",
+  "Parcela dos envios após a reformulação com um serviço indicado no formulário.": "Share of submissions after the redesign that indicated a service in the form.",
+  "Contexto para a abordagem comercial": "Context for the sales conversation",
+  "O que mudou": "What changed",
+  "Reorganizei a mensagem para explicar a oferta e para quem o serviço faz sentido.": "I reorganized the message to explain the offer and who the service is for.",
+  "Interface": "Interface",
+  "Refiz o hero e a hierarquia para dar mais clareza ao conteúdo e ao contato.": "I redesigned the hero and hierarchy to make the content and contact options clearer.",
+  "Formulário": "Form",
+  "Incluí perguntas sobre a necessidade da empresa para dar contexto à conversa.": "I added questions about the company’s needs to give the conversation context.",
+  "Como os resultados foram calculados": "How the results were calculated",
+  "Períodos, critérios e taxas por visitante": "Periods, criteria and submissions per visitor",
+  "Recorte e períodos": "Scope and periods",
+  "O comparativo reúne seis LPs de serviços: Auditoria, BPO Folha, Contas a Receber, Gestão Contábil, BPO Principal e CWB. Compara janeiro a julho com agosto a 17 de novembro de 2026, ainda parcial. As páginas de eventos são analisadas separadamente.": "The comparison covers six service landing pages: Audit, Payroll BPO, Accounts Receivable, Accounting Management, Main BPO and CWB. It compares January–July with August–November 17, 2026, with November still partial. Event pages are analyzed separately.",
+  "Os acessos vêm dos painéis das LPs, e os envios, dos exports do RD Station. Desde agosto, a captação usa formulários externos acessados pelas páginas. O formulário geral compartilhado por BPO Principal e CWB foi contado uma única vez.": "Visits come from the landing page dashboards and submissions from RD Station exports. Since August, submissions use external forms reached through the pages. The general form shared by Main BPO and CWB was counted once.",
+  "O que os indicadores medem": "What the indicators measure",
+  "O crescimento de 18,6% compara a média diária de envios nos dois períodos: envios divididos pelos dias observados. A variação relativa é a média posterior dividida pela anterior, menos um.": "The 18.6% growth compares average daily submissions in the two periods: submissions divided by observed days. The relative change is the later average divided by the earlier average, minus one.",
+  "Os 76% representam envios posteriores que selecionaram uma frente de serviço. Respostas de pesquisa, avaliação ou “outro” não entram nessa parcela. O denominador mantém todos os envios de serviços, inclusive preenchimentos abusivos.": "The 76% represents later submissions that selected a service area. Browsing, evaluating or “other” responses are not included in that share. The denominator retains all service submissions, including abusive entries.",
+  "Envios por visitante": "Submissions per visitor",
+  "A razão agregada de envios por visitante reportado passou de 0,45% para 0,16%, uma variação relativa de −64,4%. As taxas exibidas estão arredondadas. Visitantes de páginas diferentes não foram deduplicados entre si.": "The aggregate ratio of submissions to reported visitors went from 0.45% to 0.16%, a relative change of −64.4%. The displayed rates are rounded. Visitors across different pages were not deduplicated.",
+  "BPO Folha não tem visitas registradas no período anterior. Sua entrada muda a composição do conjunto; esse agregado descreve o pacote, não um teste controlado entre versões.": "Payroll BPO has no recorded visits in the earlier period. Its inclusion changes the mix; this aggregate describes the package rather than a controlled test between versions.",
+  "Como interpretar": "How to interpret the results",
+  "Na leitura das mensagens de julho, 39,0% dos envios declaravam interesse em trabalho e 12,2% tratavam de assuntos alheios aos serviços. Textos ambíguos não foram classificados automaticamente como spam. Essa leitura usa os campos disponíveis no export, sem histórico de alteração das mensagens.": "In the July message review, 39.0% of submissions expressed interest in employment and 12.2% concerned topics unrelated to the services. Ambiguous text was not automatically classified as spam. This review uses the fields available in the export, without a history of message changes.",
+  "A nova captação registra escolhas de serviço; a antiga traz texto livre. Isso permite avaliar o contexto coletado, mas não calcular um aumento equivalente de qualificação. Os percentuais medem envios, não pessoas únicas, oportunidades validadas ou vendas.": "The new capture records service selections; the earlier capture contains free text. This supports assessing the context collected, but not calculating an equivalent increase in qualification. The percentages measure submissions, not unique people, validated opportunities or sales.",
+  "Tráfego, sazonalidade e mudanças no formulário também influenciam os resultados. A comparação mostra o desempenho observado após a reformulação, sem isolar o efeito do redesign ou atribuir a queda nos preenchimentos apenas aos filtros.": "Traffic, seasonality and form changes also influence the results. The comparison shows observed performance after the redesign, without isolating its effect or attributing the lower submission ratio solely to filtering.",
+  "Ver resultados": "View results",
+  "Resultados": "Results"
+});
   const sourceText = new WeakMap();
   const sourceAttributes = new WeakMap();
   const key = 'deokyo-portfolio-language';

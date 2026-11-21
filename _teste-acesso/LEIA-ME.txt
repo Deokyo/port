@@ -1,0 +1,4 @@
+Teste controlado de escrita (Claude).
+Arquivo inofensivo, sem uso no site.
+Sera removido: o PR sera fechado sem merge e o branch excluido.
+Data: 2026-11-21

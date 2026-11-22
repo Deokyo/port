@@ -50,9 +50,13 @@ Verificação opcional / Optional check: `node scripts/check-site.mjs`.
 
 ## Uso / Usage
 
-PT: trabalhos autorizados e sanitizados, sem dados pessoais, tracking ou integrações ativas.
+PT: trabalhos autorizados e sanitizados, sem dados pessoais nem integrações ativas.
 
-EN: authorized, sanitized work without personal data, tracking, or active integrations.
+Tracking: apenas as páginas do próprio portfólio (home, páginas de projeto e páginas de case) usam Google Tag Manager e Umami, para medir a audiência do portfólio. As demos independentes (`projects/landing-pages/cases/*/demo/`) não têm nenhum tracking e não devem receber tags. Os identificadores pertencem a este site e não devem ser copiados para materiais de clientes.
+
+EN: authorized, sanitized work without personal data or active integrations.
+
+Tracking: only the portfolio's own pages (home, project pages, and case pages) use Google Tag Manager and Umami, to measure portfolio audience. The standalone demos (`projects/landing-pages/cases/*/demo/`) have no tracking and must not receive tags. The identifiers belong to this site and must not be copied into client materials.
 
 Materiais de clientes não possuem licença aberta / Client materials are not openly licensed.
 Consulte / See [NOTICE.md](NOTICE.md).

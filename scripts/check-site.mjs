@@ -61,6 +61,14 @@ for (const file of publicTextFiles) {
   }
 }
 
+// Demos independentes não carregam tracking: GTM e Umami pertencem só às páginas do portfólio.
+const demoTracking = /googletagmanager\.com|GTM-[A-Z0-9]+|umami/i;
+const demoFiles = htmlFiles.filter((file) => /[\\/]demo[\\/]/.test(relative(root, file)));
+
+for (const file of demoFiles) {
+  if (demoTracking.test(readFileSync(file, "utf8"))) fail(file, "demo independente não deve ter tracking (GTM ou Umami)");
+}
+
 if (failures.length) {
   console.error(failures.join("\n"));
   process.exit(1);

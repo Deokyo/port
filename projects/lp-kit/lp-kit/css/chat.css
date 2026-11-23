@@ -1,0 +1,57 @@
+/* LP Kit — chat.css : conversa simulada (balões, "digitando", foto, vídeo com onda, play, rever).
+   Marcação: .lp-chat > .lp-chat__bar + .lp-chat__body (.lp-msg--in | .lp-msg--out | .lp-slot) ; botões data-lp-sound / data-lp-replay.
+   Cores só por tokens (--lp-chat-*). O som é sintetizado por chat.js. */
+@layer components {
+  .lp-chat { border: 2px solid var(--lp-color-text); border-radius: 1.25rem; background: var(--lp-chat-bg); box-shadow: 6px 6px 0 var(--lp-color-text); overflow: hidden; max-width: 26rem; margin-inline: auto; width: 100%; transition: transform 300ms var(--lp-ease-out); }
+  .lp-chat:hover { transform: rotate(-0.6deg) translateY(-3px); }
+  .lp-chat__bar { display: flex; align-items: center; gap: var(--lp-space-3); padding: var(--lp-space-3) var(--lp-space-4); background: var(--lp-chat-bar-bg); color: var(--lp-chat-bar-fg); font-weight: var(--lp-fw-bold); }
+  .lp-chat__dot { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--lp-chat-online); animation: lp-ping 2.2s ease-out infinite; }
+  .lp-chat__body { display: grid; gap: var(--lp-space-3); padding: var(--lp-space-4); }
+  .lp-chat__cap { text-align: center; font-size: 0.8125rem; color: var(--lp-color-muted); margin-top: var(--lp-space-3); }
+
+  .lp-msg { max-width: 85%; padding: var(--lp-space-3) var(--lp-space-4); border-radius: 1rem; font-size: 0.9375rem; line-height: 1.45; border: 1px solid var(--lp-color-line); animation: lp-msg-in 520ms var(--lp-ease-out) both; animation-delay: var(--lp-d, 0s); }
+  .lp-msg--in { justify-self: end; background: var(--lp-chat-out); border-bottom-right-radius: 0.2rem; }
+  .lp-msg--out { justify-self: start; background: var(--lp-chat-in); border-bottom-left-radius: 0.2rem; }
+  .lp-time { display: block; margin-top: 2px; font-size: 0.6875rem; color: var(--lp-color-muted); text-align: right; }
+  .lp-photo { display: block; overflow: hidden; height: 9.5rem; margin-bottom: var(--lp-space-2); border-radius: 0.6rem; background: var(--lp-color-surface); }
+  .lp-photo__img { display: block; width: 100%; height: 100%; }
+
+  /* "digitando…" antes de uma resposta: .lp-slot envolve o balão que vai chegar */
+  .lp-slot { position: relative; justify-self: start; max-width: 85%; }
+  .lp-slot .lp-msg { max-width: none; }
+  .lp-typing { position: absolute; left: 0; top: 0; display: flex; gap: 4px; padding: 0.7rem 0.9rem; border-radius: 1rem; border-bottom-left-radius: 0.2rem; background: var(--lp-chat-in); border: 1px solid var(--lp-color-line); opacity: 0; animation: lp-typing 1.4s linear var(--lp-t, 0.9s) both; }
+  .lp-typing i { width: 6px; height: 6px; border-radius: 50%; background: var(--lp-color-muted); animation: lp-bounce 0.9s ease-in-out infinite; }
+  .lp-typing i:nth-child(2) { animation-delay: 0.15s; }
+  .lp-typing i:nth-child(3) { animation-delay: 0.3s; }
+
+  /* vídeo com onda e play */
+  .lp-video { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--lp-space-3); padding: var(--lp-space-3); margin-bottom: var(--lp-space-2); border-radius: 0.6rem; background: var(--lp-chat-media-bg); color: var(--lp-chat-media-fg); }
+  .lp-play { width: 2.75rem; height: 2.75rem; min-width: 2.75rem; min-height: 2.75rem; padding: 0; border: 0; border-radius: 50%; background: var(--lp-chat-play); position: relative; cursor: pointer; transition: transform var(--lp-ease); box-shadow: 0 0 0 0 var(--lp-chat-play-glow); animation: lp-hint 2.6s ease-out 7s 3; }
+  .lp-play::after { content: ""; position: absolute; left: 1.05rem; top: 0.8rem; border-left: 0.85rem solid var(--lp-chat-play-ink); border-block: 0.6rem solid transparent; }
+  .lp-play:hover { transform: scale(1.08); }
+  .lp-play:focus-visible { outline: 3px solid var(--lp-chat-media-fg); outline-offset: 3px; }
+  .lp-playing .lp-play::after { left: 0.95rem; top: 0.85rem; width: 0.28rem; height: 1.05rem; border: 0; background: var(--lp-chat-play-ink); box-shadow: 0.5rem 0 0 var(--lp-chat-play-ink); }
+  .lp-wave { display: flex; align-items: center; gap: 3px; height: 1.6rem; }
+  .lp-wave i { flex: 1; min-width: 2px; height: 100%; border-radius: 2px; background: var(--lp-chat-wave); transform-origin: 50% 50%; animation: lp-wave 1.1s ease-in-out infinite; }
+  .lp-wave i:nth-child(3n) { animation-delay: -0.3s; } .lp-wave i:nth-child(3n+1) { animation-delay: -0.6s; } .lp-wave i:nth-child(5n) { animation-delay: -0.15s; }
+  .lp-playing .lp-wave i { animation-duration: 0.45s; background: var(--lp-chat-wave-hi); }
+  .lp-dur { font: 700 0.75rem/1 ui-monospace, Menlo, Consolas, monospace; }
+
+  .lp-replay { display: block; margin: var(--lp-space-2) auto 0; min-height: var(--lp-tap); padding: 0 var(--lp-space-4); border: 2px solid var(--lp-color-text); border-radius: 999px; background: transparent; color: var(--lp-color-text); font: 700 0.875rem var(--lp-font-body); cursor: pointer; transition: background var(--lp-ease), color var(--lp-ease); }
+  .lp-replay:hover { background: var(--lp-color-text); color: var(--lp-color-bg); }
+  .lp-chat.lp-restart .lp-msg, .lp-chat.lp-restart .lp-typing { animation: none; }
+
+  @keyframes lp-msg-in { from { opacity: 0; transform: translateY(12px) scale(0.96); } to { opacity: 1; transform: none; } }
+  @keyframes lp-ping { 0%, 100% { box-shadow: 0 0 0 0 var(--lp-chat-online-glow); } 60% { box-shadow: 0 0 0 7px transparent; } }
+  @keyframes lp-typing { 0% { opacity: 0; } 12%, 88% { opacity: 1; } 100% { opacity: 0; } }
+  @keyframes lp-bounce { 0%, 60%, 100% { transform: none; } 30% { transform: translateY(-4px); } }
+  @keyframes lp-wave { 0%, 100% { transform: scaleY(0.25); } 50% { transform: scaleY(1); } }
+  @keyframes lp-hint { 0% { box-shadow: 0 0 0 0 var(--lp-chat-play-glow); } 100% { box-shadow: 0 0 0 16px transparent; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lp-msg, .lp-chat__dot, .lp-typing, .lp-typing i, .lp-play, .lp-wave i { animation: none; }
+    .lp-typing, .lp-replay { display: none; }
+    .lp-wave i { transform: scaleY(0.6); }
+    .lp-chat, .lp-chat:hover, .lp-play:hover { transform: none; transition: none; }
+  }
+}

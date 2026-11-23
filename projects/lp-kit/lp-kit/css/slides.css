@@ -1,0 +1,24 @@
+/* LP Kit — slides.css : vitrine de um item por vez, que passa para o lado (par do slides.js).
+   Marcação: [data-lp-slides] > .lp-slides__track (filhos = slides) + .lp-slides__bar[hidden] (anterior, contador, pontos, próximo).
+   Sem JS: a faixa rola de lado com o dedo, a roda ou o teclado (snap nativo) e a barra fica escondida.
+   Com JS: barra aparece, slide ativo ganha .is-on. Sem autoplay de propósito. Sem cor aqui: o tema pinta. */
+@layer components {
+  .lp-slides { position: relative; }
+  .lp-slides__track { position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: 100%; gap: var(--lp-space-4);
+    overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scroll-behavior: smooth; }
+  .lp-slides__track > * { scroll-snap-align: start; scroll-snap-stop: always; min-width: 0; }
+  .lp-slides__track:focus-visible { outline: 2px solid var(--lp-color-focus); outline-offset: 4px; }
+  .lp-slides.is-ready .lp-slides__track { scrollbar-width: none; }
+  .lp-slides.is-ready .lp-slides__track::-webkit-scrollbar { display: none; }
+  @media (max-width: 40rem) { .lp-slides__track { grid-auto-columns: calc(100% - 2rem); gap: var(--lp-space-3); } }
+
+  .lp-slides__bar { display: flex; align-items: center; justify-content: space-between; gap: var(--lp-space-3); margin-top: var(--lp-space-4); }
+  .lp-slides__btn { flex: none; display: inline-grid; place-items: center; width: var(--lp-tap); height: var(--lp-tap); border-radius: 50%; cursor: pointer; font: inherit; line-height: 1; }
+  .lp-slides__mid { display: flex; align-items: center; gap: var(--lp-space-3); min-width: 0; }
+  .lp-slides__dots { display: flex; }
+  .lp-slides__dot { flex: none; display: grid; place-items: center; width: var(--lp-tap); height: var(--lp-tap); padding: 0; border: 0; background: none; cursor: pointer; }
+  .lp-slides__dot::before { content: ""; display: block; width: 0.75rem; height: 0.75rem; }
+  /* tela estreita: os pontos não cabem com alvo de 44px; ficam as setas e o contador */
+  @media (max-width: 26rem) { .lp-slides__dots { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .lp-slides__track { scroll-behavior: auto; } }
+}

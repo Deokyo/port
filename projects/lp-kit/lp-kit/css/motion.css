@@ -1,0 +1,65 @@
+/* LP Kit — motion.css : movimento com propósito. Só transform/opacity (sem layout shift).
+   - [data-lp-enter]  entrada ao carregar (CSS puro, sem flash, funciona sem JS)
+   - [data-lp-reveal] aparece ao rolar (JS só "segura" o que está abaixo da dobra)
+   - [data-lp-stagger] filhos entram em sequência
+   - [data-lp-loop]   animação contínua: o visitante pode pausar (WCAG 2.2.2)
+   prefers-reduced-motion: tudo aparece de imediato, sem deslocamento. */
+@layer components {
+  @keyframes lp-rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+  @keyframes lp-fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes lp-pop  { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: none; } }
+  @keyframes lp-slide-r { from { opacity: 0; transform: translateX(-22px); } to { opacity: 1; transform: none; } }
+
+  [data-lp-enter] { animation: lp-rise var(--lp-dur-enter) var(--lp-ease-out) both; animation-delay: calc(var(--lp-i, 0) * var(--lp-step)); }
+  [data-lp-enter="fade"] { animation-name: lp-fade; }
+  [data-lp-enter="pop"] { animation-name: lp-pop; }
+  [data-lp-enter="slide"] { animation-name: lp-slide-r; }
+
+  [data-lp-reveal] { transition: opacity var(--lp-dur-enter) var(--lp-ease-out), transform var(--lp-dur-enter) var(--lp-ease-out); transition-delay: calc(var(--lp-i, 0) * var(--lp-step)); }
+  [data-lp-reveal].lp-hold { opacity: 0; transform: translateY(26px); }
+  [data-lp-reveal="pop"].lp-hold { transform: scale(0.94); }
+
+  /* microinterações */
+  .lp-btn[data-arrow]::after { content: "→"; display: inline-block; transition: transform var(--lp-ease); }
+  .lp-btn[data-arrow]:hover::after { transform: translateX(5px); }
+  /* botões: brilho que atravessa no hover e onda no clique */
+  .lp-btn { position: relative; overflow: hidden; }
+  .lp-btn::before { content: ""; position: absolute; inset: 0; background: linear-gradient(105deg, transparent 35%, var(--lp-shine) 50%, transparent 65%); transform: translateX(-120%); transition: transform 600ms var(--lp-ease-out); pointer-events: none; }
+  .lp-btn:hover::before { transform: translateX(120%); }
+  .lp-ripple { position: absolute; border-radius: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; background: var(--lp-ripple); transform: scale(0); animation: lp-ripple 600ms var(--lp-ease-out) forwards; pointer-events: none; }
+  @keyframes lp-ripple { to { transform: scale(26); opacity: 0; } }
+  .lp-header { transition: box-shadow var(--lp-ease); }
+  .lp-header[data-scrolled="true"] { box-shadow: var(--lp-shadow-header); }
+  .lp-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 90; background: var(--lp-color-accent); transform-origin: 0 50%; transform: scaleX(var(--lp-scroll, 0)); pointer-events: none; }
+
+  /* faixa corrida (decorativa: marcar aria-hidden e repetir o conteúdo duas vezes dentro da trilha) */
+  .lp-ticker { background: var(--lp-color-primary); color: var(--lp-color-on-primary); border-block: 2px solid var(--lp-ticker-line); overflow: hidden; }
+  .lp-ticker__track { display: flex; width: max-content; animation: lp-marquee 38s linear infinite; }
+  .lp-ticker span { font: 400 1rem/1 var(--lp-font-display); text-transform: uppercase; letter-spacing: 0.04em; padding: 0.85rem 0; white-space: nowrap; }
+  .lp-ticker span::after { content: "✕"; display: inline-block; margin-inline: 1.4rem; font-size: 0.8em; }
+  @keyframes lp-marquee { to { transform: translateX(-50%); } }
+
+  /* pausar animações contínuas */
+  .lp-motion-toggle { position: fixed; right: var(--lp-gutter); bottom: var(--lp-gutter); z-index: 65; min-height: var(--lp-tap); padding: 0 var(--lp-space-3); border: 1px solid var(--lp-color-line); border-radius: 999px; background: var(--lp-color-panel); color: var(--lp-color-text); font-size: 0.75rem; opacity: 0.92; font-weight: var(--lp-fw-bold); }
+  body[data-sticky="on"] .lp-motion-toggle { bottom: calc(var(--lp-gutter) + 4.25rem); }
+  @media (min-width: 52rem) { body[data-sticky="on"] .lp-motion-toggle { bottom: var(--lp-gutter); } }
+  .lp-motion-toggle__ico { display: none; }
+  .lp-motion-toggle--slot { position: static; display: inline-grid; place-items: center; width: var(--lp-tap); padding: 0; border-radius: 50%; opacity: 1; flex: none; cursor: pointer; }
+  .lp-motion-toggle--slot .lp-motion-toggle__txt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .lp-motion-toggle--slot .lp-motion-toggle__ico { display: block; width: 0.75rem; height: 0.8rem; border-inline: 0.22rem solid currentColor; }
+  .lp-motion-toggle--slot[aria-pressed="true"] .lp-motion-toggle__ico { width: 0; height: 0; border-block: 0.42rem solid transparent; border-inline: 0.7rem solid currentColor; border-inline-end-width: 0; margin-left: 0.15rem; }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-lp-enter] { animation: none; }
+    [data-lp-reveal] { transition: none; }
+    [data-lp-reveal].lp-hold { opacity: 1; transform: none; }
+    .lp-btn[data-arrow]::after, .lp-header, .lp-btn::before { transition: none; }
+    .lp-btn:hover::before, .lp-ripple { display: none; }
+    .lp-ticker__track { animation: none; }
+  }
+}
+
+@layer utilities {
+  /* utilities é a última camada: a pausa vence qualquer animação de componente ou tema */
+  html[data-motion="paused"] *, html[data-motion="paused"] *::before, html[data-motion="paused"] *::after { animation-play-state: paused; }
+}

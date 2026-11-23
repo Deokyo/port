@@ -1,0 +1,95 @@
+/* LP Kit — components.css : header, hero, botões, cartões, FAQ, formulário, barra fixa. Sem cores literais. */
+@layer components {
+  /* header + navegação */
+  .lp-header { position: sticky; top: 0; z-index: 50; background: var(--lp-color-header-bg); border-bottom: 1px solid var(--lp-color-line); min-height: var(--lp-header-h); }
+  .lp-header__bar { display: flex; align-items: center; justify-content: space-between; gap: var(--lp-space-4); min-height: var(--lp-header-h); }
+  .lp-brand { font-family: var(--lp-font-display); font-weight: var(--lp-fw-bold); font-size: var(--lp-fs-1); text-decoration: none; }
+  .lp-nav__toggle { min-width: var(--lp-tap); min-height: var(--lp-tap); padding: 0 var(--lp-space-3); background: transparent; border: 1px solid var(--lp-color-line); border-radius: var(--lp-radius); }
+  .lp-nav__list { display: none; list-style: none; padding: 0; margin: 0; }
+  .lp-nav__list a { display: flex; align-items: center; min-height: var(--lp-tap); padding-inline: var(--lp-space-3); text-decoration: none; }
+  .lp-nav__list a:hover { text-decoration: underline; }
+  .lp-nav[data-open="true"] .lp-nav__list {
+    display: block; position: absolute; left: 0; right: 0; top: 100%;
+    background: var(--lp-color-header-bg); border-bottom: 1px solid var(--lp-color-line);
+    padding: var(--lp-space-3) var(--lp-gutter); box-shadow: var(--lp-shadow);
+  }
+  @media (min-width: 52rem) {
+    .lp-nav__toggle { display: none; }
+    .lp-nav__list, .lp-nav[data-open="true"] .lp-nav__list { display: flex; position: static; padding: 0; border: 0; box-shadow: none; background: transparent; gap: var(--lp-space-2); }
+  }
+
+  /* botões e canais */
+  .lp-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: var(--lp-space-2);
+    min-height: var(--lp-tap); padding: var(--lp-space-3) var(--lp-space-5);
+    border: 2px solid transparent; border-radius: var(--lp-radius);
+    font-weight: var(--lp-fw-bold); text-decoration: none; text-align: center;
+    background: var(--lp-color-primary); color: var(--lp-color-on-primary);
+    transition: filter var(--lp-ease), transform var(--lp-ease);
+  }
+  .lp-btn:hover { filter: brightness(1.08); }
+  .lp-btn:active { transform: translateY(1px); }
+  .lp-btn[disabled], .lp-btn[aria-disabled="true"] { opacity: 0.6; cursor: not-allowed; }
+  .lp-btn--whatsapp { background: var(--lp-color-whatsapp); color: var(--lp-color-on-whatsapp); }
+  .lp-btn--accent { background: var(--lp-color-accent); color: var(--lp-color-on-accent); }
+  .lp-btn--ghost { background: transparent; color: var(--lp-color-text); border-color: var(--lp-color-text); }
+  .lp-actions { display: flex; flex-wrap: wrap; gap: var(--lp-space-3); }
+
+  /* hero */
+  .lp-hero { padding-block: var(--lp-space-7); background: var(--lp-color-surface); }
+  .lp-hero__art { border-radius: var(--lp-radius); background: var(--lp-color-bg); border: 1px solid var(--lp-color-line); padding: var(--lp-space-5); box-shadow: var(--lp-shadow); }
+  .lp-hero__art svg { width: 100%; }
+  .lp-proof { display: flex; flex-wrap: wrap; gap: var(--lp-space-4) var(--lp-space-5); list-style: none; padding: 0; color: var(--lp-color-muted); font-size: 0.9375rem; }
+  .lp-proof li::before { content: "✓ "; color: var(--lp-color-success); font-weight: var(--lp-fw-bold); }
+
+  /* cartões e listas */
+  .lp-card { background: var(--lp-color-panel); border: 1px solid var(--lp-color-line); border-radius: var(--lp-radius); padding: var(--lp-space-5); display: grid; gap: var(--lp-space-3); align-content: start; }
+  .lp-card__price { font-weight: var(--lp-fw-bold); font-size: var(--lp-fs-1); color: var(--lp-color-primary); }
+  .lp-steps { counter-reset: step; list-style: none; padding: 0; display: grid; gap: var(--lp-space-4); }
+  .lp-steps li { counter-increment: step; display: grid; grid-template-columns: 2.5rem 1fr; gap: var(--lp-space-3); align-items: start; }
+  .lp-steps li::before { content: counter(step); display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--lp-color-primary); color: var(--lp-color-on-primary); font-weight: var(--lp-fw-bold); }
+  .lp-note { font-size: 0.875rem; color: var(--lp-color-muted); }
+
+  /* FAQ (details nativo, sem JS) */
+  .lp-faq { display: grid; gap: var(--lp-space-3); }
+  .lp-faq details { border: 1px solid var(--lp-color-line); border-radius: var(--lp-radius); background: var(--lp-color-panel); }
+  .lp-faq summary { cursor: pointer; padding: var(--lp-space-4); min-height: var(--lp-tap); font-weight: var(--lp-fw-bold); }
+  .lp-faq details > div { padding: 0 var(--lp-space-4) var(--lp-space-4); color: var(--lp-color-muted); }
+
+  /* formulário */
+  .lp-form { display: grid; gap: var(--lp-space-4); background: var(--lp-color-panel); border: 1px solid var(--lp-color-line); border-radius: var(--lp-radius); padding: var(--lp-space-5); box-shadow: var(--lp-shadow); }
+  .lp-field { display: grid; gap: var(--lp-space-2); }
+  .lp-field label { font-weight: var(--lp-fw-bold); }
+  .lp-field input, .lp-field select, .lp-field textarea { min-height: var(--lp-tap); padding: var(--lp-space-3); border: 1px solid var(--lp-color-muted); border-radius: var(--lp-radius); background: var(--lp-color-bg); width: 100%; }
+  .lp-field textarea { min-height: 7rem; resize: vertical; }
+  .lp-field[data-invalid="true"] input, .lp-field[data-invalid="true"] select, .lp-field[data-invalid="true"] textarea { border-color: var(--lp-color-danger); border-width: 2px; }
+  .lp-error { color: var(--lp-color-danger); font-size: 0.9375rem; }
+  .lp-check { display: grid; grid-template-columns: auto 1fr; gap: var(--lp-space-3); align-items: start; }
+  .lp-check input { width: 1.5rem; height: 1.5rem; margin-top: 0.15rem; }
+  .lp-hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+  .lp-status { padding: var(--lp-space-4); border-radius: var(--lp-radius); border: 2px solid var(--lp-color-line); }
+  .lp-status[data-state="success"] { border-color: var(--lp-color-success); }
+  .lp-status[data-state="error"] { border-color: var(--lp-color-danger); }
+  .lp-status:empty { display: none; }
+
+  /* barra fixa de contato (mobile) */
+  .lp-sticky { position: fixed; inset: auto 0 0 0; z-index: 60; display: flex; gap: var(--lp-space-2); padding: var(--lp-space-3) var(--lp-gutter); background: var(--lp-color-header-bg); border-top: 1px solid var(--lp-color-line); box-shadow: var(--lp-shadow); transform: translateY(110%); transition: transform var(--lp-ease); }
+  .lp-sticky[data-visible="true"] { transform: none; }
+  .lp-sticky .lp-btn { flex: 1; padding-inline: var(--lp-space-3); }
+  @media (min-width: 52rem) { .lp-sticky { display: none; } }
+  body[data-sticky="on"] .lp-footer { padding-bottom: calc(var(--lp-space-6) + 4.5rem); }
+
+  /* aviso de consentimento */
+  .lp-consent { position: fixed; left: var(--lp-gutter); right: var(--lp-gutter); bottom: var(--lp-gutter); z-index: 70; max-width: 34rem; background: var(--lp-color-bg); border: 1px solid var(--lp-color-text); border-radius: var(--lp-radius); padding: var(--lp-space-4); box-shadow: var(--lp-shadow); display: grid; gap: var(--lp-space-3); }
+
+  /* opções em "chips" (radio nativo, acessível por teclado) */
+  .lp-chips { border: 0; padding: 0; margin: 0; display: grid; gap: var(--lp-space-2); }
+  .lp-chips legend { padding: 0; margin-bottom: var(--lp-space-2); font-weight: var(--lp-fw-bold); }
+  .lp-chips__row { display: flex; flex-wrap: wrap; gap: var(--lp-space-2); }
+  .lp-chip { position: relative; }
+  .lp-chip input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+  .lp-chip span { display: inline-flex; align-items: center; justify-content: center; min-height: var(--lp-tap); min-width: var(--lp-tap); padding: 0 var(--lp-space-4); border: 1px solid var(--lp-color-line); border-radius: var(--lp-radius); background: var(--lp-color-panel); font-weight: var(--lp-fw-bold); }
+  .lp-chip input:checked + span { background: var(--lp-color-primary); color: var(--lp-color-on-primary); border-color: var(--lp-color-primary); }
+  .lp-chip input:focus-visible + span { outline: 3px solid var(--lp-color-focus); outline-offset: 3px; }
+  .lp-preview { padding: var(--lp-space-3) var(--lp-space-4); border-left: 4px solid var(--lp-color-accent); background: var(--lp-color-surface); font-size: 0.9375rem; }
+}

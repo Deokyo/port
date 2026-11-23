@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rodante | Oficina de bicicletas: mande foto ou vídeo e receba o diagnóstico</title>
+  <meta name="description" content="Freio fraco, marcha pulando, pneu murcho? Mande foto ou vídeo pelo WhatsApp e a Rodante diz o que a bike precisa antes de você sair de casa. Página de demonstração fictícia.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#faf7f0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23ff5a1f'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/archivo-black.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/fira-400.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="../../lp-kit/css/reset.css">
+  <link rel="stylesheet" href="../../lp-kit/css/tokens.css">
+  <link rel="stylesheet" href="../../lp-kit/css/base.css">
+  <link rel="stylesheet" href="../../lp-kit/css/components.css">
+  <link rel="stylesheet" href="../../lp-kit/css/motion.css">
+  <link rel="stylesheet" href="../../lp-kit/css/chat.css">
+  <link rel="stylesheet" href="tema.css">
+  <script type="application/json" id="lp-config">
+  {
+    "brand": "Rodante",
+    "profile": "local",
+    "tracking": { "enabled": false, "consentRequired": true },
+    "motion": { "progress": true },
+    "channels": {
+      "whatsapp": { "number": "5500000000000", "message": "Olá! Vi a página da Rodante e quero um orçamento para minha bicicleta." },
+      "phone": "+5500000000000",
+      "directions": { "query": "Rua Exemplo, 100, Cidade Exemplo" }
+    }
+  }
+  </script>
+  <script defer src="../../lp-kit/js/core.js"></script>
+  <script defer src="../../lp-kit/js/track.js"></script>
+  <script defer src="../../lp-kit/js/channels.js"></script>
+  <script defer src="../../lp-kit/js/nav.js"></script>
+  <script defer src="../../lp-kit/js/motion.js"></script>
+  <script defer src="../../lp-kit/js/cta.js"></script>
+  <script defer src="../../lp-kit/js/compose.js"></script>
+  <script defer src="../../lp-kit/js/gl.js"></script>
+  <script defer src="roda.js"></script>
+  <script defer src="../../lp-kit/js/chat.js"></script>
+</head>
+<body>
+  <a class="lp-skip" href="#conteudo">Pular para o conteúdo</a>
+  <div class="rd-demo" role="note">Página de demonstração fictícia. Nome, endereço e contatos não são reais.</div>
+
+  <header class="lp-header">
+    <div class="lp-container lp-header__bar">
+      <a class="lp-brand" href="#topo">Rodante</a>
+      <nav class="lp-nav" aria-label="Principal">
+        <button type="button" class="lp-nav__toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul class="lp-nav__list" id="menu">
+          <li><a href="#sintomas">O que conserta</a></li>
+          <li><a href="#pedir">Pedir diagnóstico</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li><a href="#onde">Onde</a></li>
+        </ul>
+      </nav>
+      <a class="lp-btn rd-head-cta" data-lp-channel="whatsapp" data-lp-cta="header" href="#onde">WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="lp-hero rd-night" id="topo" aria-labelledby="t-hero">
+      <div class="lp-container rd-hero-grid">
+        <div class="lp-stack">
+          <p class="lp-eyebrow" data-lp-enter style="--lp-i:0">Oficina de bicicletas · atendimento por WhatsApp</p>
+          <h1 id="t-hero" data-lp-enter style="--lp-i:1">Freio fraco? Marcha pulando? <span class="rd-hl">Mande foto ou vídeo.</span></h1>
+          <p class="rd-lead">A gente responde com o que a bike precisa antes de você sair de casa.</p>
+          <div class="lp-actions" data-lp-enter style="--lp-i:3">
+            <a class="lp-btn lp-btn--whatsapp rd-attn" data-lp-magnet data-lp-ripple data-arrow data-lp-channel="whatsapp" data-lp-cta="hero" href="#pedir">Mandar foto ou vídeo</a>
+            <a class="lp-btn lp-btn--ghost" data-lp-channel="phone" data-lp-cta="hero" href="#onde">Ligar</a>
+          </div>
+          <p class="rd-after"><strong>Depois do clique:</strong> você manda foto (freio, câmbio, pneu) ou um vídeo curto com o som (barulho), a gente diz o que precisa ser feito e combina o valor antes de mexer em qualquer peça.</p>
+        </div>
+        <div class="rd-gl" data-gl="pending">
+          <canvas id="rd-gl" aria-hidden="true"></canvas>
+          <div class="rd-gl__glow" data-lp-loop aria-hidden="true"></div>
+          <p class="rd-hud rd-hud--a" aria-hidden="true">700c · 36 raios</p>
+          <p class="rd-hud rd-hud--b" aria-hidden="true">raio a raio</p>
+        </div>
+      </div>
+      <span data-lp-sticky-trigger></span>
+    </section>
+
+<div class="lp-ticker" aria-hidden="true"><div class="lp-ticker__track" data-lp-loop><span>Freio fraco</span><span>Marcha pulando</span><span>Corrente rangendo</span><span>Pneu murcho</span><span>Roda torta</span><span>Pedal folgado</span><span>Barulho estranho</span><span>Freio fraco</span><span>Marcha pulando</span><span>Corrente rangendo</span><span>Pneu murcho</span><span>Roda torta</span><span>Pedal folgado</span><span>Barulho estranho</span></div></div>
+
+    <section class="lp-section rd-atend" id="atendimento" aria-labelledby="t-atend">
+      <div class="lp-container rd-atend__grid">
+        <div class="lp-section__head" data-lp-reveal>
+          <p class="lp-eyebrow">Como é o atendimento</p>
+          <h2 id="t-atend">Foto, vídeo e valor combinado.</h2>
+          <p>Nada de "passa aqui que a gente vê". Freio e câmbio aparecem na foto. Barulho só aparece no vídeo: grave uns 10 segundos pedalando, com o som. Você sai com o diagnóstico e o valor antes de mexer em qualquer peça.</p>
+        </div>
+        <figure data-lp-reveal>
+          <div class="lp-chat">
+            <div class="lp-chat__bar"><span class="lp-chat__dot" data-lp-loop aria-hidden="true"></span>Rodante</div>
+            <div class="lp-chat__body" role="group" aria-label="Exemplo de conversa, fictícia: foto do freio, pedido de vídeo do barulho, vídeo enviado e diagnóstico com valor combinado antes do serviço.">
+              <div class="lp-msg lp-msg--in" style="--lp-d:0.6s"><div class="lp-photo" role="img" aria-label="Foto de exemplo: bicicleta com o cabo do freio traseiro solto, marcado com um círculo."><svg class="lp-photo__img" viewBox="14 36 236 140" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+<defs><radialGradient id="rd-bg" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#4a423a"/><stop offset="1" stop-color="#1d1915"/></radialGradient>
+<linearGradient id="rd-floor" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#312b25"/><stop offset="1" stop-color="#16120f"/></linearGradient></defs>
+<rect width="320" height="190" fill="url(#rd-bg)"/>
+<rect y="150" width="320" height="40" fill="url(#rd-floor)"/>
+<ellipse cx="160" cy="176" rx="130" ry="7" fill="#000" opacity=".4"/>
+<g><circle cx="80" cy="128" r="46" fill="none" stroke="#0d0b0a" stroke-width="7"/><circle cx="80" cy="128" r="42" fill="none" stroke="#b9b3a5" stroke-width="2.2"/><line x1="83.5" y1="129.9" x2="122.0" y2="128.0" stroke="#8d887c" stroke-width=".7"/><line x1="82.6" y1="131.0" x2="119.5" y2="142.4" stroke="#8d887c" stroke-width=".7"/><line x1="81.5" y1="131.7" x2="112.2" y2="155.0" stroke="#8d887c" stroke-width=".7"/><line x1="80.1" y1="132.0" x2="101.0" y2="164.4" stroke="#8d887c" stroke-width=".7"/><line x1="78.7" y1="131.8" x2="87.3" y2="169.4" stroke="#8d887c" stroke-width=".7"/><line x1="77.5" y1="131.1" x2="72.7" y2="169.4" stroke="#8d887c" stroke-width=".7"/><line x1="76.6" y1="130.1" x2="59.0" y2="164.4" stroke="#8d887c" stroke-width=".7"/><line x1="76.1" y1="128.8" x2="47.8" y2="155.0" stroke="#8d887c" stroke-width=".7"/><line x1="76.0" y1="127.4" x2="40.5" y2="142.4" stroke="#8d887c" stroke-width=".7"/><line x1="76.5" y1="126.1" x2="38.0" y2="128.0" stroke="#8d887c" stroke-width=".7"/><line x1="77.4" y1="125.0" x2="40.5" y2="113.6" stroke="#8d887c" stroke-width=".7"/><line x1="78.5" y1="124.3" x2="47.8" y2="101.0" stroke="#8d887c" stroke-width=".7"/><line x1="79.9" y1="124.0" x2="59.0" y2="91.6" stroke="#8d887c" stroke-width=".7"/><line x1="81.3" y1="124.2" x2="72.7" y2="86.6" stroke="#8d887c" stroke-width=".7"/><line x1="82.5" y1="124.9" x2="87.3" y2="86.6" stroke="#8d887c" stroke-width=".7"/><line x1="83.4" y1="125.9" x2="101.0" y2="91.6" stroke="#8d887c" stroke-width=".7"/><line x1="83.9" y1="127.2" x2="112.2" y2="101.0" stroke="#8d887c" stroke-width=".7"/><line x1="84.0" y1="128.6" x2="119.5" y2="113.6" stroke="#8d887c" stroke-width=".7"/><circle cx="80" cy="128" r="5" fill="#d9d2c2"/><circle cx="80" cy="128" r="2" fill="#2a2622"/></g><g><circle cx="240" cy="128" r="46" fill="none" stroke="#0d0b0a" stroke-width="7"/><circle cx="240" cy="128" r="42" fill="none" stroke="#b9b3a5" stroke-width="2.2"/><line x1="243.5" y1="129.9" x2="282.0" y2="128.0" stroke="#8d887c" stroke-width=".7"/><line x1="242.6" y1="131.0" x2="279.5" y2="142.4" stroke="#8d887c" stroke-width=".7"/><line x1="241.5" y1="131.7" x2="272.2" y2="155.0" stroke="#8d887c" stroke-width=".7"/><line x1="240.1" y1="132.0" x2="261.0" y2="164.4" stroke="#8d887c" stroke-width=".7"/><line x1="238.7" y1="131.8" x2="247.3" y2="169.4" stroke="#8d887c" stroke-width=".7"/><line x1="237.5" y1="131.1" x2="232.7" y2="169.4" stroke="#8d887c" stroke-width=".7"/><line x1="236.6" y1="130.1" x2="219.0" y2="164.4" stroke="#8d887c" stroke-width=".7"/><line x1="236.1" y1="128.8" x2="207.8" y2="155.0" stroke="#8d887c" stroke-width=".7"/><line x1="236.0" y1="127.4" x2="200.5" y2="142.4" stroke="#8d887c" stroke-width=".7"/><line x1="236.5" y1="126.1" x2="198.0" y2="128.0" stroke="#8d887c" stroke-width=".7"/><line x1="237.4" y1="125.0" x2="200.5" y2="113.6" stroke="#8d887c" stroke-width=".7"/><line x1="238.5" y1="124.3" x2="207.8" y2="101.0" stroke="#8d887c" stroke-width=".7"/><line x1="239.9" y1="124.0" x2="219.0" y2="91.6" stroke="#8d887c" stroke-width=".7"/><line x1="241.3" y1="124.2" x2="232.7" y2="86.6" stroke="#8d887c" stroke-width=".7"/><line x1="242.5" y1="124.9" x2="247.3" y2="86.6" stroke="#8d887c" stroke-width=".7"/><line x1="243.4" y1="125.9" x2="261.0" y2="91.6" stroke="#8d887c" stroke-width=".7"/><line x1="243.9" y1="127.2" x2="272.2" y2="101.0" stroke="#8d887c" stroke-width=".7"/><line x1="244.0" y1="128.6" x2="279.5" y2="113.6" stroke="#8d887c" stroke-width=".7"/><circle cx="240" cy="128" r="5" fill="#d9d2c2"/><circle cx="240" cy="128" r="2" fill="#2a2622"/></g>
+<g fill="none" stroke="#e8e1cf" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M80 128 L132 128 L120 70 L208 76 L132 128"/><path d="M80 128 L120 70"/><path d="M208 76 L240 128"/><path d="M208 76 L204 62 L216 56 L232 60"/></g>
+<path d="M104 66 L136 66" stroke="#0d0b0a" stroke-width="7" stroke-linecap="round"/>
+<path d="M120 70 L120 66" stroke="#e8e1cf" stroke-width="4" stroke-linecap="round"/>
+<circle cx="132" cy="128" r="9" fill="none" stroke="#8d887c" stroke-width="3"/><path d="M132 128 L146 138" stroke="#0d0b0a" stroke-width="4" stroke-linecap="round"/>
+<path d="M80 128 L132 128" stroke="#a1491c" stroke-width="2" stroke-dasharray="3 1.6" transform="translate(0 6)"/>
+<g class="rd-brake"><path d="M70 80 q10 -8 20 0" fill="none" stroke="#b9b3a5" stroke-width="4" stroke-linecap="round"/><rect x="78" y="82" width="5" height="9" rx="1" fill="#5a5148"/></g>
+<g class="rd-cable"><path d="M84 78 C 96 58, 110 96, 104 118 C 101 132, 92 134, 95 146" fill="none" stroke="#ff7a45" stroke-width="2.4" stroke-linecap="round"/><circle cx="95" cy="147" r="2.6" fill="#ff7a45"/></g>
+<ellipse class="rd-ring" cx="86" cy="88" rx="30" ry="24" fill="none" stroke="#ff5a1f" stroke-width="2.6" stroke-dasharray="5 4" transform="rotate(-12 86 88)"/>
+<rect width="320" height="190" fill="#000" opacity=".08"/></svg></div>O freio de trás tá fraco e faz barulho.<span class="lp-time">09:12</span></div>
+              <div class="lp-slot"><span class="lp-typing" aria-hidden="true"><i></i><i></i><i></i></span><div class="lp-msg lp-msg--out" style="--lp-d:2.3s">Pela foto dá pra ver o cabo folgado e a pastilha gasta. Tem barulho também? Grava uns 10 segundos pedalando, com o som, que eu escuto.<span class="lp-time">09:13</span></div></div>
+              <div class="lp-msg lp-msg--in" style="--lp-d:4.2s"><div class="lp-video"><button type="button" class="lp-play" data-lp-sound="chain" aria-pressed="false" aria-label="Ouvir o barulho de exemplo (som simulado)"></button><span class="lp-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="lp-dur">0:04</span></div>Tá assim quando eu pedalo.<span class="lp-time">09:14</span></div>
+              <div class="lp-slot"><span class="lp-typing" aria-hidden="true" style="--lp-t:5s"><i></i><i></i><i></i></span><div class="lp-msg lp-msg--out" style="--lp-d:6.4s">Deu pra ouvir: a corrente tá seca. Traz na quinta? Te passo o valor antes de mexer.<span class="lp-time">09:16</span></div></div>
+            </div>
+          </div>
+          <figcaption class="lp-chat__cap">Exemplo de conversa (fictício). Toque no play para ouvir um som simulado.</figcaption>
+          <button type="button" class="lp-replay" data-lp-replay>Rever a conversa</button>
+        </figure>
+      </div>
+    </section>
+
+    <section class="lp-section" id="sintomas" aria-labelledby="t-sint">
+      <div class="lp-container">
+        <div class="lp-section__head" data-lp-reveal>
+          <p class="lp-eyebrow">Sua bike faz isso?</p>
+          <h2 id="t-sint">Do barulho ao conserto</h2>
+          <p class="lp-lead">Cinco sintomas comuns, o que costuma estar por trás, o que a gente faz e o que mandar para a gente enxergar (ou ouvir) o problema.</p>
+        </div>
+        <div class="rd-symptoms" data-lp-reveal>
+          <table>
+            <thead><tr><th scope="col">Sintoma</th><th scope="col">Costuma ser</th><th scope="col">O que a gente faz</th><th scope="col">Pra gente ver</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Freio fraco</th><td data-label="Costuma ser">Pastilha gasta ou cabo folgado</td><td data-label="A gente faz">Troca de pastilha e ajuste do cabo</td><td data-label="Mande"><span class="rd-media rd-media--foto">Foto</span></td></tr>
+              <tr><th scope="row">Marcha pulando</th><td data-label="Costuma ser">Cabo esticado ou câmbio desalinhado</td><td data-label="A gente faz">Regulagem do câmbio</td><td data-label="Mande"><span class="rd-media rd-media--video">Vídeo curto</span></td></tr>
+              <tr><th scope="row">Pneu murchando</th><td data-label="Costuma ser">Furo ou válvula com defeito</td><td data-label="A gente faz">Remendo ou troca de câmara</td><td data-label="Mande"><span class="rd-media rd-media--foto">Foto</span></td></tr>
+              <tr><th scope="row">Rangido ao pedalar</th><td data-label="Costuma ser">Falta de lubrificação ou folga no movimento central</td><td data-label="A gente faz">Limpeza, lubrificação e conferência das folgas</td><td data-label="Mande"><span class="rd-media rd-media--video">Vídeo com som</span></td></tr>
+              <tr><th scope="row">Só quer garantir</th><td data-label="Costuma ser">Desgaste que ainda não apareceu</td><td data-label="A gente faz">Revisão geral com relatório do que está bom e do que pede atenção</td><td data-label="Mande"><span class="rd-media rd-media--foto">Foto geral da bike</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="lp-note" style="margin-top: var(--lp-space-3)">Diagnóstico por foto ou vídeo é uma orientação. O valor final é combinado com você antes do serviço.</p>
+      </div>
+    </section>
+
+    <section class="lp-section lp-section--alt" id="pedir" aria-labelledby="t-pedir">
+      <div class="lp-container">
+        <div class="lp-section__head" data-lp-reveal>
+          <p class="lp-eyebrow">Pedir diagnóstico</p>
+          <h2 id="t-pedir">Monte o recado em dois toques</h2>
+          <p class="lp-lead">Escolha o problema, confira a mensagem e envie. Depois é só anexar: foto para freio, câmbio e pneu; vídeo com som para barulho.</p>
+        </div>
+        <div class="rd-compose" data-lp-compose data-lp-template="Olá! Minha bike está com: {problema}. {midia?}">
+          <fieldset class="lp-chips"><legend>O que está acontecendo?</legend><div class="lp-chips__row">
+            <label class="lp-chip"><input type="radio" name="problema" value="freio fraco"><span>Freio fraco</span></label>
+            <label class="lp-chip"><input type="radio" name="problema" value="marcha pulando"><span>Marcha pulando</span></label>
+            <label class="lp-chip"><input type="radio" name="problema" value="pneu murchando"><span>Pneu murchando</span></label>
+            <label class="lp-chip"><input type="radio" name="problema" value="barulho ao pedalar"><span>Barulho</span></label>
+            <label class="lp-chip"><input type="radio" name="problema" value="revisão geral"><span>Revisão</span></label></div></fieldset>
+          <fieldset class="lp-chips"><legend>Já tem foto ou vídeo?</legend><div class="lp-chips__row">
+            <label class="lp-chip"><input type="radio" name="midia" value="Já vou mandar foto ou vídeo."><span>Já tenho</span></label>
+            <label class="lp-chip"><input type="radio" name="midia" value="Ainda vou gravar ou fotografar."><span>Ainda vou fazer</span></label></div></fieldset>
+          <p class="lp-preview" data-lp-compose-preview aria-live="polite"></p>
+          <div class="lp-actions"><a class="lp-btn lp-btn--whatsapp" data-lp-channel="whatsapp" data-lp-compose-target data-arrow data-lp-cta="pedir" href="#onde">Enviar pelo WhatsApp</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section" id="serve" aria-labelledby="t-serve">
+      <div class="lp-container">
+        <div class="lp-section__head" data-lp-reveal>
+          <p class="lp-eyebrow">Dúvida comum</p>
+          <h2 id="t-serve">Será que a gente resolve?</h2>
+        </div>
+        <div class="rd-fit" data-lp-stagger="pop">
+          <div>
+            <h3>Pode chamar quando</h3>
+            <ul><li>A bike é de uso diário ou de fim de semana e algo mudou no jeito de rodar.</li><li>Você quer saber o valor antes de deixar a bike.</li><li>Quer entender o que foi feito, não só receber a conta.</li></ul>
+          </div>
+          <div class="rd-ask">
+            <h3>Caso diferente? Pergunta primeiro</h3>
+            <p>Bike elétrica, peça fora do comum ou conserto para hoje: conte no recado e a gente responde o que dá para fazer.</p>
+            <a class="lp-btn lp-btn--ghost" data-arrow data-lp-channel="whatsapp" data-lp-cta="serve" data-lp-message="Olá! Tenho uma dúvida antes de levar a bike: vocês atendem o meu caso? (bike elétrica, peça diferente ou conserto para hoje)" href="#onde">Tirar dúvida no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section lp-section--alt" id="duvidas" aria-labelledby="t-faq">
+      <div class="lp-container">
+        <div class="lp-section__head" data-lp-reveal>
+          <p class="lp-eyebrow">Dúvidas</p>
+          <h2 id="t-faq">O que perguntam antes de chamar</h2>
+        </div>
+        <div class="lp-faq" data-lp-stagger>
+          <details><summary>Preciso agendar?</summary><div>Sim. Pelo WhatsApp a gente combina um horário e sua bike não espera na fila.</div></details>
+          <details><summary>Quanto custa?</summary><div>Depende do problema e das peças. Você recebe o valor por mensagem, antes de qualquer serviço, e só começa se aprovar.</div></details>
+          <details><summary>Foto e vídeo resolvem mesmo?</summary><div>Resolvem a maior parte das dúvidas: freio e câmbio aparecem bem na foto, e barulho só aparece no vídeo, com o som ligado. Quando não resolve, a gente avisa e confere pessoalmente antes de dar o valor.</div></details>
+          <details><summary>Dá pra ligar em vez de mandar mensagem?</summary><div>Dá. Mas um vídeo de 10 segundos costuma ser mais rápido do que explicar o barulho por telefone.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section" id="onde" aria-labelledby="t-onde">
+      <div class="lp-container rd-where">
+        <div class="lp-stack">
+          <p class="lp-eyebrow">Onde estamos</p>
+          <h2 id="t-onde">Chame, depois venha</h2>
+          <address>Rua Exemplo, 100, Cidade Exemplo<br>Segunda a sábado, das 9h às 18h (horário de exemplo)</address>
+        </div>
+        <div class="lp-actions">
+          <a class="lp-btn lp-btn--whatsapp" data-lp-channel="whatsapp" data-lp-cta="rodape" href="#onde">WhatsApp</a>
+          <a class="lp-btn lp-btn--ghost" data-lp-channel="phone" data-lp-cta="rodape" href="#onde">Ligar</a>
+          <a class="lp-btn lp-btn--ghost" data-lp-channel="directions" data-lp-cta="rodape" href="#onde">Como chegar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lp-footer">
+    <div class="lp-container">
+      <p><strong>Rodante</strong>: marca fictícia usada para demonstrar o LP Kit da Deokyo.</p>
+      <p class="lp-footer__legal">Esta página não coleta dados nem usa medição. Nenhum contato exibido é real.</p>
+    </div>
+  </footer>
+
+  <div class="lp-sticky" role="region" aria-label="Contato rápido">
+    <a class="lp-btn lp-btn--whatsapp" data-lp-channel="whatsapp" data-lp-cta="barra-fixa" href="#onde">WhatsApp</a>
+    <a class="lp-btn lp-btn--ghost" data-lp-channel="phone" data-lp-cta="barra-fixa" href="#onde">Ligar</a>
+  </div>
+</body>
+</html>

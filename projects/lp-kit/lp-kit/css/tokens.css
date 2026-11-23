@@ -1,0 +1,75 @@
+/* LP Kit — tokens.css
+   Única fonte (junto com tema.css de cada página) de cores, tipografia e espaços.
+   Valores neutros: cada página sobrescreve na camada "theme". */
+@layer tokens {
+  :root {
+    /* cor */
+    --lp-color-bg: #ffffff;
+    --lp-color-surface: #f4f5f7;
+    --lp-color-panel: var(--lp-color-bg);
+    --lp-color-text: #1b1f24;
+    --lp-color-muted: #4a5360;
+    --lp-color-line: #d6dae0;
+    --lp-color-primary: #1d4ed8;
+    --lp-color-on-primary: #ffffff;
+    --lp-color-accent: #b45309;
+    --lp-color-on-accent: #ffffff;
+    --lp-color-whatsapp: #0f7a43;
+    --lp-color-on-whatsapp: #ffffff;
+    --lp-color-danger: #b42318;
+    --lp-color-success: #0f7a43;
+    --lp-color-focus: #1d4ed8;
+    --lp-color-header-bg: #ffffff;
+    --lp-color-footer-bg: #14181d;
+    --lp-color-footer-text: #e6e8eb;
+
+    /* tipografia (fontes do sistema: zero requisição externa) */
+    --lp-font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --lp-font-display: var(--lp-font-body);
+    --lp-fs-0: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+    --lp-fs-1: clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
+    --lp-fs-2: clamp(1.375rem, 1.2rem + 0.9vw, 1.75rem);
+    --lp-fs-3: clamp(1.75rem, 1.35rem + 2vw, 2.75rem);
+    --lp-lh-body: 1.6;
+    --lp-lh-tight: 1.15;
+    --lp-fw-bold: 700;
+
+    /* espaço, forma, movimento */
+    --lp-space-1: 0.25rem;
+    --lp-space-2: 0.5rem;
+    --lp-space-3: 0.75rem;
+    --lp-space-4: 1rem;
+    --lp-space-5: 1.5rem;
+    --lp-space-6: 2.5rem;
+    --lp-space-7: 4rem;
+    --lp-radius: 0.5rem;
+    --lp-shadow: 0 6px 20px rgb(0 0 0 / 0.08);
+    --lp-container: 70rem;
+    --lp-gutter: 1rem;
+    --lp-tap: 2.75rem;
+    --lp-header-h: 4rem;
+    --lp-ease: 160ms ease;
+    --lp-ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+    --lp-dur-enter: 700ms;
+    --lp-step: 90ms;
+    /* conversa simulada (chat.css) */
+    --lp-chat-in: #ffffff;
+    --lp-chat-out: #d9f2c9;
+    --lp-chat-bg: #ece8df;
+    --lp-chat-bar-bg: var(--lp-color-text);
+    --lp-chat-bar-fg: var(--lp-color-bg);
+    --lp-chat-online: #3ecf6b;
+    --lp-chat-online-glow: rgb(62 207 107 / 0.7);
+    --lp-chat-media-bg: #1b1f24;
+    --lp-chat-media-fg: #f4f5f7;
+    --lp-chat-wave: #9db8ff;
+    --lp-chat-wave-hi: #cddbff;
+    --lp-chat-play: var(--lp-color-primary);
+    --lp-chat-play-ink: var(--lp-color-on-primary);
+    --lp-chat-play-glow: rgb(29 78 216 / 0.55);
+    --lp-ticker-line: var(--lp-color-text);
+    --lp-shine: rgb(255 255 255 / 0.35);
+    --lp-ripple: rgb(255 255 255 / 0.55);
+    --lp-shadow-header: 0 6px 20px rgb(0 0 0 / 0.08);
+  }
+}
